@@ -58,7 +58,12 @@ const Header = () => {
             <img 
               src="/images/Adobe Express - sheesha icon.png" 
               alt="Medina Cafe Sheesha Logo" 
-              className="w-8 h-8 object-contain"
+              className={`w-8 h-8 object-contain transition-all duration-300 ${
+                scrolled ? '' : 'filter invert brightness-0 contrast-100'
+              }`}
+              style={{
+                filter: scrolled ? 'none' : 'invert(1) brightness(2) contrast(1)'
+              }}
             />
             <span className={`font-heading text-xl md:text-2xl font-semibold ${scrolled ? 'text-accent-700' : 'text-white'} transition-colors duration-300`}>
               Medina Cafe
