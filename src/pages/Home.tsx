@@ -106,7 +106,7 @@ const Home = () => {
               variants={fadeIn}
             >
               <SectionHeading 
-                title="Welcome to Medina" 
+                title="Welcome to Medina Cafe" 
                 subtitle="A taste of the Middle East in Calgary"
               />
               <p className="text-gray-600 mb-4 sm:mb-6">
