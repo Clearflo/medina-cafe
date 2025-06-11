@@ -56,8 +56,8 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center gap-2 py-2">
             <img 
-              src="/images/Adobe Express - file.png" 
-              alt="Medina Cafe Logo" 
+              src="/images/Adobe Express - sheesha icon.png" 
+              alt="Medina Cafe Sheesha Logo" 
               className="w-8 h-8 object-contain"
             />
             <span className={`font-heading text-xl md:text-2xl font-semibold ${scrolled ? 'text-accent-700' : 'text-white'} transition-colors duration-300`}>
