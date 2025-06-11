@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  // Check if we're on the home page (which has a dark hero background)
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,11 +46,40 @@ const Header = () => {
     { to: '/about', label: 'About' },
   ];
 
-  const headerClasses = `fixed w-full z-50 transition-all duration-300 ${
-    scrolled
-      ? 'bg-white shadow-md py-2'
-      : 'bg-transparent backdrop-blur-sm py-4'
-  }`;
+  // Determine header background and text colors based on page and scroll state
+  const getHeaderStyles = () => {
+    if (isHomePage) {
+      // Home page: transparent when not scrolled, white when scrolled
+      return scrolled
+        ? 'bg-white shadow-md py-2'
+        : 'bg-transparent backdrop-blur-sm py-4';
+    } else {
+      // Other pages: always white background
+      return 'bg-white shadow-md py-2';
+    }
+  };
+
+  const getTextColor = () => {
+    if (isHomePage) {
+      // Home page: white text when not scrolled, dark when scrolled
+      return scrolled ? 'text-accent-700' : 'text-white';
+    } else {
+      // Other pages: always dark text
+      return 'text-accent-700';
+    }
+  };
+
+  const getLogoFilter = () => {
+    if (isHomePage) {
+      // Home page: inverted when not scrolled, normal when scrolled
+      return scrolled ? 'none' : 'invert(1) brightness(2) contrast(1)';
+    } else {
+      // Other pages: always normal colors
+      return 'none';
+    }
+  };
+
+  const headerClasses = `fixed w-full z-50 transition-all duration-300 ${getHeaderStyles()}`;
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -58,14 +91,12 @@ const Header = () => {
             <img 
               src="/images/Adobe Express - sheesha icon.png" 
               alt="Medina Cafe Sheesha Logo" 
-              className={`w-8 h-8 object-contain transition-all duration-300 ${
-                scrolled ? '' : 'filter invert brightness-0 contrast-100'
-              }`}
+              className="w-8 h-8 object-contain transition-all duration-300"
               style={{
-                filter: scrolled ? 'none' : 'invert(1) brightness(2) contrast(1)'
+                filter: getLogoFilter()
               }}
             />
-            <span className={`font-heading text-xl md:text-2xl font-semibold ${scrolled ? 'text-accent-700' : 'text-white'} transition-colors duration-300`}>
+            <span className={`font-heading text-xl md:text-2xl font-semibold ${getTextColor()} transition-colors duration-300`}>
               Medina Cafe
             </span>
           </NavLink>
@@ -78,7 +109,7 @@ const Header = () => {
                 to={link.to}
                 className={({ isActive }) =>
                   `text-lg font-medium transition-colors duration-200 hover:text-primary-700 ${
-                    isActive ? 'text-primary-700' : scrolled ? 'text-accent-700' : 'text-white'
+                    isActive ? 'text-primary-700' : getTextColor()
                   }`
                 }
               >
@@ -95,7 +126,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden ${scrolled ? 'text-accent-700' : 'text-white'} focus:outline-none p-2 touch-manipulation transition-colors duration-300`}
+            className={`md:hidden ${getTextColor()} focus:outline-none p-2 touch-manipulation transition-colors duration-300`}
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
