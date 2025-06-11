@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Facebook, Instagram, MapPin, Phone, Clock, Mail, Coffee } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Clock, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,11 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Coffee size={28} className="text-secondary-300" />
+              <img 
+                src="/images/Adobe Express - sheesha icon.png" 
+                alt="Medina Cafe Sheesha Logo" 
+                className="w-7 h-7 object-contain"
+              />
               <span className="font-heading text-xl sm:text-2xl font-semibold">Medina</span>
             </div>
             <p className="text-sm text-gray-300 max-w-xs">
