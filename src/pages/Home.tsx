@@ -199,11 +199,11 @@ const Home = () => {
       {/* Parallax Section */}
       <ParallaxSection imageUrl="https://images.pexels.com/photos/6546258/pexels-photo-6546258.jpeg">
         <div className="max-w-4xl mx-auto py-12 md:py-16 text-center">
-          <GlassmorphicCard className="max-w-2xl mx-auto text-white bg-accent-800/40">
-            <h2 className="font-heading text-2xl sm:text-3xl font-semibold mb-4">
+          <GlassmorphicCard className="max-w-2xl mx-auto bg-white/95 backdrop-blur-md shadow-2xl border border-white/20">
+            <h2 className="font-heading text-2xl sm:text-3xl font-semibold mb-4 text-accent-800">
               "Food is not just eating energy. It's an experience."
             </h2>
-            <p className="text-gray-200">
+            <p className="text-gray-700">
               At Medina, we believe in creating memorable dining experiences through authentic flavors, warm hospitality, and premium sheesha.
             </p>
           </GlassmorphicCard>
