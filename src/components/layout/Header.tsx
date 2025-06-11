@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, Coffee } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
@@ -55,7 +55,11 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center gap-2 py-2">
-            <Coffee size={32} className="text-primary-700" />
+            <img 
+              src="/images/Adobe Express - file.png" 
+              alt="Medina Cafe Logo" 
+              className="w-8 h-8 object-contain"
+            />
             <span className={`font-heading text-xl md:text-2xl font-semibold ${scrolled ? 'text-accent-700' : 'text-white'} transition-colors duration-300`}>
               Medina Cafe
             </span>
