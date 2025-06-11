@@ -57,7 +57,7 @@ const Header = () => {
           <NavLink to="/" className="flex items-center gap-2 py-2">
             <Coffee size={32} className="text-primary-700" />
             <span className={`font-heading text-xl md:text-2xl font-semibold ${scrolled ? 'text-accent-700' : 'text-white'} transition-colors duration-300`}>
-              Medina
+              Medina Cafe
             </span>
           </NavLink>
 
