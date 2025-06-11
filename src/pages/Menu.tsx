@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Coffee, UtensilsCrossed, Sandwich, Wine, CakeSlice, Search, CupSoda, FilterX } from 'lucide-react';
+import { UtensilsCrossed, Sandwich, Wine, CakeSlice, Search, CupSoda, FilterX } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
@@ -58,7 +58,7 @@ const SheeshaMenuItem = ({ name, description, notes }: { name: string, descripti
       <h3 className="font-heading text-lg font-semibold text-accent-800 mb-1">{name}</h3>
       <p className="text-sm text-gray-600 mb-2">{description}</p>
       {notes && (
-        <p className="text-xs text-primary-700 font-medium">{notes}</p>
+        <p className="text-xs text-secondary-300 font-medium">{notes}</p>
       )}
     </motion.div>
   );
@@ -93,7 +93,7 @@ const FoodMenuItem = ({ name, description, price, image, category }: {
       <div className="p-4 sm:p-5">
         <div className="flex justify-between items-start mb-2">
           <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-800 pr-2">{name}</h3>
-          <span className="text-primary-700 font-medium whitespace-nowrap">{price}</span>
+          <span className="text-secondary-300 font-medium whitespace-nowrap">{price}</span>
         </div>
         <p className="text-sm sm:text-base text-gray-600 mb-3">{description}</p>
         <div className="flex flex-wrap justify-between items-center gap-2">
@@ -146,7 +146,18 @@ const Menu = () => {
 
   const categories = [
     { id: 'all', name: 'All', icon: <UtensilsCrossed size={20} /> },
-    { id: 'sheesha', name: 'Sheesha', icon: <Coffee size={20} /> },
+    { 
+      id: 'sheesha', 
+      name: 'Sheesha', 
+      icon: (
+        <img 
+          src="/images/Adobe Express - sheesha icon.png" 
+          alt="Sheesha" 
+          className="w-5 h-5 object-contain"
+          style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(38%) saturate(492%) hue-rotate(18deg) brightness(92%) contrast(85%)' }}
+        />
+      )
+    },
     { id: 'appetizers', name: 'Appetizers', icon: <Sandwich size={20} /> },
     { id: 'mainDishes', name: 'Main Dishes', icon: <UtensilsCrossed size={20} /> },
     { id: 'drinks', name: 'Drinks', icon: <CupSoda size={20} /> },
@@ -313,7 +324,7 @@ const Menu = () => {
                     (activeCategory === category.id) || 
                     (activeCategory.includes('sheesha') && category.id === 'sheesha') ||
                     ((activeCategory.includes('coffee') || activeCategory.includes('tea') || activeCategory.includes('milkshake') || activeCategory.includes('juice')) && category.id === 'drinks')
-                      ? 'bg-primary-700 text-white'
+                      ? 'bg-secondary-300 text-white'
                       : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
                   }`}
                 >
@@ -469,12 +480,17 @@ const Menu = () => {
                 items.length > 0 ? (
                   <div key={category} className="mb-12">
                     <div className="flex items-center gap-3 mb-4">
-                      <Coffee size={24} className="text-primary-700" />
+                      <img 
+                        src="/images/Adobe Express - sheesha icon.png" 
+                        alt="Sheesha" 
+                        className="w-6 h-6 object-contain"
+                        style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(38%) saturate(492%) hue-rotate(18deg) brightness(92%) contrast(85%)' }}
+                      />
                       <h3 className="font-heading text-xl font-semibold text-accent-700">
                         {category}
-                        {category === 'House Blend Sheesha' && <span className="ml-2 text-primary-700">$25.99</span>}
-                        {category === 'Fresh Sheesha' && <span className="ml-2 text-primary-700">$25.99</span>}
-                        {category === 'Premium Sheesha' && <span className="ml-2 text-primary-700">$28.99-$29.99</span>}
+                        {category === 'House Blend Sheesha' && <span className="ml-2 text-secondary-300">$25.99</span>}
+                        {category === 'Fresh Sheesha' && <span className="ml-2 text-secondary-300">$25.99</span>}
+                        {category === 'Premium Sheesha' && <span className="ml-2 text-secondary-300">$28.99-$29.99</span>}
                       </h3>
                     </div>
                     
@@ -543,7 +559,7 @@ const Menu = () => {
                 <p className="text-lg text-gray-600 mb-4">No menu items found.</p>
                 <button 
                   onClick={clearSearch}
-                  className="bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-full transition-all duration-300 text-base font-medium inline-flex items-center gap-2"
+                  className="bg-secondary-300 hover:bg-secondary-400 text-white px-6 py-3 rounded-full transition-all duration-300 text-base font-medium inline-flex items-center gap-2"
                 >
                   Clear Search <FilterX size={18} />
                 </button>
