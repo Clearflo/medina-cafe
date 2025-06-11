@@ -45,8 +45,13 @@ const drinkSubcategories = {
   juice: 'Juices'
 };
 
-// Component for text-based sheesha menu items
-const SheeshaMenuItem = ({ name, description, notes }: { name: string, description: string, notes?: string }) => {
+// Component for text-based menu items (unified for all categories)
+const MenuItem = ({ name, description, price, notes }: { 
+  name: string, 
+  description: string, 
+  price?: string, 
+  notes?: string 
+}) => {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 10 }}
@@ -55,53 +60,14 @@ const SheeshaMenuItem = ({ name, description, notes }: { name: string, descripti
       transition={{ duration: 0.3 }}
       className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
     >
-      <h3 className="font-heading text-lg font-semibold text-accent-800 mb-1">{name}</h3>
+      <div className="flex justify-between items-start mb-1">
+        <h3 className="font-heading text-lg font-semibold text-accent-800">{name}</h3>
+        {price && <span className="text-secondary-300 font-medium whitespace-nowrap ml-2">{price}</span>}
+      </div>
       <p className="text-sm text-gray-600 mb-2">{description}</p>
       {notes && (
         <p className="text-xs text-secondary-300 font-medium">{notes}</p>
       )}
-    </motion.div>
-  );
-};
-
-// Component for food menu items with images
-const FoodMenuItem = ({ name, description, price, image, category }: { 
-  name: string, 
-  description: string, 
-  price: string, 
-  image?: string, 
-  category: string 
-}) => {
-  return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5 }}
-      whileHover={{ y: -8, boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)" }}
-      className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 border border-gray-100"
-    >
-      {image && (
-        <div className="h-48 sm:h-52 overflow-hidden">
-          <ImageWithLoader 
-            src={image} 
-            alt={name}
-            className="w-full h-full"
-          />
-        </div>
-      )}
-      <div className="p-4 sm:p-5">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-800 pr-2">{name}</h3>
-          <span className="text-secondary-300 font-medium whitespace-nowrap">{price}</span>
-        </div>
-        <p className="text-sm sm:text-base text-gray-600 mb-3">{description}</p>
-        <div className="flex flex-wrap justify-between items-center gap-2">
-          <span className="text-xs py-1 px-2 bg-secondary-300/20 text-secondary-700 rounded-full">
-            {category}
-          </span>
-        </div>
-      </div>
     </motion.div>
   );
 };
@@ -232,8 +198,25 @@ const Menu = () => {
     )
   };
   
-  // Filter non-sheesha items
-  const nonSheeshaItems = filteredItems.filter(item => !item.category.includes('Sheesha'));
+  // Filter non-sheesha items and group them by category
+  const groupedNonSheeshaItems = {
+    'Appetizers': filteredItems.filter(item => 
+      item.category.includes('Appetizer') && 
+      (activeCategory === 'all' || activeCategory === 'appetizers')
+    ),
+    'Main Dishes': filteredItems.filter(item => 
+      item.category.includes('Main Dish') && 
+      (activeCategory === 'all' || activeCategory === 'mainDishes')
+    ),
+    'Drinks': filteredItems.filter(item => 
+      (item.category.includes('Coffee') || item.category.includes('Tea') || item.category.includes('Milkshake') || item.category.includes('Juice')) && 
+      (activeCategory === 'all' || activeCategory === 'drinks' || activeCategory === 'coffee' || activeCategory === 'tea' || activeCategory === 'milkshake' || activeCategory === 'juice')
+    ),
+    'Desserts': filteredItems.filter(item => 
+      item.category.includes('Dessert') && 
+      (activeCategory === 'all' || activeCategory === 'desserts')
+    )
+  };
   
   // Handle category click
   const handleCategoryClick = (category: CategoryType) => {
@@ -267,6 +250,22 @@ const Menu = () => {
   
   const clearSearch = () => {
     setSearchTerm('');
+  };
+
+  // Helper function to get category icon
+  const getCategoryIcon = (categoryName: string) => {
+    switch (categoryName) {
+      case 'Appetizers':
+        return <Sandwich size={24} className="text-secondary-300" />;
+      case 'Main Dishes':
+        return <UtensilsCrossed size={24} className="text-secondary-300" />;
+      case 'Drinks':
+        return <CupSoda size={24} className="text-secondary-300" />;
+      case 'Desserts':
+        return <CakeSlice size={24} className="text-secondary-300" />;
+      default:
+        return <UtensilsCrossed size={24} className="text-secondary-300" />;
+    }
   };
 
   return (
@@ -474,7 +473,7 @@ const Menu = () => {
             animate="visible"
             variants={staggerContainer}
           >
-            {/* Sheesha Menu Section - Text-based layout */}
+            {/* Sheesha Menu Section */}
             {(activeCategory === 'all' || activeCategory.includes('sheesha')) && (
               Object.entries(groupedSheeshaItems).map(([category, items]) => 
                 items.length > 0 ? (
@@ -524,7 +523,7 @@ const Menu = () => {
                     {/* Grid layout for sheesha flavors */}
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {items.map((item) => (
-                        <SheeshaMenuItem
+                        <MenuItem
                           key={item.id}
                           name={item.name}
                           description={item.description}
@@ -537,20 +536,30 @@ const Menu = () => {
               )
             )}
 
-            {/* Non-Sheesha Menu Items - Keep images for these */}
-            {nonSheeshaItems.length > 0 && (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                {nonSheeshaItems.map((item) => (
-                  <FoodMenuItem
-                    key={item.id}
-                    name={item.name}
-                    description={item.description}
-                    price={item.price}
-                    image={item.image}
-                    category={item.category}
-                  />
-                ))}
-              </div>
+            {/* Non-Sheesha Menu Items - Now with unified text-based layout */}
+            {Object.entries(groupedNonSheeshaItems).map(([category, items]) => 
+              items.length > 0 ? (
+                <div key={category} className="mb-12">
+                  <div className="flex items-center gap-3 mb-4">
+                    {getCategoryIcon(category)}
+                    <h3 className="font-heading text-xl font-semibold text-accent-700">
+                      {category}
+                    </h3>
+                  </div>
+                  
+                  {/* Grid layout for menu items */}
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {items.map((item) => (
+                      <MenuItem
+                        key={item.id}
+                        name={item.name}
+                        description={item.description}
+                        price={item.price}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : null
             )}
 
             {/* No results message */}
