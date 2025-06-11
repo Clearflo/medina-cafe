@@ -15,6 +15,9 @@ const Footer = () => {
                 src="/images/Adobe Express - sheesha icon.png" 
                 alt="Medina Cafe Sheesha Logo" 
                 className="w-7 h-7 object-contain"
+                style={{
+                  filter: 'brightness(0) saturate(100%) invert(85%) sepia(46%) saturate(492%) hue-rotate(25deg) brightness(96%) contrast(88%)'
+                }}
               />
               <span className="font-heading text-xl sm:text-2xl font-semibold">Medina</span>
             </div>
