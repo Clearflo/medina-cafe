@@ -79,7 +79,7 @@ const Home = () => {
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
               <Link 
                 to="/menu" 
-                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-5 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium flex items-center justify-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
+                className="bg-gradient-to-r from-secondary-300 to-secondary-400 hover:from-secondary-400 hover:to-secondary-500 text-white px-5 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium flex items-center justify-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
               >
                 View Menu <ArrowRight size={18} />
               </Link>
@@ -117,28 +117,28 @@ const Home = () => {
               </p>
               <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <div className="flex items-start gap-2 sm:gap-3 hover-lift p-3 rounded-lg bg-white shadow-sm">
-                  <MapPin size={20} className="text-primary-700 mt-1 flex-shrink-0" />
+                  <MapPin size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium text-accent-700">Location</h3>
                     <p className="text-sm text-gray-600">Downtown Calgary</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3 hover-lift p-3 rounded-lg bg-white shadow-sm">
-                  <Utensils size={20} className="text-primary-700 mt-1 flex-shrink-0" />
+                  <Utensils size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium text-accent-700">Cuisine</h3>
                     <p className="text-sm text-gray-600">Middle Eastern</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3 hover-lift p-3 rounded-lg bg-white shadow-sm">
-                  <Clock size={20} className="text-primary-700 mt-1 flex-shrink-0" />
+                  <Clock size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium text-accent-700">Open Hours</h3>
                     <p className="text-sm text-gray-600">11 AM - 11 PM</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3 hover-lift p-3 rounded-lg bg-white shadow-sm">
-                  <Star size={20} className="text-primary-700 mt-1 flex-shrink-0" />
+                  <Star size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium text-accent-700">Rating</h3>
                     <p className="text-sm text-gray-600">4.8/5 (200+ reviews)</p>
@@ -147,7 +147,7 @@ const Home = () => {
               </div>
               <Link 
                 to="/about" 
-                className="text-primary-700 hover:text-primary-800 font-medium flex items-center gap-1 hover:-translate-y-1 transition-transform duration-300 touch-manipulation"
+                className="text-secondary-300 hover:text-secondary-400 font-medium flex items-center gap-1 hover:-translate-y-1 transition-transform duration-300 touch-manipulation"
               >
                 Learn more about us <ArrowRight size={16} />
               </Link>
@@ -246,7 +246,7 @@ const Home = () => {
                   <div className="p-4 sm:p-5">
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-800 pr-2">{item.name}</h3>
-                      <span className="text-primary-700 font-medium whitespace-nowrap">{item.price}</span>
+                      <span className="text-secondary-300 font-medium whitespace-nowrap">{item.price}</span>
                     </div>
                     <p className="text-sm sm:text-base text-gray-600 mb-3">{item.description}</p>
                     <div className="flex flex-wrap justify-between items-center gap-2">
@@ -268,7 +268,7 @@ const Home = () => {
           <div className="text-center mt-8 sm:mt-12">
             <Link 
               to="/menu" 
-              className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-6 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium inline-flex items-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
+              className="bg-gradient-to-r from-secondary-300 to-secondary-400 hover:from-secondary-400 hover:to-secondary-500 text-white px-6 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium inline-flex items-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
             >
               View Full Menu <ArrowRight size={18} />
             </Link>
@@ -341,7 +341,7 @@ const Home = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 to="/menu" 
-                className="bg-white hover:bg-gray-100 text-primary-700 px-6 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium flex items-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
+                className="bg-white hover:bg-gray-100 text-secondary-300 px-6 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium flex items-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
               >
                 View Menu
               </Link>
