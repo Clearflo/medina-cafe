@@ -108,8 +108,8 @@ const Header = () => {
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
-                  `text-lg font-medium transition-colors duration-200 hover:text-primary-700 ${
-                    isActive ? 'text-primary-700' : getTextColor()
+                  `text-lg font-medium transition-colors duration-200 hover:text-secondary-600 ${
+                    isActive ? 'text-secondary-600' : getTextColor()
                   }`
                 }
               >
@@ -118,7 +118,7 @@ const Header = () => {
             ))}
             <NavLink
               to="/menu"
-              className="bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-full transition-all duration-300 font-medium flex items-center justify-center"
+              className="bg-secondary-400 hover:bg-secondary-500 text-white px-6 py-3 rounded-full transition-all duration-300 font-medium flex items-center justify-center"
             >
               Order Now
             </NavLink>
@@ -152,8 +152,8 @@ const Header = () => {
                     key={link.to}
                     to={link.to}
                     className={({ isActive }) =>
-                      `text-xl font-medium py-4 transition-colors duration-200 hover:text-primary-700 ${
-                        isActive ? 'text-primary-700' : 'text-accent-700'
+                      `text-xl font-medium py-4 transition-colors duration-200 hover:text-secondary-600 ${
+                        isActive ? 'text-secondary-600' : 'text-accent-700'
                       }`
                     }
                     onClick={() => setIsOpen(false)}
@@ -163,7 +163,7 @@ const Header = () => {
                 ))}
                 <NavLink
                   to="/menu"
-                  className="bg-primary-700 hover:bg-primary-800 text-white py-4 rounded-lg text-center transition-all duration-300 font-medium text-xl mt-4"
+                  className="bg-secondary-400 hover:bg-secondary-500 text-white py-4 rounded-lg text-center transition-all duration-300 font-medium text-xl mt-4"
                   onClick={() => setIsOpen(false)}
                 >
                   Order Now
