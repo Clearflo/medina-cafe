@@ -116,12 +116,12 @@ const Header = () => {
                 {link.label}
               </NavLink>
             ))}
-            <a
-              href="tel:+14031234567"
+            <NavLink
+              to="/menu"
               className="bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-full transition-all duration-300 font-medium flex items-center justify-center"
             >
               Order Now
-            </a>
+            </NavLink>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -161,13 +161,13 @@ const Header = () => {
                     {link.label}
                   </NavLink>
                 ))}
-                <a
-                  href="tel:+14031234567"
+                <NavLink
+                  to="/menu"
                   className="bg-primary-700 hover:bg-primary-800 text-white py-4 rounded-lg text-center transition-all duration-300 font-medium text-xl mt-4"
                   onClick={() => setIsOpen(false)}
                 >
                   Order Now
-                </a>
+                </NavLink>
               </nav>
             </div>
           </motion.div>
