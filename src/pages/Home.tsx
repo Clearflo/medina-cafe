@@ -68,7 +68,7 @@ const Home = () => {
       {/* About Section */}
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div 
               initial="hidden"
               whileInView="visible"
@@ -76,91 +76,13 @@ const Home = () => {
               variants={fadeIn}
             >
               <SectionHeading 
-                title="Welcome to Medina Cafe" 
-                subtitle="A taste of the Middle East in Calgary"
+                title="Premium Sheesha Lounge" 
+                subtitle=""
+                centered
               />
-              <p className="text-gray-600 mb-4 sm:mb-6">
-                Established in 2015, Medina Cafe & Grill brings authentic Middle Eastern flavors and traditions to Calgary. Our restaurant offers a warm, inviting atmosphere where friends and family can gather to enjoy delicious food and premium sheesha.
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Established in 2010, Medina Cafe & Grill brings authentic Middle Eastern flavors and traditions to Calgary. Our restaurant offers a warm, inviting atmosphere where friends and family can gather to enjoy delicious food and premium sheesha.
               </p>
-              <p className="text-gray-600 mb-6 sm:mb-8">
-                From our carefully sourced ingredients to our traditional cooking methods, we strive to provide an authentic experience with every visit. Our chefs prepare each dish with passion and attention to detail, ensuring a memorable dining experience.
-              </p>
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                <div className="flex items-start gap-2 sm:gap-3 hover-lift p-3 rounded-lg bg-white shadow-sm">
-                  <MapPin size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-medium text-accent-700">Location</h3>
-                    <p className="text-sm text-gray-600">Downtown Calgary</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2 sm:gap-3 hover-lift p-3 rounded-lg bg-white shadow-sm">
-                  <Utensils size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-medium text-accent-700">Cuisine</h3>
-                    <p className="text-sm text-gray-600">Middle Eastern</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2 sm:gap-3 hover-lift p-3 rounded-lg bg-white shadow-sm">
-                  <Clock size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-medium text-accent-700">Open Hours</h3>
-                    <p className="text-sm text-gray-600">11 AM - 11 PM</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2 sm:gap-3 hover-lift p-3 rounded-lg bg-white shadow-sm">
-                  <Star size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-medium text-accent-700">Rating</h3>
-                    <p className="text-sm text-gray-600">4.8/5 (200+ reviews)</p>
-                  </div>
-                </div>
-              </div>
-              <Link 
-                to="/about" 
-                className="text-secondary-300 hover:text-secondary-400 font-medium flex items-center gap-1 hover:-translate-y-1 transition-transform duration-300 touch-manipulation"
-              >
-                Learn more about us <ArrowRight size={16} />
-              </Link>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-              className="grid grid-cols-2 gap-2 sm:gap-4"
-            >
-              <div className="space-y-2 sm:space-y-4">
-                <div className="rounded-lg overflow-hidden shadow-md h-36 sm:h-48 hover-lift">
-                  <ImageWithLoader
-                    src="https://images.pexels.com/photos/7470753/pexels-photo-7470753.jpeg"
-                    alt="Middle Eastern Food"
-                    className="w-full h-full"
-                  />
-                </div>
-                <div className="rounded-lg overflow-hidden shadow-md h-48 sm:h-64 hover-lift">
-                  <ImageWithLoader
-                    src="https://images.pexels.com/photos/6157001/pexels-photo-6157001.jpeg"
-                    alt="Restaurant Interior"
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2 sm:space-y-4 mt-4 sm:mt-8">
-                <div className="rounded-lg overflow-hidden shadow-md h-48 sm:h-64 hover-lift">
-                  <ImageWithLoader
-                    src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg"
-                    alt="Sheesha Lounge"
-                    className="w-full h-full"
-                  />
-                </div>
-                <div className="rounded-lg overflow-hidden shadow-md h-36 sm:h-48 hover-lift">
-                  <ImageWithLoader
-                    src="https://images.pexels.com/photos/7474389/pexels-photo-7474389.jpeg"
-                    alt="Cooking Preparation"
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
