@@ -45,8 +45,10 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Playfair Display', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Bread Coffee', 'serif'],
+        body: ['Bread Coffee', 'sans-serif'],
+        sans: ['Bread Coffee', 'sans-serif'],
+        serif: ['Bread Coffee', 'serif'],
       },
       backgroundImage: {
         'hero-pattern': "url('https://images.pexels.com/photos/7474247/pexels-photo-7474247.jpeg')",
