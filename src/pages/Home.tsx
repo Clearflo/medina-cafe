@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { ArrowRight, Star, MapPin, Utensils, Clock } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
-import { testimonials, menuItems } from '../utils/constants';
+import { menuItems } from '../utils/constants';
 import ParallaxSection from '../components/ui/ParallaxSection';
 import GlassmorphicCard from '../components/ui/GlassmorphicCard';
 import ImageWithLoader from '../components/ui/ImageWithLoader';
@@ -247,87 +247,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
-      <section className="py-12 md:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 bg-pattern bg-repeat"></div>
-        <div className="container mx-auto px-4 md:px-6 relative">
-          <SectionHeading 
-            title="What Our Customers Say" 
-            subtitle="Hear from our satisfied guests"
-            centered
-          />
-          
-          <div className="overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 hide-scrollbar">
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 min-w-[280px]"
-              style={{ gridAutoFlow: 'column', gridAutoColumns: 'calc(100% - 16px)', width: 'max-content' }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <motion.div 
-                  key={testimonial.id}
-                  variants={fadeIn}
-                  whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)" }}
-                  className="bg-white p-5 sm:p-6 rounded-lg shadow-md transition-all duration-300 w-[280px] sm:w-[220px] md:w-[240px] lg:w-auto border border-gray-100 backdrop-blur-sm bg-white/90"
-                  style={{
-                    transformOrigin: index % 2 === 0 ? "bottom" : "top"
-                  }}
-                >
-                  <div className="flex gap-1 mb-3 sm:mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={16} className="text-secondary-400 fill-secondary-400" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 mb-3 sm:mb-4 italic text-sm sm:text-base">"{testimonial.comment}"</p>
-                  <p className="font-medium text-accent-700 text-sm sm:text-base">- {testimonial.name}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <ParallaxSection 
-        imageUrl="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg"
-        overlayColor="from-primary-800/90 to-accent-800/90"
-      >
-        <div className="text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4 text-white">
-              Ready to Experience Medina?
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-200">
-              Join us for a delightful culinary journey and relaxing sheesha experience.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                to="/menu" 
-                className="bg-white hover:bg-gray-100 text-secondary-300 px-6 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium flex items-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
-              >
-                View Menu
-              </Link>
-              <Link 
-                to="/menu" 
-                onClick={scrollToSheesha}
-                className="glass-dark hover:bg-white/20 border border-white/30 text-white px-6 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
-              >
-                Sheesha Menu
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </ParallaxSection>
     </div>
   );
 };
