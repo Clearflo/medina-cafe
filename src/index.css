@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bread Coffee:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,23 +6,32 @@
 
 @layer base {
   * {
-    font-family: 'Bread Coffee', sans-serif;
-    color: #8B2C2C; /* Burgundy color for all text */
+    font-family: 'Playfair Display', serif;
+    color: #8B2C2C !important; /* Burgundy color for all text */
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bread Coffee', sans-serif;
-    color: #8B2C2C;
+    font-family: 'Playfair Display', serif;
+    color: #8B2C2C !important;
   }
   
   .logo {
-    font-family: 'Bread Coffee', sans-serif;
-    color: #8B2C2C;
+    font-family: 'Playfair Display', serif;
+    color: #8B2C2C !important;
   }
   
   .menu-heading {
-    font-family: 'Bread Coffee', sans-serif;
-    color: #8B2C2C;
+    font-family: 'Playfair Display', serif;
+    color: #8B2C2C !important;
+  }
+  
+  body {
+    font-family: 'Playfair Display', serif;
+    color: #8B2C2C !important;
+  }
+  
+  p, span, div, a, button {
+    color: #8B2C2C !important;
   }
 }
 
