@@ -5,8 +5,6 @@ import { ArrowRight, Star, MapPin, Utensils, Clock } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
-import ParallaxSection from '../components/ui/ParallaxSection';
-import GlassmorphicCard from '../components/ui/GlassmorphicCard';
 import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 const fadeIn = {
@@ -167,20 +165,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Parallax Section */}
-      <ParallaxSection imageUrl="https://images.pexels.com/photos/6546258/pexels-photo-6546258.jpeg">
-        <div className="max-w-4xl mx-auto py-12 md:py-16 text-center">
-          <GlassmorphicCard className="max-w-2xl mx-auto bg-white/95 backdrop-blur-md shadow-2xl border border-white/20">
-            <h2 className="font-heading text-2xl sm:text-3xl font-semibold mb-4 text-accent-800">
-              "Food is not just eating energy. It's an experience."
-            </h2>
-            <p className="text-gray-700">
-              At Medina, we believe in creating memorable dining experiences through authentic flavors, warm hospitality, and premium sheesha.
-            </p>
-          </GlassmorphicCard>
-        </div>
-      </ParallaxSection>
 
       {/* Featured Menu Section */}
       <section className="py-12 md:py-20 bg-gray-50">
