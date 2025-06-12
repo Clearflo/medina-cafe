@@ -27,29 +27,29 @@ const staggerContainer = {
 const About = () => {
   const features = [
     {
-      icon: <Coffee className="text-primary-700" size={24} />,
+      icon: <Coffee className="text-secondary-300" size={24} />,
       title: 'Premium Sheesha',
       description: 'We offer top-quality sheesha with a wide variety of flavors to choose from.'
     },
     {
-      icon: <Utensils className="text-primary-700\" size={24} />,
+      icon: <Utensils className="text-secondary-300" size={24} />,
       title: 'Authentic Cuisine',
       description: 'Our chefs prepare authentic Middle Eastern dishes using traditional recipes.'
     },
     {
-      icon: <Users className="text-primary-700\" size={24} />,
+      icon: <Users className="text-secondary-300" size={24} />,
       title: 'Welcoming Atmosphere',
       description: 'A cozy space where friends and family can gather and enjoy good food.'
     },
     {
-      icon: <Award className="text-primary-700\" size={24} />,
+      icon: <Award className="text-secondary-300" size={24} />,
       title: 'Quality Service',
       description: 'Our dedicated staff ensures you have a memorable dining experience.'
     }
   ];
 
   return (
-    <div className="pt-24 pb-12 sm:pb-16">
+    <div className="pt-24 pb-12 sm:pb-16 bg-stone-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -107,7 +107,7 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeIn}
-          className="mt-12 sm:mt-16 bg-accent-50 p-5 sm:p-6 md:p-8 rounded-lg"
+          className="mt-12 sm:mt-16 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm"
         >
           <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700 mb-3 sm:mb-4">
             Our Concept
@@ -149,10 +149,10 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeIn}
-          className="mt-12 sm:mt-16 bg-primary-700/5 p-5 sm:p-6 md:p-8 rounded-lg"
+          className="mt-12 sm:mt-16 bg-secondary-300/10 p-5 sm:p-6 md:p-8 rounded-lg"
         >
           <div className="flex items-center gap-3 mb-4">
-            <AlertTriangle size={24} className="text-primary-700 flex-shrink-0" />
+            <AlertTriangle size={24} className="text-secondary-300 flex-shrink-0" />
             <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700">
               Restaurant Policies
             </h3>
@@ -161,29 +161,29 @@ const About = () => {
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
             <div className="space-y-3">
               <div className="flex items-start gap-2">
-                <Info size={18} className="text-primary-700 flex-shrink-0 mt-0.5" />
+                <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">18% gratuity will be added for groups of 6 or more</p>
               </div>
               <div className="flex items-start gap-2">
-                <Info size={18} className="text-primary-700 flex-shrink-0 mt-0.5" />
+                <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">Minimum 1 shisha per 2 customers</p>
               </div>
               <div className="flex items-start gap-2">
-                <Info size={18} className="text-primary-700 flex-shrink-0 mt-0.5" />
+                <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">Minimum 1 drink per customer</p>
               </div>
             </div>
             <div className="space-y-3">
               <div className="flex items-start gap-2">
-                <Info size={18} className="text-primary-700 flex-shrink-0 mt-0.5" />
+                <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">Please ask your server to move sheesha pipes</p>
               </div>
               <div className="flex items-start gap-2">
-                <Info size={18} className="text-primary-700 flex-shrink-0 mt-0.5" />
+                <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">All prices are subject to change without notice</p>
               </div>
               <div className="flex items-start gap-2">
-                <Info size={18} className="text-primary-700 flex-shrink-0 mt-0.5" />
+                <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">Must be 18+ for sheesha service (ID required)</p>
               </div>
             </div>
@@ -213,7 +213,7 @@ const About = () => {
             </h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin size={20} className="text-primary-700 mt-1 flex-shrink-0" />
+                <MapPin size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-medium text-accent-700">Address</h4>
                   <p className="text-gray-600">{businessInfo.address}</p>
@@ -221,22 +221,22 @@ const About = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Phone size={20} className="text-primary-700 mt-1 flex-shrink-0" />
+                <Phone size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-medium text-accent-700">Phone</h4>
                   <p className="text-gray-600">
-                    <a href={`tel:${businessInfo.phone}`} className="hover:text-primary-700 transition-colors touch-manipulation">
+                    <a href={`tel:${businessInfo.phone}`} className="hover:text-secondary-300 transition-colors touch-manipulation">
                       {businessInfo.phone}
                     </a>
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Mail size={20} className="text-primary-700 mt-1 flex-shrink-0" />
+                <Mail size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-medium text-accent-700">Email</h4>
                   <p className="text-gray-600">
-                    <a href={`mailto:${businessInfo.email}`} className="hover:text-primary-700 transition-colors touch-manipulation">
+                    <a href={`mailto:${businessInfo.email}`} className="hover:text-secondary-300 transition-colors touch-manipulation">
                       {businessInfo.email}
                     </a>
                   </p>
@@ -274,7 +274,7 @@ const About = () => {
               <div className="relative pb-[56.25%] h-0">
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                   <div className="text-center p-4">
-                    <MapPin size={36} className="text-primary-700 mb-2 mx-auto" />
+                    <MapPin size={36} className="text-secondary-300 mb-2 mx-auto" />
                     <p className="text-gray-500 font-medium">Interactive Map</p>
                     <p className="text-xs sm:text-sm text-gray-400 mt-1">Google Maps Integration</p>
                   </div>
@@ -296,7 +296,7 @@ const About = () => {
             </h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Clock size={20} className="text-primary-700 mt-1 flex-shrink-0" />
+                <Clock size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                 <div className="w-full">
                   <h4 className="font-medium text-accent-700 mb-3">Open Hours</h4>
                   <div className="space-y-3">
@@ -312,7 +312,7 @@ const About = () => {
             </div>
 
             {/* Notes */}
-            <div className="mt-5 sm:mt-6 bg-gray-50 p-3 sm:p-4 rounded-lg">
+            <div className="mt-5 sm:mt-6 bg-stone-50 p-3 sm:p-4 rounded-lg">
               <h4 className="font-medium text-accent-700 mb-2">Special Notes</h4>
               <ul className="text-gray-600 space-y-1.5 sm:space-y-2 text-sm">
                 <li>• Kitchen closes 30 minutes before closing time</li>
@@ -332,7 +332,7 @@ const About = () => {
               <div className="flex gap-3 sm:gap-4">
                 <a 
                   href={`tel:${businessInfo.phone}`} 
-                  className="bg-primary-700 hover:bg-primary-800 text-white px-3 sm:px-4 py-2.5 sm:py-3 rounded-md transition-all duration-300 text-sm sm:text-base font-medium flex-1 text-center flex items-center justify-center gap-2 touch-manipulation"
+                  className="bg-secondary-300 hover:bg-secondary-400 text-white px-3 sm:px-4 py-2.5 sm:py-3 rounded-md transition-all duration-300 text-sm sm:text-base font-medium flex-1 text-center flex items-center justify-center gap-2 touch-manipulation"
                 >
                   <Phone size={16} /> Call Now
                 </a>
