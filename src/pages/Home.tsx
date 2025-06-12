@@ -58,40 +58,12 @@ const Home = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative h-screen min-h-[550px] flex items-center justify-center">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/medina 2021-08-15.jpeg')" }}>
-          <div className="absolute inset-0 bg-gradient-to-r from-accent-900/95 to-accent-800/90"></div>
-        </div>
-        <div className="container mx-auto px-4 md:px-6 relative z-10 flex justify-center items-center h-full pb-16">
-          <motion.div 
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-            className="max-w-md sm:max-w-lg md:max-w-2xl text-white text-center"
-          >
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-shadow">
-              Experience Authentic Middle Eastern Cuisine
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-200 text-shadow">
-              Savor traditional flavors and premium sheesha in the heart of Calgary
-            </p>
-            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
-              <Link 
-                to="/menu" 
-                className="bg-gradient-to-r from-secondary-300 to-secondary-400 hover:from-secondary-400 hover:to-secondary-500 text-white px-5 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium flex items-center justify-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
-              >
-                View Menu <ArrowRight size={18} />
-              </Link>
-              <Link 
-                to="/menu" 
-                onClick={scrollToSheesha}
-                className="glass-dark text-white hover:bg-white/10 px-5 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium touch-manipulation flex items-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-1"
-              >
-                Sheesha
-              </Link>
-            </div>
-          </motion.div>
+      {/* Hero Section - Clean Image Only */}
+      <section className="relative h-screen min-h-[550px]">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/medina 2021-08-15.jpeg')" }}
+        >
         </div>
       </section>
 
