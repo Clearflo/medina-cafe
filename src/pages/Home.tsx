@@ -33,27 +33,6 @@ const Home = () => {
     controls.start('visible');
   }, [controls]);
 
-  // Get featured items for homepage
-  const featuredItems = [
-    menuItems.mainDishes[0],
-    menuItems.appetizers[0],
-    menuItems.sheesha[1],
-  ];
-
-  // Function to scroll to sheesha section
-  const scrollToSheesha = () => {
-    // Navigate to menu page first
-    window.location.href = '/menu';
-    
-    // After navigation, scroll to sheesha section
-    setTimeout(() => {
-      const sheeshaButton = document.querySelector('button[data-category="sheesha"]');
-      if (sheeshaButton) {
-        sheeshaButton.click();
-      }
-    }, 500);
-  };
-
   return (
     <div>
       {/* Hero Section - Clean Image Only */}
@@ -88,69 +67,61 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Menu Section */}
+      {/* Gallery Section */}
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <SectionHeading 
-            title="Our Specialties" 
-            subtitle="Discover our most popular dishes and sheesha flavors"
-            centered
-          />
-          
           <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           >
-            {featuredItems.map((item) => (
-              <motion.div 
-                key={item.id} 
-                whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 border border-gray-100">
-                  {item.image && (
-                    <div className="h-48 sm:h-52 overflow-hidden">
-                      <ImageWithLoader 
-                        src={item.image} 
-                        alt={item.name}
-                        className="w-full h-full"
-                      />
-                    </div>
-                  )}
-                  <div className="p-4 sm:p-5">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-800 pr-2">{item.name}</h3>
-                      <span className="text-secondary-300 font-medium whitespace-nowrap">{item.price}</span>
-                    </div>
-                    <p className="text-sm sm:text-base text-gray-600 mb-3">{item.description}</p>
-                    <div className="flex flex-wrap justify-between items-center gap-2">
-                      <span className="text-xs py-1 px-2 bg-secondary-300/20 text-secondary-700 rounded-full">
-                        {item.category}
-                      </span>
-                      {item.notes && (
-                        <span className="text-xs text-gray-500 italic">
-                          {item.notes}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-          
-          <div className="text-center mt-8 sm:mt-12">
-            <Link 
-              to="/menu" 
-              className="bg-gradient-to-r from-secondary-300 to-secondary-400 hover:from-secondary-400 hover:to-secondary-500 text-white px-6 sm:px-8 py-3 rounded-full transition-all duration-300 text-base sm:text-lg font-medium inline-flex items-center gap-2 touch-manipulation shadow-md hover:shadow-lg hover:-translate-y-1"
+            <motion.div 
+              variants={fadeIn}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              View Full Menu <ArrowRight size={18} />
-            </Link>
-          </div>
+              <div className="aspect-square">
+                <ImageWithLoader 
+                  src="/images/Screenshot 2025-06-12 at 5.43.36 PM Medium 2.jpeg"
+                  alt="Medina Cafe Gallery Image 1"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div 
+              variants={fadeIn}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="aspect-square">
+                <ImageWithLoader 
+                  src="/images/Screenshot 2025-06-12 at 5.43.54 PM Medium.jpeg"
+                  alt="Medina Cafe Gallery Image 2"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div 
+              variants={fadeIn}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 sm:col-span-2 lg:col-span-1"
+            >
+              <div className="aspect-square">
+                <ImageWithLoader 
+                  src="/images/Screenshot 2025-06-12 at 5.45.35 PM Medium.jpeg"
+                  alt="Medina Cafe Gallery Image 3"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>
