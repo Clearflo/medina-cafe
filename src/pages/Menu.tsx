@@ -58,7 +58,7 @@ const MenuItem = ({ name, description, price, notes }: {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
-      className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+      className="bg-stone-50 p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
     >
       <div className="flex justify-between items-start mb-1">
         <h3 className="font-heading text-lg font-semibold text-accent-800">{name}</h3>
@@ -269,7 +269,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 pb-16 bg-stone-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -292,7 +292,7 @@ const Menu = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search our menu..."
-              className="w-full px-4 py-3 pl-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-base"
+              className="w-full px-4 py-3 pl-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-base bg-white"
             />
             <Search className="absolute left-3 top-3.5 text-gray-400" size={20} />
             {searchTerm && (
@@ -310,7 +310,7 @@ const Menu = () => {
         {/* Category Filters */}
         <div 
           ref={categoryRef} 
-          className={`transition-all duration-300 ${isSticky ? 'sticky top-[60px] z-30 bg-white shadow-md py-3 -mx-4 px-4 md:mx-0 md:px-0 md:static md:shadow-none md:py-0' : ''}`}
+          className={`transition-all duration-300 ${isSticky ? 'sticky top-[60px] z-30 bg-stone-50 shadow-md py-3 -mx-4 px-4 md:mx-0 md:px-0 md:static md:shadow-none md:py-0' : ''}`}
         >
           <div className="flex justify-start md:justify-center mb-6 mt-4 overflow-x-auto pb-2 hide-scrollbar">
             <div className="flex space-x-2 md:space-x-4">
@@ -324,7 +324,7 @@ const Menu = () => {
                     (activeCategory.includes('sheesha') && category.id === 'sheesha') ||
                     ((activeCategory.includes('coffee') || activeCategory.includes('tea') || activeCategory.includes('milkshake') || activeCategory.includes('juice')) && category.id === 'drinks')
                       ? 'bg-secondary-300 text-white'
-                      : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                      : 'bg-white text-accent-700 hover:bg-gray-100'
                   }`}
                 >
                   {category.icon}
@@ -350,7 +350,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'sheesha'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {sheeshaSubcategories.all}
@@ -360,7 +360,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'sheeshaHouse'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {sheeshaSubcategories.sheeshaHouse}
@@ -370,7 +370,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'sheeshaFresh'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {sheeshaSubcategories.sheeshaFresh}
@@ -380,7 +380,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'sheeshaPremium'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {sheeshaSubcategories.sheeshaPremium}
@@ -406,7 +406,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'drinks'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {drinkSubcategories.all}
@@ -416,7 +416,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'coffee'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {drinkSubcategories.coffee}
@@ -426,7 +426,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'tea'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {drinkSubcategories.tea}
@@ -436,7 +436,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'milkshake'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {drinkSubcategories.milkshake}
@@ -446,7 +446,7 @@ const Menu = () => {
                     className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
                       activeCategory === 'juice'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-gray-100 text-accent-700 hover:bg-gray-200'
+                        : 'bg-white text-accent-700 hover:bg-gray-100'
                     }`}
                   >
                     {drinkSubcategories.juice}
@@ -495,7 +495,7 @@ const Menu = () => {
                     
                     {/* Sheesha pricing info */}
                     {items.length > 0 && (
-                      <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                      <div className="mb-4 p-3 bg-white rounded-lg">
                         <p className="text-sm text-gray-700">
                           {category.includes('Premium') 
                             ? 'Premium Sheesha: $28.99-$29.99 | After 1AM: $30.99-$31.99' 
