@@ -31,7 +31,7 @@ const BackToTopButton = () => {
         <motion.button
           onClick={scrollToTop}
           aria-label="Back to top"
-          className="fixed bottom-6 left-6 z-40 bg-accent-700 hover:bg-accent-800 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+          className="fixed bottom-6 left-6 z-40 bg-secondary-300 hover:bg-secondary-400 text-[#8B2C2C] w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
