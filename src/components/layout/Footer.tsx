@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { Instagram, MapPin, Phone, Clock, Mail } from 'lucide-react';
 
 const Footer = () => {
@@ -7,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary-300 pt-10 sm:pt-12 pb-6">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -32,22 +31,6 @@ const Footer = () => {
                 <Instagram size={22} />
               </a>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 font-heading text-[#8B2C2C]">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <NavLink to="/" className="text-gray-600 hover:text-[#8B2C2C] transition-colors block py-1 touch-manipulation">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/menu" className="text-gray-600 hover:text-[#8B2C2C] transition-colors block py-1 touch-manipulation">Menu</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about" className="text-gray-600 hover:text-[#8B2C2C] transition-colors block py-1 touch-manipulation">About Us</NavLink>
-              </li>
-            </ul>
           </div>
 
           {/* Contact Information */}
