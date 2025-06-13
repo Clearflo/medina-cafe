@@ -40,7 +40,7 @@ const Home = () => {
           <img 
             src="/images/medina 2021-08-15.jpeg"
             alt="Medina Cafe"
-            className="w-full h-auto object-contain md:hidden block"
+            className="w-full h-auto object-cover md:hidden block max-h-[70vh]"
           />
           <div 
             className="hidden md:block h-screen min-h-[550px] bg-cover bg-center"
