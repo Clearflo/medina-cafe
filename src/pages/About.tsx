@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Users, Coffee, Award, Utensils, Info, AlertTriangle, ExternalLink } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
-import { businessInfo } from '../utils/constants';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -22,6 +21,16 @@ const staggerContainer = {
       staggerChildren: 0.2
     }
   }
+};
+
+const businessHours = {
+  monday: '4:00 PM - 2:00 AM',
+  tuesday: '2:00 PM - 2:00 AM',
+  wednesday: '2:00 PM - 2:00 AM',
+  thursday: '2:00 PM - 2:00 AM',
+  friday: '2:00 PM - 3:00 AM',
+  saturday: '2:00 PM - 3:00 AM',
+  sunday: '2:00 PM - 2:00 AM'
 };
 
 const About = () => {
@@ -55,7 +64,7 @@ const About = () => {
   };
 
   return (
-    <div className="pt-24 pb-12 sm:pb-16 bg-stone-50 min-h-screen">
+    <div className="pt-24 pb-12 bg-stone-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -66,18 +75,18 @@ const About = () => {
             title="About Us" 
             subtitle="Learn more about Medina Cafe & Grill Sheesha Lounge"
             centered
-            className="mt-4 sm:mt-8"
+            className="mt-4 mb-8"
           />
         </motion.div>
 
         {/* Story Section */}
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center mt-8 sm:mt-12">
+        <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="rounded-lg overflow-hidden shadow-md h-[300px] sm:h-auto"
+            className="rounded-lg overflow-hidden shadow-md h-[300px] md:h-auto"
           >
             <img 
               src="/images/aboutmedina.jpg" 
@@ -92,10 +101,10 @@ const About = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
           >
-            <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700 mb-3 sm:mb-4">
+            <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700 mb-4">
               Our Story
             </h3>
-            <p className="text-gray-600 mb-3 sm:mb-4">
+            <p className="text-gray-600 mb-4">
               Established in 2010, Medina Cafe & Grill was born from a passion for authentic Middle Eastern and Turkish cuisine and a desire to create a welcoming space for the Calgary community. Our founder, Ahmed Medina, brought his family recipes from Lebanon to share the rich culinary traditions of the Middle East.
             </p>
             <p className="text-gray-600">
@@ -110,16 +119,16 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 mb-12"
         >
           {features.map((feature, index) => (
             <motion.div
               key={index}
               variants={fadeIn}
-              className="bg-white p-5 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
+              className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
             >
               <div className="mb-3 sm:mb-4 flex justify-center">{feature.icon}</div>
-              <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-700 mb-1 sm:mb-2">
+              <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-700 mb-2">
                 {feature.title}
               </h3>
               <p className="text-xs sm:text-base text-gray-600">{feature.description}</p>
@@ -133,7 +142,7 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeIn}
-          className="mt-12 sm:mt-16 bg-secondary-300/10 p-5 sm:p-6 md:p-8 rounded-lg"
+          className="mb-12 bg-secondary-300/10 p-6 md:p-8 rounded-lg"
         >
           <div className="flex items-center gap-3 mb-4">
             <AlertTriangle size={24} className="text-secondary-300 flex-shrink-0" />
@@ -142,7 +151,7 @@ const About = () => {
             </h3>
           </div>
           
-          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 gap-6">
             <div className="space-y-3">
               <div className="flex items-start gap-2">
                 <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
@@ -173,8 +182,8 @@ const About = () => {
             </div>
           </div>
           
-          <div className="mt-5 sm:mt-6 p-3 sm:p-4 bg-white rounded-md shadow-sm">
-            <p className="text-xs sm:text-sm text-gray-600">
+          <div className="mt-6 p-4 bg-white rounded-md shadow-sm">
+            <p className="text-sm text-gray-600">
               At Medina Cafe & Grill, we strive to provide an exceptional experience for all our guests. 
               These policies help us maintain the quality of our service and ensure everyone has an enjoyable time.
               We appreciate your understanding and cooperation.
@@ -183,16 +192,16 @@ const About = () => {
         </motion.div>
 
         {/* Contact & Hours Section */}
-        <div className="mt-12 sm:mt-16 grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
-            className="bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-md"
+            className="bg-white p-6 md:p-8 rounded-lg shadow-md"
           >
-            <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700 mb-5 sm:mb-6">
+            <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700 mb-6">
               Contact Information
             </h3>
             <div className="space-y-4">
@@ -200,8 +209,8 @@ const About = () => {
                 <MapPin size={20} className="text-secondary-300 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-medium text-accent-700">Address</h4>
-                  <p className="text-gray-600">{businessInfo.address}</p>
-                  <p className="text-gray-600 mt-1">Calgary, Alberta, Canada</p>
+                  <p className="text-gray-600">123 Calgary Avenue</p>
+                  <p className="text-gray-600">Calgary, AB T2P 2Y3</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -209,8 +218,8 @@ const About = () => {
                 <div>
                   <h4 className="font-medium text-accent-700">Phone</h4>
                   <p className="text-gray-600">
-                    <a href={`tel:${businessInfo.phone}`} className="hover:text-secondary-300 transition-colors touch-manipulation">
-                      {businessInfo.phone}
+                    <a href="tel:+14031234567" className="hover:text-secondary-300 transition-colors touch-manipulation">
+                      (403) 123-4567
                     </a>
                   </p>
                 </div>
@@ -220,8 +229,8 @@ const About = () => {
                 <div>
                   <h4 className="font-medium text-accent-700">Email</h4>
                   <p className="text-gray-600">
-                    <a href={`mailto:${businessInfo.email}`} className="hover:text-secondary-300 transition-colors touch-manipulation">
-                      {businessInfo.email}
+                    <a href="mailto:info@medinacafe.com" className="hover:text-secondary-300 transition-colors touch-manipulation">
+                      info@medinacafe.com
                     </a>
                   </p>
                 </div>
@@ -248,9 +257,9 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
-            className="bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-md"
+            className="bg-white p-6 md:p-8 rounded-lg shadow-md"
           >
-            <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700 mb-5 sm:mb-6">
+            <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700 mb-6">
               Business Hours
             </h3>
             <div className="space-y-4">
@@ -259,104 +268,18 @@ const About = () => {
                 <div className="w-full">
                   <h4 className="font-medium text-accent-700 mb-3">Open Hours</h4>
                   <div className="space-y-3">
-                    {Object.entries(businessInfo.hours).map(([day, hours]) => (
+                    {Object.entries(businessHours).map(([day, hours]) => (
                       <div key={day} className="flex justify-between items-center border-b border-gray-100 pb-2">
                         <span className="text-gray-600 capitalize">{day}</span>
-                        <span className="font-medium">{hours}</span>
+                        <span className="font-medium text-sm">{hours}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Notes */}
-            <div className="mt-5 sm:mt-6 bg-stone-50 p-3 sm:p-4 rounded-lg">
-              <h4 className="font-medium text-accent-700 mb-2">Special Notes</h4>
-              <ul className="text-gray-600 space-y-1.5 sm:space-y-2 text-sm">
-                <li>• Kitchen closes 30 minutes before closing time</li>
-                <li>• Last sheesha orders taken 1 hour before closing</li>
-                <li>• Reservations recommended for groups of 6 or more</li>
-                <li>• Happy hour: Monday-Thursday 3-6PM (15% off select items)</li>
-                <li>• Extended hours on holidays - please call for details</li>
-              </ul>
-            </div>
-
-            {/* Reservations */}
-            <div className="mt-5 sm:mt-6">
-              <h4 className="font-medium text-accent-700 mb-3">Make a Reservation</h4>
-              <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                For group reservations or special events, please call us directly or send an email with your details.
-              </p>
-              <div className="flex gap-3 sm:gap-4">
-                <a 
-                  href={`tel:${businessInfo.phone}`} 
-                  className="bg-secondary-300 hover:bg-secondary-400 text-white px-3 sm:px-4 py-2.5 sm:py-3 rounded-md transition-all duration-300 text-sm sm:text-base font-medium flex-1 text-center flex items-center justify-center gap-2 touch-manipulation"
-                >
-                  <Phone size={16} /> Call Now
-                </a>
-                <a 
-                  href={`mailto:${businessInfo.email}?subject=Reservation Request`} 
-                  className="bg-accent-700 hover:bg-accent-800 text-white px-3 sm:px-4 py-2.5 sm:py-3 rounded-md transition-all duration-300 text-sm sm:text-base font-medium flex-1 text-center flex items-center justify-center gap-2 touch-manipulation"
-                >
-                  <Mail size={16} /> Email Us
-                </a>
-              </div>
-            </div>
           </motion.div>
         </div>
-
-        {/* FAQ Section */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeIn}
-          className="mt-12 sm:mt-16"
-        >
-          <SectionHeading 
-            title="Frequently Asked Questions" 
-            centered
-          />
-          
-          <div className="max-w-3xl mx-auto mt-6 sm:mt-8 space-y-4 sm:space-y-6">
-            <div className="bg-white p-5 sm:p-6 rounded-lg shadow-md">
-              <h4 className="font-heading text-base sm:text-lg font-semibold text-accent-700 mb-2">
-                Do you offer catering services?
-              </h4>
-              <p className="text-sm sm:text-base text-gray-600">
-                Yes, we offer catering for events of all sizes. Please contact us at least 48 hours in advance to discuss your requirements and place your order.
-              </p>
-            </div>
-            
-            <div className="bg-white p-5 sm:p-6 rounded-lg shadow-md">
-              <h4 className="font-heading text-base sm:text-lg font-semibold text-accent-700 mb-2">
-                Can I bring my own sheesha?
-              </h4>
-              <p className="text-sm sm:text-base text-gray-600">
-                No, due to health and safety regulations, we do not allow outside sheesha. We offer a wide variety of premium flavors to choose from.
-              </p>
-            </div>
-            
-            <div className="bg-white p-5 sm:p-6 rounded-lg shadow-md">
-              <h4 className="font-heading text-base sm:text-lg font-semibold text-accent-700 mb-2">
-                Is there a dress code?
-              </h4>
-              <p className="text-sm sm:text-base text-gray-600">
-                We maintain a casual to smart-casual dress code. We ask that guests refrain from wearing sportswear or beachwear in the evenings.
-              </p>
-            </div>
-            
-            <div className="bg-white p-5 sm:p-6 rounded-lg shadow-md">
-              <h4 className="font-heading text-base sm:text-lg font-semibold text-accent-700 mb-2">
-                Do you have vegetarian or vegan options?
-              </h4>
-              <p className="text-sm sm:text-base text-gray-600">
-                Yes, we have a variety of vegetarian and vegan dishes. Our menu clearly marks these options, and our staff is happy to accommodate dietary preferences.
-              </p>
-            </div>
-          </div>
-        </motion.div>
         
       </div>
     </div>
