@@ -36,12 +36,12 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section - Clean Image Only */}
-      <section className="relative pt-20 md:pt-0">
+      <section className="relative pt-16 md:pt-0">
         <div className="w-full">
           <img 
             src="/images/medina 2021-08-15.jpeg"
             alt="Medina Cafe"
-            className="w-full h-auto object-contain md:hidden"
+            className="w-full h-auto object-contain md:hidden block"
           />
           <div 
             className="hidden md:block h-screen min-h-[550px] bg-cover bg-center"
