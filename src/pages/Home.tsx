@@ -36,11 +36,17 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section - Clean Image Only */}
-      <section className="relative h-screen min-h-[550px] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat md:bg-cover"
-          style={{ backgroundImage: "url('/images/medina 2021-08-15.jpeg')" }}
-        >
+      <section className="relative">
+        <div className="w-full">
+          <img 
+            src="/images/medina 2021-08-15.jpeg"
+            alt="Medina Cafe"
+            className="w-full h-auto object-contain md:hidden"
+          />
+          <div 
+            className="hidden md:block h-screen min-h-[550px] bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/medina 2021-08-15.jpeg')" }}
+          />
         </div>
       </section>
 
