@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Users, Coffee, Award, Utensils, Info, AlertTriangle, Facebook, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Users, Coffee, Award, Utensils, Info, AlertTriangle, ExternalLink } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { businessInfo } from '../utils/constants';
@@ -48,6 +48,12 @@ const About = () => {
     }
   ];
 
+  const handleMapClick = () => {
+    // Replace with your actual Google Maps URL
+    const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=123+Calgary+Avenue,+Calgary,+AB+T2P+2Y3";
+    window.open(googleMapsUrl, '_blank');
+  };
+
   return (
     <div className="pt-24 pb-12 sm:pb-16 bg-stone-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
@@ -74,8 +80,8 @@ const About = () => {
             className="rounded-lg overflow-hidden shadow-md h-[300px] sm:h-auto"
           >
             <img 
-              src="https://images.pexels.com/photos/6157056/pexels-photo-6157056.jpeg" 
-              alt="Restaurant Interior" 
+              src="/images/aboutmedina.jpg" 
+              alt="Medina Cafe Interior" 
               className="rounded-lg shadow-md w-full h-full object-cover"
               loading="lazy"
             />
@@ -90,35 +96,13 @@ const About = () => {
               Our Story
             </h3>
             <p className="text-gray-600 mb-3 sm:mb-4">
-              Established in 2015, Medina Cafe & Grill was born from a passion for authentic Middle Eastern and Turkish cuisine and a desire to create a welcoming space for the Calgary community. Our founder, Ahmed Medina, brought his family recipes from Lebanon to share the rich culinary traditions of the Middle East.
-            </p>
-            <p className="text-gray-600 mb-3 sm:mb-4">
-              What began as a small cafe has grown into a beloved destination for both locals and visitors seeking authentic flavors and a relaxing sheesha experience. Our commitment to quality and tradition has remained unwavering throughout our journey.
+              Established in 2010, Medina Cafe & Grill was born from a passion for authentic Middle Eastern and Turkish cuisine and a desire to create a welcoming space for the Calgary community. Our founder, Ahmed Medina, brought his family recipes from Lebanon to share the rich culinary traditions of the Middle East.
             </p>
             <p className="text-gray-600">
-              Today, we continue to serve our community with the same passion and dedication, offering a taste of the Middle East in the heart of Calgary. Our menu features time-honored recipes prepared with the finest ingredients, and our sheesha selection is carefully curated to provide an exceptional experience.
+              What began as a small cafe has grown into a beloved destination for both locals and visitors seeking authentic flavors and a relaxing sheesha experience. Our commitment to quality and tradition has remained unwavering throughout our journey.
             </p>
           </motion.div>
         </div>
-
-        {/* Restaurant Concept */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeIn}
-          className="mt-12 sm:mt-16 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm"
-        >
-          <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700 mb-3 sm:mb-4">
-            Our Concept
-          </h3>
-          <p className="text-gray-600 mb-3 sm:mb-4">
-            Medina Cafe & Grill Sheesha Lounge brings together the best of Middle Eastern and Turkish cuisine with a premium sheesha experience. We've created a space where traditional flavors meet modern dining in a comfortable, welcoming atmosphere.
-          </p>
-          <p className="text-gray-600">
-            Our concept revolves around creating an authentic experience that transports our guests to the vibrant streets of Istanbul, Beirut, and Cairo. From the aromatic spices in our dishes to the carefully selected sheesha flavors, every aspect of Medina is designed to provide a genuine taste of Middle Eastern hospitality.
-          </p>
-        </motion.div>
 
         {/* Features Section */}
         <motion.div
@@ -244,42 +228,17 @@ const About = () => {
               </div>
             </div>
 
-            {/* Social Media Links */}
-            <div className="mt-5 sm:mt-6">
-              <h4 className="font-medium text-accent-700 mb-3">Connect With Us</h4>
-              <div className="flex gap-3 sm:gap-4">
-                <a 
-                  href={businessInfo.socialMedia.facebook} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-accent-700 hover:bg-accent-800 text-white p-3 rounded-full transition-colors touch-manipulation"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={20} />
-                </a>
-                <a 
-                  href={businessInfo.socialMedia.instagram} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-accent-700 hover:bg-accent-800 text-white p-3 rounded-full transition-colors touch-manipulation"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={20} />
-                </a>
-              </div>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="mt-6 bg-gray-200 rounded-lg overflow-hidden shadow-sm">
-              <div className="relative pb-[56.25%] h-0">
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                  <div className="text-center p-4">
-                    <MapPin size={36} className="text-secondary-300 mb-2 mx-auto" />
-                    <p className="text-gray-500 font-medium">Interactive Map</p>
-                    <p className="text-xs sm:text-sm text-gray-400 mt-1">Google Maps Integration</p>
-                  </div>
-                </div>
-              </div>
+            {/* Simplified Map Button */}
+            <div className="mt-6">
+              <h4 className="font-medium text-accent-700 mb-3">Location</h4>
+              <button
+                onClick={handleMapClick}
+                className="w-full bg-secondary-300 hover:bg-secondary-400 text-white p-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-3 shadow-md hover:shadow-lg"
+              >
+                <MapPin size={24} />
+                <span className="font-medium">View on Google Maps</span>
+                <ExternalLink size={18} />
+              </button>
             </div>
           </motion.div>
 
