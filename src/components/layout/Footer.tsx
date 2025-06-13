@@ -1,4 +1,4 @@
-import { Instagram, MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-secondary-300 pt-10 sm:pt-12 pb-6">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo and Description */}
+          {/* Logo Only */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img 
@@ -16,20 +16,6 @@ const Footer = () => {
                 className="w-7 h-7 object-contain"
               />
               <span className="font-heading text-xl sm:text-2xl font-semibold text-[#8B2C2C]">Medina</span>
-            </div>
-            <p className="text-sm text-gray-600 max-w-xs">
-              Experience authentic Middle Eastern cuisine and premium sheesha in a welcoming atmosphere at Calgary's favorite lounge.
-            </p>
-            <div className="flex pt-2">
-              <a 
-                href="https://www.instagram.com/medinacafegrill/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="Follow us on Instagram" 
-                className="text-gray-600 hover:text-[#8B2C2C] transition-colors p-2 touch-manipulation"
-              >
-                <Instagram size={22} />
-              </a>
             </div>
           </div>
 
