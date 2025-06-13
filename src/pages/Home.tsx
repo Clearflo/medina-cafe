@@ -40,8 +40,8 @@ const Home = () => {
           {/* Mobile Hero - Full image visible without cropping */}
           <div className="md:hidden relative bg-gray-100">
             <img 
-              src="/images/aboutmedina.jpg"
-              alt="Medina Cafe Interior"
+              src="/images/medinamainimage.jpeg"
+              alt="Medina Cafe Main Interior"
               className="w-full h-auto object-contain max-h-[70vh]"
               loading="eager"
             />
@@ -51,7 +51,7 @@ const Home = () => {
             <div 
               className="h-screen min-h-[600px] bg-cover bg-center bg-no-repeat"
               style={{ 
-                backgroundImage: "url('/images/aboutmedina.jpg')",
+                backgroundImage: "url('/images/medinamainimage.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center center'
               }}
