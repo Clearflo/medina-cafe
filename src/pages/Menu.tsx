@@ -4,7 +4,6 @@ import { UtensilsCrossed, Sandwich, Wine, CakeSlice, Search, CupSoda, FilterX } 
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
-import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -81,6 +80,11 @@ const Menu = () => {
   
   const categoryRef = useRef<HTMLDivElement>(null);
   const prevScrollY = useRef(0);
+  
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   // Reset search when changing categories
   useEffect(() => {
@@ -495,28 +499,12 @@ const Menu = () => {
                     
                     {/* Sheesha pricing info */}
                     {items.length > 0 && (
-                      <div className="mb-4 p-3 bg-white rounded-lg">
+                      <div className="mb-6 p-3 bg-white rounded-lg">
                         <p className="text-sm text-gray-700">
                           {category.includes('Premium') 
                             ? 'Premium Sheesha: $28.99-$29.99 | After 1AM: $30.99-$31.99' 
                             : 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'}
                         </p>
-                      </div>
-                    )}
-                    
-                    {/* Sheesha category image - one per category */}
-                    {items.length > 0 && (
-                      <div className="mb-6 rounded-lg overflow-hidden h-48 sm:h-64">
-                        <ImageWithLoader 
-                          src={category === 'House Blend Sheesha' 
-                            ? "https://images.pexels.com/photos/6546260/pexels-photo-6546260.jpeg"
-                            : category === 'Fresh Sheesha'
-                              ? "https://images.pexels.com/photos/6546619/pexels-photo-6546619.jpeg"
-                              : "https://images.pexels.com/photos/6544945/pexels-photo-6544945.jpeg"
-                          } 
-                          alt={category}
-                          className="w-full h-full object-cover"
-                        />
                       </div>
                     )}
                     
@@ -536,7 +524,7 @@ const Menu = () => {
               )
             )}
 
-            {/* Non-Sheesha Menu Items - Now with unified text-based layout */}
+            {/* Non-Sheesha Menu Items */}
             {Object.entries(groupedNonSheeshaItems).map(([category, items]) => 
               items.length > 0 ? (
                 <div key={category} className="mb-12">
