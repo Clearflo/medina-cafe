@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Facebook, Instagram, MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { Instagram, MapPin, Phone, Clock, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,21 +21,12 @@ const Footer = () => {
             <p className="text-sm text-gray-600 max-w-xs">
               Experience authentic Middle Eastern cuisine and premium sheesha in a welcoming atmosphere at Calgary's favorite lounge.
             </p>
-            <div className="flex space-x-4 pt-2">
+            <div className="flex pt-2">
               <a 
-                href="https://facebook.com" 
+                href="https://www.instagram.com/medinacafegrill/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                aria-label="Facebook" 
-                className="text-gray-600 hover:text-[#8B2C2C] transition-colors p-2 touch-manipulation"
-              >
-                <Facebook size={22} />
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="Instagram" 
+                aria-label="Follow us on Instagram" 
                 className="text-gray-600 hover:text-[#8B2C2C] transition-colors p-2 touch-manipulation"
               >
                 <Instagram size={22} />
