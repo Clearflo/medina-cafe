@@ -40,16 +40,23 @@ const Home = () => {
           {/* Mobile Hero - Full image visible without cropping */}
           <div className="md:hidden relative bg-gray-100">
             <img 
-              src="/images/medina-2021-08-15.jpeg"
-              alt="Medina Cafe"
-              className="w-full h-auto object-contain max-h-[65vh]"
+              src="/images/aboutmedina.jpg"
+              alt="Medina Cafe Interior"
+              className="w-full h-auto object-contain max-h-[70vh]"
+              loading="eager"
             />
           </div>
-          {/* Desktop Hero */}
-          <div 
-            className="hidden md:block h-screen min-h-[550px] bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/medina-2021-08-15.jpeg')" }}
-          />
+          {/* Desktop Hero - Full height background */}
+          <div className="hidden md:block">
+            <div 
+              className="h-screen min-h-[600px] bg-cover bg-center bg-no-repeat"
+              style={{ 
+                backgroundImage: "url('/images/aboutmedina.jpg')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center center'
+              }}
+            />
+          </div>
         </div>
       </section>
 
