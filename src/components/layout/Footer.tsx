@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4 mb-6">
             <div className="flex items-center gap-2">
               <img 
-                src="/images/Adobe Express - sheesha icon.png" 
+                src="/images/sheesha-icon.png" 
                 alt="Medina Cafe Sheesha Logo" 
                 className="w-7 h-7 object-contain"
               />
@@ -84,7 +84,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img 
-                src="/images/Adobe Express - sheesha icon.png" 
+                src="/images/sheesha-icon.png" 
                 alt="Medina Cafe Sheesha Logo" 
                 className="w-7 h-7 object-contain"
               />
