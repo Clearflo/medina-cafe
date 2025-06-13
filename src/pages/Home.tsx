@@ -5,7 +5,6 @@ import { ArrowRight, Star, MapPin, Utensils, Clock } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
-import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -90,10 +89,11 @@ const Home = () => {
               className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="aspect-square">
-                <ImageWithLoader 
+                <img 
                   src="/images/medina101.jpeg"
                   alt="Medina Cafe Interior"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -105,10 +105,11 @@ const Home = () => {
               className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="aspect-square">
-                <ImageWithLoader 
+                <img 
                   src="/images/medina102.jpeg"
                   alt="Medina Cafe Experience"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -120,10 +121,11 @@ const Home = () => {
               className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 sm:col-span-2 lg:col-span-1"
             >
               <div className="aspect-square">
-                <ImageWithLoader 
+                <img 
                   src="/images/medina103.jpeg"
                   alt="Medina Cafe Atmosphere"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
