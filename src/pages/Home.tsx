@@ -85,7 +85,7 @@ const Home = () => {
             >
               <div className="aspect-square">
                 <ImageWithLoader 
-                  src="/images/Screenshot 2025-06-12 at 5.43.54 PM Medium.jpeg"
+                  src="/images/medina101.jpeg"
                   alt="Medina Cafe Interior"
                   className="w-full h-full object-cover"
                 />
@@ -100,7 +100,7 @@ const Home = () => {
             >
               <div className="aspect-square">
                 <ImageWithLoader 
-                  src="/images/Screenshot 2025-06-12 at 5.45.35 PM Medium.jpeg"
+                  src="/images/medina102.jpeg"
                   alt="Medina Cafe Experience"
                   className="w-full h-full object-cover"
                 />
@@ -115,7 +115,7 @@ const Home = () => {
             >
               <div className="aspect-square">
                 <ImageWithLoader 
-                  src="/images/Screenshot 2025-06-12 at 5.43.36 PM Medium 2.jpeg"
+                  src="/images/medina103.jpeg"
                   alt="Medina Cafe Atmosphere"
                   className="w-full h-full object-cover"
                 />
