@@ -121,7 +121,7 @@ const Menu = () => {
       name: 'Sheesha', 
       icon: (
         <img 
-          src="/images/Adobe Express - sheesha icon.png" 
+          src="/images/adobe-express-sheesha1-icon.png" 
           alt="Sheesha" 
           className="w-5 h-5 object-contain"
           style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(38%) saturate(492%) hue-rotate(18deg) brightness(92%) contrast(85%)' }}
@@ -484,7 +484,7 @@ const Menu = () => {
                   <div key={category} className="mb-12">
                     <div className="flex items-center gap-3 mb-4">
                       <img 
-                        src="/images/Adobe Express - sheesha icon.png" 
+                        src="/images/adobe-express-sheesha1-icon.png" 
                         alt="Sheesha" 
                         className="w-6 h-6 object-contain"
                         style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(38%) saturate(492%) hue-rotate(18deg) brightness(92%) contrast(85%)' }}
