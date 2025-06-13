@@ -35,13 +35,17 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section - Clean Image Only */}
-      <section className="relative pt-16 md:pt-0">
+      <section className="relative">
         <div className="w-full">
-          <img 
-            src="/images/medina 2021-08-15.jpeg"
-            alt="Medina Cafe"
-            className="w-full h-auto object-cover md:hidden block max-h-[70vh]"
-          />
+          {/* Mobile Hero - Full image visible */}
+          <div className="md:hidden relative">
+            <img 
+              src="/images/medina 2021-08-15.jpeg"
+              alt="Medina Cafe"
+              className="w-full h-[60vh] object-cover"
+            />
+          </div>
+          {/* Desktop Hero */}
           <div 
             className="hidden md:block h-screen min-h-[550px] bg-cover bg-center"
             style={{ backgroundImage: "url('/images/medina 2021-08-15.jpeg')" }}
