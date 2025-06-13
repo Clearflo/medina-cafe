@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section - Clean Image Only */}
-      <section className="relative">
+      <section className="relative pt-20 md:pt-0">
         <div className="w-full">
           <img 
             src="/images/medina 2021-08-15.jpeg"
