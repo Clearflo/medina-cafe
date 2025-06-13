@@ -25,9 +25,13 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Add loading indicator when navigating between pages
+  // Add loading indicator when navigating between pages and scroll to top
   useEffect(() => {
     setIsLoading(true);
+    
+    // Scroll to top immediately when route changes
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 500);
