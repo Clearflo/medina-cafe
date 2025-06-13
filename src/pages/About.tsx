@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Users, Coffee, Award, Utensils, Info, AlertTriangle, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin, Phone, Mail, Clock, Users, Coffee, Award, Utensils, Info, AlertTriangle, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 
@@ -33,7 +33,18 @@ const businessHours = {
   sunday: '2:00 PM - 2:00 AM'
 };
 
+// Image carousel data
+const carouselImages = [
+  { src: '/images/aboutmedina.jpg', alt: 'Medina Cafe Interior' },
+  { src: '/images/aboutmedina2.jpg', alt: 'Medina Cafe Atmosphere' },
+  { src: '/images/aboutmedina3.jpg', alt: 'Medina Cafe Dining Area' },
+  { src: '/images/aboutmedina4.jpg', alt: 'Medina Cafe Lounge' },
+  { src: '/images/aboutmedina5.jpg', alt: 'Medina Cafe Experience' }
+];
+
 const About = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const features = [
     {
       icon: <Coffee className="text-secondary-300" size={24} />,
@@ -63,6 +74,18 @@ const About = () => {
     window.open(googleMapsUrl, '_blank');
   };
 
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
+
+  const goToImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
   return (
     <div className="pt-24 pb-12 bg-stone-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
@@ -81,12 +104,80 @@ const About = () => {
 
         {/* Story Section */}
         <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+          {/* Mobile Carousel */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="rounded-lg overflow-hidden shadow-md h-[300px] md:h-auto"
+            className="md:hidden rounded-lg overflow-hidden shadow-md h-[300px] relative"
+          >
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentImageIndex}
+                src={carouselImages[currentImageIndex].src}
+                alt={carouselImages[currentImageIndex].alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                initial={{ opacity: 0, x: 300 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -300 }}
+                transition={{ duration: 0.3 }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(event, { offset, velocity }) => {
+                  const swipe = swipePower(offset.x, velocity.x);
+
+                  if (swipe < -swipeConfidenceThreshold) {
+                    nextImage();
+                  } else if (swipe > swipeConfidenceThreshold) {
+                    prevImage();
+                  }
+                }}
+              />
+            </AnimatePresence>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+              aria-label="Previous image"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+              aria-label="Next image"
+            >
+              <ChevronRight size={20} />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToImage(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                    index === currentImageIndex
+                      ? 'bg-white shadow-lg'
+                      : 'bg-white/50 hover:bg-white/70'
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Desktop Single Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="hidden md:block rounded-lg overflow-hidden shadow-md h-[300px] md:h-auto"
           >
             <img 
               src="/images/aboutmedina.jpg" 
@@ -95,6 +186,7 @@ const About = () => {
               loading="lazy"
             />
           </motion.div>
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -284,6 +376,12 @@ const About = () => {
       </div>
     </div>
   );
+};
+
+// Swipe detection utilities
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
 };
 
 export default About;
