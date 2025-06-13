@@ -82,10 +82,6 @@ const About = () => {
     setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
   };
 
-  const goToImage = (index: number) => {
-    setCurrentImageIndex(index);
-  };
-
   return (
     <div className="pt-24 pb-12 bg-stone-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
@@ -153,22 +149,6 @@ const About = () => {
             >
               <ChevronRight size={20} />
             </button>
-
-            {/* Dots Indicator */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {carouselImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToImage(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                    index === currentImageIndex
-                      ? 'bg-white shadow-lg'
-                      : 'bg-white/50 hover:bg-white/70'
-                  }`}
-                  aria-label={`Go to image ${index + 1}`}
-                />
-              ))}
-            </div>
           </motion.div>
 
           {/* Desktop Single Image */}
