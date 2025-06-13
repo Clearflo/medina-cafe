@@ -12,11 +12,11 @@ const Footer = () => {
           <div className="space-y-4 mb-6">
             <div className="flex items-center gap-2">
               <img 
-                src="/images/sheesha-icon.png" 
+                src="/images/adobe-express-sheesha1-icon.png" 
                 alt="Medina Cafe Sheesha Logo" 
                 className="w-7 h-7 object-contain"
               />
-              <span className="font-heading text-xl sm:text-2xl font-semibold text-[#8B2C2C]">Medina</span>
+              <span className="font-heading text-xl sm:text-2xl font-semibold text-[#8B2C2C]">Medina Cafe</span>
             </div>
           </div>
 
@@ -84,11 +84,11 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img 
-                src="/images/sheesha-icon.png" 
+                src="/images/adobe-express-sheesha1-icon.png" 
                 alt="Medina Cafe Sheesha Logo" 
                 className="w-7 h-7 object-contain"
               />
-              <span className="font-heading text-xl sm:text-2xl font-semibold text-[#8B2C2C]">Medina</span>
+              <span className="font-heading text-xl sm:text-2xl font-semibold text-[#8B2C2C]">Medina Cafe</span>
             </div>
           </div>
 
