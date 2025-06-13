@@ -45,22 +45,29 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Clock size={18} className="text-[#8B2C2C] mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-600">Monday - Thursday</p>
-                  <p className="text-sm font-medium text-gray-600">11:00 AM - 11:00 PM</p>
+                  <p className="text-sm text-gray-600">Monday</p>
+                  <p className="text-sm font-medium text-gray-600">4:00 PM - 2:00 AM</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock size={18} className="text-[#8B2C2C] mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-gray-600">Tuesday - Thursday</p>
+                  <p className="text-sm font-medium text-gray-600">2:00 PM - 2:00 AM</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={18} className="text-[#8B2C2C] mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-600">Friday - Saturday</p>
-                  <p className="text-sm font-medium text-gray-600">11:00 AM - 1:00 AM</p>
+                  <p className="text-sm font-medium text-gray-600">2:00 PM - 3:00 AM</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={18} className="text-[#8B2C2C] mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-600">Sunday</p>
-                  <p className="text-sm font-medium text-gray-600">12:00 PM - 10:00 PM</p>
+                  <p className="text-sm font-medium text-gray-600">2:00 PM - 2:00 AM</p>
                 </div>
               </li>
             </ul>
