@@ -85,8 +85,8 @@ const Home = () => {
             >
               <div className="aspect-square">
                 <ImageWithLoader 
-                  src="https://images.pexels.com/photos/7470753/pexels-photo-7470753.jpeg"
-                  alt="Medina Cafe Middle Eastern Cuisine"
+                  src="/images/Screenshot%202025-06-12%20at%205.43.54%20PM%20Medium.jpeg"
+                  alt="Medina Cafe Interior"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -100,8 +100,8 @@ const Home = () => {
             >
               <div className="aspect-square">
                 <ImageWithLoader 
-                  src="https://images.pexels.com/photos/6546260/pexels-photo-6546260.jpeg"
-                  alt="Premium Sheesha Experience"
+                  src="/images/Screenshot%202025-06-12%20at%205.45.35%20PM%20Medium.jpeg"
+                  alt="Medina Cafe Experience"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -115,8 +115,8 @@ const Home = () => {
             >
               <div className="aspect-square">
                 <ImageWithLoader 
-                  src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg"
-                  alt="Cozy Lounge Atmosphere"
+                  src="/images/Screenshot%202025-06-12%20at%205.43.36%20PM%20Medium%202.jpeg"
+                  alt="Medina Cafe Atmosphere"
                   className="w-full h-full object-cover"
                 />
               </div>
