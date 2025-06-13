@@ -35,7 +35,7 @@ const Header = () => {
             <img 
               src="/images/medina_transparent_image.png" 
               alt="Medina Cafe Logo" 
-              className="h-12 w-auto object-contain"
+              className="h-14 md:h-12 w-auto object-contain"
             />
           </NavLink>
 
