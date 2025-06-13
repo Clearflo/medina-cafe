@@ -31,15 +31,12 @@ const Header = () => {
     <header className="fixed w-full z-50 bg-secondary-300 shadow-md py-2 transition-all duration-300">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <NavLink to="/" className="flex items-center gap-2 py-2">
+          <NavLink to="/" className="flex items-center py-2">
             <img 
-              src="/images/Adobe Express - sheesha icon.png" 
-              alt="Medina Cafe Sheesha Logo" 
-              className="w-8 h-8 object-contain"
+              src="/images/medina_transparent_image.png" 
+              alt="Medina Cafe Logo" 
+              className="h-12 w-auto object-contain"
             />
-            <span className="font-heading text-xl md:text-2xl font-semibold text-[#8B2C2C]">
-              Medina Cafe
-            </span>
           </NavLink>
 
           {/* Desktop Navigation */}
