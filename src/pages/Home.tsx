@@ -71,7 +71,7 @@ const Home = () => {
               variants={fadeIn}
             >
               <SectionHeading 
-                title="Premium Sheesha Lounge" 
+                title="Premium Sheesha Lounge & Grill" 
                 subtitle=""
                 centered
               />
