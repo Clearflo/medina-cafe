@@ -54,12 +54,6 @@ const Header = () => {
                 {link.label}
               </NavLink>
             ))}
-            <NavLink
-              to="/menu"
-              className="bg-secondary-400 hover:bg-secondary-500 text-white px-6 py-3 rounded-full transition-all duration-300 font-medium flex items-center justify-center"
-            >
-              Order Now
-            </NavLink>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -99,13 +93,6 @@ const Header = () => {
                     {link.label}
                   </NavLink>
                 ))}
-                <NavLink
-                  to="/menu"
-                  className="bg-secondary-400 hover:bg-secondary-500 text-white py-4 rounded-lg text-center transition-all duration-300 font-medium text-xl mt-4"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Order Now
-                </NavLink>
               </nav>
             </div>
           </motion.div>
