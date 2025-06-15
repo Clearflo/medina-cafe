@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Sheesha/Hookah Icon -->
+  <g fill="white" stroke="white" stroke-width="1">
+    <!-- Base -->
+    <ellipse cx="32" cy="56" rx="12" ry="4"/>
+    
+    <!-- Main Body -->
+    <rect x="28" y="45" width="8" height="12" rx="2"/>
+    
+    <!-- Water Chamber -->
+    <ellipse cx="32" cy="42" rx="8" ry="6"/>
+    
+    <!-- Stem -->
+    <rect x="31" y="25" width="2" height="20"/>
+    
+    <!-- Bowl -->
+    <circle cx="32" cy="20" r="6"/>
+    <circle cx="32" cy="18" r="4" fill="none" stroke="white" stroke-width="1"/>
+    
+    <!-- Hose -->
+    <path d="M24 38 Q18 35 12 38 Q8 40 10 44 Q12 46 16 44 Q20 42 24 40" stroke="white" stroke-width="2" fill="none"/>
+    
+    <!-- Hose End -->
+    <circle cx="10" cy="44" r="2"/>
+    
+    <!-- Decorative elements -->
+    <circle cx="32" cy="42" r="2" fill="white"/>
+    <circle cx="29" cy="40" r="1" fill="white"/>
+    <circle cx="35" cy="40" r="1" fill="white"/>
+  </g>
+</svg>
