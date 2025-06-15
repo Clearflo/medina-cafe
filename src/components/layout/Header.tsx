@@ -33,7 +33,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center py-2">
             <img 
-              src="/images/medina_transparent_image.png" 
+              src="/images/medinamainimage.jpeg" 
               alt="Medina Cafe Logo" 
               className="h-14 md:h-12 w-auto object-contain"
             />
