@@ -10,7 +10,6 @@ import BackToTopButton from './components/ui/BackToTopButton';
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
 const Menu = lazy(() => import('./pages/Menu'));
-const About = lazy(() => import('./pages/About'));
 
 function App() {
   const location = useLocation();
@@ -51,7 +50,6 @@ function App() {
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
                 <Route path="/menu" element={<Menu />} />
-                <Route path="/about" element={<About />} />
               </Routes>
             </Suspense>
           )}
