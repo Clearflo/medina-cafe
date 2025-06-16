@@ -28,7 +28,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <MapPin size={16} className="text-[#8B2C2C] mt-1 flex-shrink-0" />
-                  <span className="text-xs text-gray-600">123 Calgary Avenue, Calgary, AB T2P 2Y3</span>
+                  <span className="text-xs text-gray-600">1004 1 St SW, Calgary, AB T2R 1K4</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone size={16} className="text-[#8B2C2C] flex-shrink-0" />
@@ -98,7 +98,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#8B2C2C] mt-1 flex-shrink-0" />
-                <span className="text-sm text-gray-600">123 Calgary Avenue, Calgary, AB T2P 2Y3</span>
+                <span className="text-sm text-gray-600">1004 1 St SW, Calgary, AB T2R 1K4</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[#8B2C2C] flex-shrink-0" />
