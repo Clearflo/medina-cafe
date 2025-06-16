@@ -25,8 +25,8 @@ const staggerContainer = {
   }
 };
 
-// Define types for each menu category
-type CategoryType = 'all' | 'sheesha' | 'sheeshaHouse' | 'sheeshaFresh' | 'sheeshaPremium' | 'appetizers' | 'mainDishes' | 'drinks' | 'coffee' | 'tea' | 'milkshake' | 'juice' | 'desserts';
+// Define types for each menu category (removed 'juice' from the type)
+type CategoryType = 'all' | 'sheesha' | 'sheeshaHouse' | 'sheeshaFresh' | 'sheeshaPremium' | 'appetizers' | 'mainDishes' | 'drinks' | 'coffee' | 'tea' | 'milkshake' | 'desserts';
 
 // Define subcategories for sheesha
 const sheeshaSubcategories = {
@@ -36,13 +36,12 @@ const sheeshaSubcategories = {
   sheeshaPremium: 'Premium'
 };
 
-// Define subcategories for drinks
+// Define subcategories for drinks (removed juice)
 const drinkSubcategories = {
   all: 'All Drinks',
   coffee: 'Coffee',
   tea: 'Tea',
-  milkshake: 'Milkshakes',
-  juice: 'Juices'
+  milkshake: 'Milkshakes'
 };
 
 // Component for text-based menu items (unified for all categories)
@@ -207,8 +206,6 @@ const Menu = () => {
       filteredItems = menuItems.drinks.filter(item => item.category.includes('Tea'));
     } else if (activeCategory === 'milkshake') {
       filteredItems = menuItems.drinks.filter(item => item.category.includes('Milkshake'));
-    } else if (activeCategory === 'juice') {
-      filteredItems = menuItems.drinks.filter(item => item.category.includes('Juice'));
     } else {
       filteredItems = menuItems[activeCategory];
     }
@@ -246,7 +243,7 @@ const Menu = () => {
     )
   };
   
-  // Filter non-sheesha items and group them by category
+  // Filter non-sheesha items and group them by category (removed juice filtering)
   const groupedNonSheeshaItems = {
     'Appetizers': filteredItems.filter(item => 
       item.category.includes('Appetizer') && 
@@ -257,8 +254,8 @@ const Menu = () => {
       (activeCategory === 'all' || activeCategory === 'mainDishes')
     ),
     'Drinks': filteredItems.filter(item => 
-      (item.category.includes('Coffee') || item.category.includes('Tea') || item.category.includes('Milkshake') || item.category.includes('Juice') || item.category.includes('Drink')) && 
-      (activeCategory === 'all' || activeCategory === 'drinks' || activeCategory === 'coffee' || activeCategory === 'tea' || activeCategory === 'milkshake' || activeCategory === 'juice')
+      (item.category.includes('Coffee') || item.category.includes('Tea') || item.category.includes('Milkshake') || item.category.includes('Drink')) && 
+      (activeCategory === 'all' || activeCategory === 'drinks' || activeCategory === 'coffee' || activeCategory === 'tea' || activeCategory === 'milkshake')
     ),
     'Desserts': filteredItems.filter(item => 
       item.category.includes('Dessert') && 
@@ -370,7 +367,7 @@ const Menu = () => {
                   className={`flex items-center gap-2 px-4 py-3 md:px-6 md:py-3 rounded-full transition-all duration-300 min-w-[80px] justify-center touch-manipulation ${
                     (activeCategory === category.id) || 
                     (activeCategory.includes('sheesha') && category.id === 'sheesha') ||
-                    ((activeCategory.includes('coffee') || activeCategory.includes('tea') || activeCategory.includes('milkshake') || activeCategory.includes('juice')) && category.id === 'drinks')
+                    ((activeCategory.includes('coffee') || activeCategory.includes('tea') || activeCategory.includes('milkshake')) && category.id === 'drinks')
                       ? 'bg-secondary-300 text-white'
                       : 'bg-white text-accent-700 hover:bg-gray-100'
                   }`}
@@ -438,7 +435,7 @@ const Menu = () => {
             )}
           </AnimatePresence>
 
-          {/* Drink Subcategories */}
+          {/* Drink Subcategories (removed juice button) */}
           <AnimatePresence>
             {showDrinkSubcategories && (
               <motion.div
@@ -488,16 +485,6 @@ const Menu = () => {
                     }`}
                   >
                     {drinkSubcategories.milkshake}
-                  </button>
-                  <button
-                    onClick={() => setActiveCategory('juice')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
-                      activeCategory === 'juice'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    {drinkSubcategories.juice}
                   </button>
                 </div>
               </motion.div>
