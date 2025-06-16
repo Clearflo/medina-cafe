@@ -213,7 +213,7 @@ const Menu = () => {
       (activeCategory === 'all' || activeCategory === 'mainDishes')
     ),
     'Drinks': filteredItems.filter(item => 
-      (item.category.includes('Coffee') || item.category.includes('Tea') || item.category.includes('Milkshake') || item.category.includes('Juice')) && 
+      (item.category.includes('Coffee') || item.category.includes('Tea') || item.category.includes('Milkshake') || item.category.includes('Juice') || item.category.includes('Drink')) && 
       (activeCategory === 'all' || activeCategory === 'drinks' || activeCategory === 'coffee' || activeCategory === 'tea' || activeCategory === 'milkshake' || activeCategory === 'juice')
     ),
     'Desserts': filteredItems.filter(item => 
@@ -565,35 +565,22 @@ const Menu = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Additional Info */}
+        {/* Sheesha Sessions Info */}
         <div className="mt-16 bg-accent-700/5 p-6 rounded-lg">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-heading text-xl font-semibold text-accent-700 mb-4">
-                Special Requests
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Have dietary restrictions or special requests? Our chefs are happy to accommodate your needs whenever possible.
-              </p>
-              <p className="text-gray-600">
-                Please inform your server of any allergies or dietary requirements when placing your order.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-heading text-xl font-semibold text-accent-700 mb-4">
-                Sheesha Sessions
-              </h3>
-              <p className="text-gray-600 mb-4">
-                All sheesha sessions last approximately 60-90 minutes. We offer premium tobacco and herbal options.
-              </p>
-              <p className="text-gray-600">
-                Must be 18+ to order sheesha. Please ask your server about our current special flavors and combinations.
-              </p>
-              <div className="mt-4 p-3 bg-secondary-300/20 rounded-md">
-                <p className="text-sm text-accent-700 font-medium">Sheesha Pricing:</p>
-                <p className="text-sm text-gray-600">Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99</p>
-                <p className="text-sm text-gray-600">Premium: $28.99-$29.99 | After 1AM: $30.99-$31.99</p>
-              </div>
+          <div className="text-center">
+            <h3 className="font-heading text-xl font-semibold text-accent-700 mb-4">
+              Sheesha Sessions
+            </h3>
+            <p className="text-gray-600 mb-4">
+              All sheesha sessions last approximately 60-90 minutes. We offer premium tobacco and herbal options.
+            </p>
+            <p className="text-gray-600 mb-4">
+              Must be 18+ to order sheesha. Please ask your server about our current special flavors and combinations.
+            </p>
+            <div className="mt-4 p-3 bg-secondary-300/20 rounded-md inline-block">
+              <p className="text-sm text-accent-700 font-medium">Sheesha Pricing:</p>
+              <p className="text-sm text-gray-600">Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99</p>
+              <p className="text-sm text-gray-600">Premium: $28.99-$29.99 | After 1AM: $30.99-$31.99</p>
             </div>
           </div>
         </div>
