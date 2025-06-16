@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award } from 'lucide-react';
+import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award, AlertTriangle, Info } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
@@ -143,6 +143,65 @@ const Home = () => {
                 <p className="text-xs sm:text-base text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Restaurant Policies Section */}
+      <section className="py-12 md:py-16 bg-stone-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeIn}
+            className="max-w-5xl mx-auto bg-secondary-300/10 p-6 md:p-8 rounded-lg"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <AlertTriangle size={24} className="text-secondary-300 flex-shrink-0" />
+              <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700">
+                Restaurant Policies
+              </h3>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="space-y-3">
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">18% gratuity will be added for groups of 6 or more</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">Minimum 1 shisha per 2 customers</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">Minimum 1 drink per customer</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">Please ask your server to move sheesha pipes</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">All prices are subject to change without notice</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">Must be 18+ for sheesha service (ID required)</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-6 p-4 bg-white rounded-md shadow-sm">
+              <p className="text-sm text-gray-600">
+                At Medina Cafe & Grill, we strive to provide an exceptional experience for all our guests. 
+                These policies help us maintain the quality of our service and ensure everyone has an enjoyable time.
+                We appreciate your understanding and cooperation.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
