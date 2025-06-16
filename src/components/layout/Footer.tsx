@@ -32,7 +32,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone size={16} className="text-[#8B2C2C] flex-shrink-0" />
-                  <a href="tel:+14031234567" className="text-xs text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation">(403) 123-4567</a>
+                  <a href="tel:+14032379002" className="text-xs text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation">(403)237-9002</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail size={16} className="text-[#8B2C2C] flex-shrink-0" />
@@ -102,7 +102,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[#8B2C2C] flex-shrink-0" />
-                <a href="tel:+14031234567" className="text-sm text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation">(403) 123-4567</a>
+                <a href="tel:+14032379002" className="text-sm text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation">(403)237-9002</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-[#8B2C2C] flex-shrink-0" />
