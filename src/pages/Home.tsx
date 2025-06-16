@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award, AlertTriangle, Info, CupSoda, CakeSlice } from 'lucide-react';
+import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award, AlertTriangle, Info, CupSoda, CakeSlice, Zap } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
@@ -25,6 +25,34 @@ const staggerContainer = {
   }
 };
 
+// Hookah/Sheesha Icon Component
+const HookahIcon = ({ className, size = 24 }: { className?: string, size?: number }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    className={className}
+  >
+    {/* Base/Bowl */}
+    <circle cx="12" cy="8" r="3"/>
+    {/* Stem */}
+    <line x1="12" y1="11" x2="12" y2="18"/>
+    {/* Water container */}
+    <path d="M8 18c0 2.2 1.8 4 4 4s4-1.8 4-4"/>
+    {/* Hose connection */}
+    <path d="M8 15l-3 1"/>
+    <path d="M16 15l3 1"/>
+    {/* Hose curves */}
+    <path d="M5 16c-1 0-2 1-2 2s1 2 2 2"/>
+    <path d="M19 16c1 0 2 1 2 2s-1 2-2 2"/>
+  </svg>
+);
+
 const Home = () => {
   const controls = useAnimation();
 
@@ -34,7 +62,7 @@ const Home = () => {
 
   const features = [
     {
-      icon: <Coffee className="text-secondary-300" size={24} />,
+      icon: <HookahIcon className="text-secondary-300" size={24} />,
       title: 'Premium Sheesha',
       description: 'We offer top-quality sheesha with a wide variety of flavors to choose from.',
       clickable: true,
@@ -48,7 +76,7 @@ const Home = () => {
       link: '/menu#maindishes'
     },
     {
-      icon: <CupSoda className="text-secondary-300" size={24} />,
+      icon: <Coffee className="text-secondary-300" size={24} />,
       title: 'Drink Menu',
       description: 'Explore our selection of traditional teas, coffees, and specialty drinks.',
       clickable: true,
