@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award, AlertTriangle, Info, CupSoda } from 'lucide-react';
+import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award, AlertTriangle, Info, CupSoda, CakeSlice } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
@@ -37,27 +37,29 @@ const Home = () => {
       icon: <Coffee className="text-secondary-300" size={24} />,
       title: 'Premium Sheesha',
       description: 'We offer top-quality sheesha with a wide variety of flavors to choose from.',
-      clickable: false
+      clickable: true,
+      link: '/menu#sheesha'
     },
     {
       icon: <Utensils className="text-secondary-300" size={24} />,
       title: 'Authentic Cuisine',
       description: 'Our chefs prepare authentic Middle Eastern dishes using traditional recipes.',
-      clickable: false
+      clickable: true,
+      link: '/menu#food'
     },
     {
       icon: <CupSoda className="text-secondary-300" size={24} />,
       title: 'Drink Menu',
-      description: 'Explore our selection of traditional teas, coffees, fresh juices, and specialty drinks.',
+      description: 'Explore our selection of traditional teas, coffees, and specialty drinks.',
       clickable: true,
-      link: '/menu'
+      link: '/menu#drinks'
     },
     {
-      icon: <Utensils className="text-secondary-300" size={24} />,
-      title: 'Food Menu',
-      description: 'Discover our authentic Middle Eastern cuisine, appetizers, and main dishes.',
+      icon: <CakeSlice className="text-secondary-300" size={24} />,
+      title: 'Dessert Menu',
+      description: 'Indulge in our authentic Middle Eastern desserts and sweet treats.',
       clickable: true,
-      link: '/menu'
+      link: '/menu#desserts'
     }
   ];
 
