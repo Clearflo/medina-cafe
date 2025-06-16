@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award, AlertTriangle, Info } from 'lucide-react';
+import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award, AlertTriangle, Info, CupSoda } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
@@ -36,22 +36,28 @@ const Home = () => {
     {
       icon: <Coffee className="text-secondary-300" size={24} />,
       title: 'Premium Sheesha',
-      description: 'We offer top-quality sheesha with a wide variety of flavors to choose from.'
+      description: 'We offer top-quality sheesha with a wide variety of flavors to choose from.',
+      clickable: false
     },
     {
       icon: <Utensils className="text-secondary-300" size={24} />,
       title: 'Authentic Cuisine',
-      description: 'Our chefs prepare authentic Middle Eastern dishes using traditional recipes.'
+      description: 'Our chefs prepare authentic Middle Eastern dishes using traditional recipes.',
+      clickable: false
     },
     {
-      icon: <Users className="text-secondary-300" size={24} />,
-      title: 'Welcoming Atmosphere',
-      description: 'A cozy space where friends and family can gather and enjoy good food.'
+      icon: <CupSoda className="text-secondary-300" size={24} />,
+      title: 'Drink Menu',
+      description: 'Explore our selection of traditional teas, coffees, fresh juices, and specialty drinks.',
+      clickable: true,
+      link: '/menu'
     },
     {
-      icon: <Award className="text-secondary-300" size={24} />,
-      title: 'Quality Service',
-      description: 'Our dedicated staff ensures you have a memorable dining experience.'
+      icon: <Utensils className="text-secondary-300" size={24} />,
+      title: 'Food Menu',
+      description: 'Discover our authentic Middle Eastern cuisine, appetizers, and main dishes.',
+      clickable: true,
+      link: '/menu'
     }
   ];
 
@@ -130,19 +136,38 @@ const Home = () => {
             variants={staggerContainer}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6"
           >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                variants={fadeIn}
-                className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
-              >
-                <div className="mb-3 sm:mb-4 flex justify-center">{feature.icon}</div>
-                <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-700 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-xs sm:text-base text-gray-600">{feature.description}</p>
-              </motion.div>
-            ))}
+            {features.map((feature, index) => {
+              const CardContent = () => (
+                <motion.div
+                  key={index}
+                  variants={fadeIn}
+                  className={`bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-center ${
+                    feature.clickable ? 'cursor-pointer hover:scale-105 hover:bg-gray-50' : ''
+                  }`}
+                >
+                  <div className="mb-3 sm:mb-4 flex justify-center">{feature.icon}</div>
+                  <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-700 mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-xs sm:text-base text-gray-600">{feature.description}</p>
+                  {feature.clickable && (
+                    <div className="mt-3 flex justify-center">
+                      <ArrowRight size={18} className="text-secondary-300" />
+                    </div>
+                  )}
+                </motion.div>
+              );
+
+              if (feature.clickable) {
+                return (
+                  <Link key={index} to={feature.link}>
+                    <CardContent />
+                  </Link>
+                );
+              }
+
+              return <CardContent key={index} />;
+            })}
           </motion.div>
         </div>
       </section>
