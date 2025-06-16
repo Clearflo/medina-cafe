@@ -457,7 +457,7 @@ export const menuItems = {
 // Business information
 export const businessInfo = {
   name: 'Medina Cafe & Grill Sheesha Lounge',
-  address: '123 Calgary Avenue, Calgary, AB T2P 2Y3',
+  address: '1004 1 St SW, Calgary, AB T2R 1K4',
   phone: '(403)237-9002',
   email: 'info@medinacafe.com',
   hours: {
