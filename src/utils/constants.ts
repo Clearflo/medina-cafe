@@ -420,36 +420,12 @@ export const menuItems = {
   ],
   desserts: [
     {
-      id: 'de1',
-      name: 'Baklava',
-      description: 'Layers of phyllo pastry filled with chopped nuts and sweetened with honey syrup.',
-      price: '$6.99',
-      category: 'Dessert',
-      image: 'https://images.pexels.com/photos/6546024/pexels-photo-6546024.jpeg'
-    },
-    {
       id: 'de2',
       name: 'Kunafa',
       description: 'Sweet cheese pastry soaked in sugar syrup, topped with crushed pistachios.',
       price: '$7.99',
       category: 'Dessert',
       image: 'https://images.pexels.com/photos/9260823/pexels-photo-9260823.jpeg'
-    },
-    {
-      id: 'de3',
-      name: 'Rice Pudding',
-      description: 'Creamy rice pudding flavored with rose water and topped with cinnamon.',
-      price: '$5.99',
-      category: 'Dessert',
-      image: 'https://images.pexels.com/photos/4397920/pexels-photo-4397920.jpeg'
-    },
-    {
-      id: 'de4',
-      name: 'Turkish Delight',
-      description: 'Assorted flavors of soft, gel-like confections dusted with powdered sugar.',
-      price: '$6.99',
-      category: 'Dessert',
-      image: 'https://images.pexels.com/photos/14732635/pexels-photo-14732635.jpeg'
     }
   ]
 };
