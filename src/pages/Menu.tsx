@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { UtensilsCrossed, Sandwich, Wine, CakeSlice, Search, CupSoda, FilterX } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
@@ -80,11 +81,54 @@ const Menu = () => {
   
   const categoryRef = useRef<HTMLDivElement>(null);
   const prevScrollY = useRef(0);
+  const location = useLocation();
   
-  // Scroll to top when component mounts
+  // Handle hash navigation from URL
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const hash = location.hash.replace('#', '');
+    if (hash) {
+      // Map hash values to category types
+      const hashToCategory: { [key: string]: CategoryType } = {
+        'sheesha': 'sheesha',
+        'drinks': 'drinks', 
+        'desserts': 'desserts',
+        'appetizers': 'appetizers',
+        'food': 'mainDishes',
+        'mainDishes': 'mainDishes'
+      };
+      
+      const targetCategory = hashToCategory[hash];
+      if (targetCategory) {
+        setActiveCategory(targetCategory);
+        
+        // Set subcategory visibility
+        if (targetCategory === 'sheesha') {
+          setShowSheeshaSubcategories(true);
+          setShowDrinkSubcategories(false);
+        } else if (targetCategory === 'drinks') {
+          setShowDrinkSubcategories(true);
+          setShowSheeshaSubcategories(false);
+        } else {
+          setShowSheeshaSubcategories(false);
+          setShowDrinkSubcategories(false);
+        }
+        
+        // Scroll to the results section after a short delay to ensure rendering
+        setTimeout(() => {
+          const resultsElement = document.getElementById('menu-results');
+          if (resultsElement) {
+            window.scrollTo({
+              top: resultsElement.offsetTop - 150,
+              behavior: 'smooth'
+            });
+          }
+        }, 500);
+      }
+    } else {
+      // Scroll to top when no hash
+      window.scrollTo(0, 0);
+    }
+  }, [location.hash]);
   
   // Reset search when changing categories
   useEffect(() => {
@@ -481,7 +525,7 @@ const Menu = () => {
             {(activeCategory === 'all' || activeCategory.includes('sheesha')) && (
               Object.entries(groupedSheeshaItems).map(([category, items]) => 
                 items.length > 0 ? (
-                  <div key={category} className="mb-12">
+                  <div key={category} className="mb-12" id={category === 'House Blend Sheesha' ? 'sheesha' : undefined}>
                     <div className="flex items-center gap-3 mb-4">
                       <img 
                         src="/images/adobe-express-sheesha1-icon.png" 
@@ -527,7 +571,7 @@ const Menu = () => {
             {/* Non-Sheesha Menu Items */}
             {Object.entries(groupedNonSheeshaItems).map(([category, items]) => 
               items.length > 0 ? (
-                <div key={category} className="mb-12">
+                <div key={category} className="mb-12" id={category.toLowerCase().replace(' ', '')}>
                   <div className="flex items-center gap-3 mb-4">
                     {getCategoryIcon(category)}
                     <h3 className="font-heading text-xl font-semibold text-accent-700">
