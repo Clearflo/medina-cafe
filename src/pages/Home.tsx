@@ -178,6 +178,14 @@ const Home = () => {
                   <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
                   <p className="text-gray-700">Minimum 1 drink per customer</p>
                 </div>
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">No Vaping!</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">No loitering</p>
+                </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-start gap-2">
@@ -191,6 +199,14 @@ const Home = () => {
                 <div className="flex items-start gap-2">
                   <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
                   <p className="text-gray-700">Must be 18+ for sheesha service (ID required)</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">No outside food or drinks</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">We do not serve alcohol and will not accept intoxicated customers</p>
                 </div>
               </div>
             </div>
