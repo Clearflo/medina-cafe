@@ -268,38 +268,6 @@ export const menuItems = {
       price: '$13.99',
       category: 'Appetizer',
       image: 'https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg'
-    },
-    {
-      id: 'a5',
-      name: 'Calamari',
-      description: 'Lightly breaded and fried calamari served with tzatziki sauce.',
-      price: '$20.99',
-      category: 'Appetizer',
-      image: 'https://images.pexels.com/photos/15899879/pexels-photo-15899879/free-photo-of-fried-calamari-served-with-dip-and-lemon.jpeg'
-    },
-    {
-      id: 'a6',
-      name: 'Baba Ghanoush',
-      description: 'Smoky eggplant dip with tahini, garlic, and olive oil.',
-      price: '$12.99',
-      category: 'Appetizer',
-      image: 'https://images.pexels.com/photos/7474073/pexels-photo-7474073.jpeg'
-    },
-    {
-      id: 'a7',
-      name: 'Falafel Plate',
-      description: 'Crispy chickpea fritters served with tahini sauce and pickled vegetables.',
-      price: '$13.99',
-      category: 'Appetizer',
-      image: 'https://images.pexels.com/photos/15028060/pexels-photo-15028060/free-photo-of-top-view-of-falafel.jpeg'
-    },
-    {
-      id: 'a8',
-      name: 'Mezze Platter',
-      description: 'Assortment of dips, olives, pickles, and warm pita bread.',
-      price: '$21.99',
-      category: 'Appetizer',
-      image: 'https://images.pexels.com/photos/15012329/pexels-photo-15012329/free-photo-of-meze-on-table.jpeg'
     }
   ],
   mainDishes: [
@@ -310,30 +278,6 @@ export const menuItems = {
       price: '$18.99',
       category: 'Main Dish',
       image: 'https://images.pexels.com/photos/7470601/pexels-photo-7470601.jpeg'
-    },
-    {
-      id: 'm2',
-      name: 'Lamb Kebab',
-      description: 'Grilled lamb skewers with aromatic spices, served with rice and grilled vegetables.',
-      price: '$22.99',
-      category: 'Main Dish',
-      image: 'https://images.pexels.com/photos/6896380/pexels-photo-6896380.jpeg'
-    },
-    {
-      id: 'm3',
-      name: 'Vegetarian Platter',
-      description: 'Assortment of vegetarian Middle Eastern specialties, perfect for sharing.',
-      price: '$17.99',
-      category: 'Main Dish',
-      image: 'https://images.pexels.com/photos/15937009/pexels-photo-15937009/free-photo-of-flat-lay-of-meze-with-hummus-and-pita-bread.jpeg'
-    },
-    {
-      id: 'm4',
-      name: 'Mixed Grill',
-      description: 'Selection of grilled meats including chicken, beef, and lamb with sides.',
-      price: '$26.99',
-      category: 'Main Dish',
-      image: 'https://images.pexels.com/photos/8969237/pexels-photo-8969237.jpeg'
     },
     {
       id: 'm5',
@@ -466,14 +410,6 @@ export const menuItems = {
       image: 'https://images.pexels.com/photos/12448165/pexels-photo-12448165.jpeg'
     },
     {
-      id: 'd11',
-      name: 'Fresh Orange Juice',
-      description: 'Freshly squeezed orange juice, served cold.',
-      price: '$6.49',
-      category: 'Juice',
-      image: 'https://images.pexels.com/photos/158053/fresh-orange-juice-squeezed-refreshing-citrus-158053.jpeg'
-    },
-    {
       id: 'd12',
       name: 'Rose Lemonade',
       description: 'House-made lemonade infused with rose water and sweetened with honey.',
@@ -522,7 +458,7 @@ export const menuItems = {
 export const businessInfo = {
   name: 'Medina Cafe & Grill Sheesha Lounge',
   address: '123 Calgary Avenue, Calgary, AB T2P 2Y3',
-  phone: '(403) 123-4567',
+  phone: '(403)237-9002',
   email: 'info@medinacafe.com',
   hours: {
     monday: '11:00 AM - 11:00 PM',
