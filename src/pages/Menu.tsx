@@ -282,7 +282,7 @@ const Menu = () => {
         >
           <SectionHeading 
             title="Our Menu" 
-            subtitle="Explore our selection of authentic Middle Eastern cuisine and premium sheesha flavors"
+            subtitle="Explore our selection of authentic cuisine and premium sheesha flavors"
             centered
             className="mt-8 mb-6"
           />
