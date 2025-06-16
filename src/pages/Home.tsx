@@ -75,9 +75,23 @@ const Home = () => {
                 subtitle=""
                 centered
               />
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Established in 2010, Medina Cafe & Grill brings authentic Middle Eastern flavors and traditions to Calgary. Our restaurant offers a warm, inviting atmosphere where friends and family can gather to enjoy delicious food and premium sheesha.
-              </p>
+              <div className="text-gray-600 text-lg leading-relaxed space-y-6">
+                <p>
+                  Medina Café & Grill was established in 2010 with one goal in mind: to create a welcoming, vibrant space for everyone — a place that feels like home, no matter where you're from.
+                </p>
+                
+                <p>
+                  With over 20 years in the hospitality industry, we've built a space that reflects our taste: warm lighting, bold design, good food, and great atmosphere.
+                </p>
+                
+                <p>
+                  Our guests have always been diverse, and we're proud to be the kind of place where people come together — for meals, conversation, and a relaxed evening experience.
+                </p>
+                
+                <p className="font-medium text-accent-700">
+                  Come on in, take a seat, and enjoy the vibe — we'd love to welcome you.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
