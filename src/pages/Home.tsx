@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowRight, Star, MapPin, Utensils, Clock } from 'lucide-react';
+import { ArrowRight, Star, MapPin, Utensils, Clock, Coffee, Users, Award } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import { menuItems } from '../utils/constants';
@@ -31,6 +31,29 @@ const Home = () => {
   useEffect(() => {
     controls.start('visible');
   }, [controls]);
+
+  const features = [
+    {
+      icon: <Coffee className="text-secondary-300" size={24} />,
+      title: 'Premium Sheesha',
+      description: 'We offer top-quality sheesha with a wide variety of flavors to choose from.'
+    },
+    {
+      icon: <Utensils className="text-secondary-300" size={24} />,
+      title: 'Authentic Cuisine',
+      description: 'Our chefs prepare authentic Middle Eastern dishes using traditional recipes.'
+    },
+    {
+      icon: <Users className="text-secondary-300" size={24} />,
+      title: 'Welcoming Atmosphere',
+      description: 'A cozy space where friends and family can gather and enjoy good food.'
+    },
+    {
+      icon: <Award className="text-secondary-300" size={24} />,
+      title: 'Quality Service',
+      description: 'Our dedicated staff ensures you have a memorable dining experience.'
+    }
+  ];
 
   return (
     <div>
@@ -97,8 +120,35 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Features Section */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6"
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={fadeIn}
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
+              >
+                <div className="mb-3 sm:mb-4 flex justify-center">{feature.icon}</div>
+                <h3 className="font-heading text-lg sm:text-xl font-semibold text-accent-700 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-xs sm:text-base text-gray-600">{feature.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
-      <section className="py-12 md:py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-stone-50">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
             initial="hidden"
