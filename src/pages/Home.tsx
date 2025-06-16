@@ -45,7 +45,7 @@ const Home = () => {
       title: 'Authentic Cuisine',
       description: 'Our chefs prepare authentic Middle Eastern dishes using traditional recipes.',
       clickable: true,
-      link: '/menu#food'
+      link: '/menu#maindishes'
     },
     {
       icon: <CupSoda className="text-secondary-300" size={24} />,
