@@ -3,6 +3,9 @@ import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  // Google Maps URL for the restaurant address
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=1004+1+St+SW,+Calgary,+AB+T2R+1K4";
+
   return (
     <footer className="bg-secondary-300 pt-10 sm:pt-12 pb-6">
       <div className="container mx-auto px-4 md:px-6">
@@ -28,7 +31,14 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <MapPin size={16} className="text-[#8B2C2C] mt-1 flex-shrink-0" />
-                  <span className="text-xs text-gray-600">1004 1 St SW, Calgary, AB T2R 1K4</span>
+                  <a 
+                    href={googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation underline"
+                  >
+                    1004 1 St SW, Calgary, AB T2R 1K4
+                  </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone size={16} className="text-[#8B2C2C] flex-shrink-0" />
@@ -98,7 +108,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#8B2C2C] mt-1 flex-shrink-0" />
-                <span className="text-sm text-gray-600">1004 1 St SW, Calgary, AB T2R 1K4</span>
+                <a 
+                  href={googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation underline"
+                >
+                  1004 1 St SW, Calgary, AB T2R 1K4
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[#8B2C2C] flex-shrink-0" />
