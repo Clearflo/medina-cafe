@@ -224,6 +224,51 @@ const Home = () => {
         </div>
       </section>
 
+      {/* New Tea Service and Sheesha Images Section */}
+      <section className="py-12 md:py-16 bg-stone-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="grid sm:grid-cols-2 gap-6 md:gap-8"
+          >
+            <motion.div 
+              variants={fadeIn}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="aspect-square">
+                <img 
+                  src="/images/tea-service.jpeg"
+                  alt="Traditional Middle Eastern Tea Service"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div 
+              variants={fadeIn}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="aspect-square">
+                <img 
+                  src="/images/sheesha-setup.jpeg"
+                  alt="Premium Sheesha Setup"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Restaurant Policies Section */}
       <section className="py-12 md:py-16 bg-stone-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -234,65 +279,80 @@ const Home = () => {
             variants={fadeIn}
             className="max-w-5xl mx-auto bg-secondary-300/10 p-6 md:p-8 rounded-lg"
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-6">
               <AlertTriangle size={24} className="text-secondary-300 flex-shrink-0" />
               <h3 className="font-heading text-xl sm:text-2xl font-semibold text-accent-700">
-                Restaurant Policies
+                House Policies
               </h3>
             </div>
             
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="space-y-3">
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">18% gratuity will be added for groups of 6 or more</p>
+            <div className="text-gray-700 space-y-4">
+              <p className="text-base leading-relaxed">
+                We're committed to creating a respectful and comfortable environment for all guests. Kindly review our policies below:
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-6 mt-6">
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">18% gratuity will be added to groups of 6 or more</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">Minimum 1 shisha per 2 guests</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">Minimum 1 drink per guest</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">No vaping inside the premises</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">No loitering — seating is reserved for dining and lounge service</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">For safety, please ask your server to move any shisha</p>
+                  </div>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Minimum 1 shisha per 2 customers</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Minimum 1 drink per customer</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">No Vaping!</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">No loitering</p>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Please ask your server to move sheesha pipes</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">All prices are subject to change without notice</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Must be 18+ for sheesha service (ID required)</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">No outside food or drinks</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Info size={18} className="text-secondary-300 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">We do not serve alcohol and will not accept intoxicated customers</p>
+                
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <AlertTriangle size={16} className="text-secondary-300 flex-shrink-0 mt-1" />
+                    <p className="text-gray-700 font-medium">Guests may be responsible for damage caused by moving equipment</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">Do not place feet up on the seating</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">All prices are subject to change without notice</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">Shisha service is for guests 18+ (valid ID required)</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">No outside food or drinks allowed</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-secondary-300 flex-shrink-0 mt-1">•</span>
+                    <p className="text-gray-700">We do not serve alcohol and cannot accommodate intoxicated guests</p>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div className="mt-6 p-4 bg-white rounded-md shadow-sm">
-              <p className="text-sm text-gray-600">
-                At Medina Cafe & Grill, we strive to provide an exceptional experience for all our guests. 
-                These policies help us maintain the quality of our service and ensure everyone has an enjoyable time.
-                We appreciate your understanding and cooperation.
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <p className="text-sm text-gray-600 leading-relaxed">
+                At Medina Café & Grill, our goal is to offer a high-quality experience in a welcoming space. 
+                These policies help us maintain that standard so everyone can enjoy their visit. 
+                Thank you for your understanding and cooperation.
               </p>
             </div>
           </motion.div>
