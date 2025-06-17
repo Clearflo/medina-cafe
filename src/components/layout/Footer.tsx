@@ -3,8 +3,8 @@ import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  // Google Maps URL for the restaurant address
-  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=1004+1+St+SW,+Calgary,+AB+T2R+1K4";
+  // Google Maps URL for the restaurant by business name
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Medina+Cafe+%26+Grill+Sheesha+Lounge+Calgary";
 
   return (
     <footer className="bg-secondary-300 pt-10 sm:pt-12 pb-6">
