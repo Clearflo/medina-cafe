@@ -224,7 +224,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* New Tea Service and Sheesha Images Section */}
+      {/* Featured Gallery Images Section */}
       <section className="py-12 md:py-16 bg-stone-50">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
@@ -242,8 +242,8 @@ const Home = () => {
             >
               <div className="aspect-square">
                 <img 
-                  src="/images/tea-service.jpeg"
-                  alt="Traditional Middle Eastern Tea Service"
+                  src="/images/medina102.jpeg"
+                  alt="Medina Cafe Experience"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -258,8 +258,8 @@ const Home = () => {
             >
               <div className="aspect-square">
                 <img 
-                  src="/images/sheesha-setup.jpeg"
-                  alt="Premium Sheesha Setup"
+                  src="/images/medina103.jpeg"
+                  alt="Medina Cafe Atmosphere"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -355,51 +355,6 @@ const Home = () => {
                 Thank you for your understanding and cooperation.
               </p>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Remaining Gallery Section */}
-      <section className="py-12 md:py-20 bg-stone-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid sm:grid-cols-2 gap-4 md:gap-6"
-          >
-            <motion.div 
-              variants={fadeIn}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <div className="aspect-square">
-                <img 
-                  src="/images/medina102.jpeg"
-                  alt="Medina Cafe Experience"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-            </motion.div>
-
-            <motion.div 
-              variants={fadeIn}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <div className="aspect-square">
-                <img 
-                  src="/images/medina103.jpeg"
-                  alt="Medina Cafe Atmosphere"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </section>
