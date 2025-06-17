@@ -156,6 +156,28 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Single Gallery Image Section */}
+      <section className="py-8 md:py-12 bg-stone-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeIn}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img 
+                src="/images/medina101.jpeg"
+                alt="Medina Cafe Interior Atmosphere"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -277,7 +299,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Remaining Gallery Section */}
       <section className="py-12 md:py-20 bg-stone-50">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
@@ -285,24 +307,8 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+            className="grid sm:grid-cols-2 gap-4 md:gap-6"
           >
-            <motion.div 
-              variants={fadeIn}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <div className="aspect-square">
-                <img 
-                  src="/images/medina101.jpeg"
-                  alt="Medina Cafe Interior"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-            </motion.div>
-
             <motion.div 
               variants={fadeIn}
               whileHover={{ y: -8 }}
@@ -323,7 +329,7 @@ const Home = () => {
               variants={fadeIn}
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 sm:col-span-2 lg:col-span-1"
+              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="aspect-square">
                 <img 
