@@ -240,7 +240,7 @@ export const menuItems = {
     {
       id: 'a1',
       name: 'Hummus',
-      description: 'Homemade hummus served with warm pita bread.',
+      description: 'Creamy chickpea dip made with tahini, lemon, and olive oil. Served with warm pita.',
       price: '$13.99',
       category: 'Appetizer',
       image: 'https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg'
@@ -248,7 +248,7 @@ export const menuItems = {
     {
       id: 'a2',
       name: 'Poutine',
-      description: 'Crispy fries topped with cheese curds and rich gravy.',
+      description: 'Golden fries topped with cheese curds and our signature homemade gravy.',
       price: '$18.99',
       category: 'Appetizer',
       image: 'https://images.pexels.com/photos/15161107/pexels-photo-15161107/free-photo-of-poutine-on-plate.jpeg'
@@ -256,15 +256,15 @@ export const menuItems = {
     {
       id: 'a3',
       name: 'French Fries',
-      description: 'Medina\'s famous tender crispy fries, perfectly seasoned.',
+      description: 'Crispy, tender fries that keep guests coming back. A house favorite.',
       price: '$10.99',
       category: 'Appetizer',
       image: 'https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg'
     },
     {
       id: 'a4',
-      name: 'Beef Samosa',
-      description: 'Pastry pockets filled with spiced minced beef (4 pcs).',
+      name: 'Beef Samosa (4 pcs)',
+      description: 'Flaky pastry filled with seasoned minced beef. Perfectly spiced and fried.',
       price: '$13.99',
       category: 'Appetizer',
       image: 'https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg'
@@ -273,157 +273,266 @@ export const menuItems = {
   mainDishes: [
     {
       id: 'm1',
-      name: 'Chicken Shawarma Plate',
-      description: 'Marinated chicken served with rice, salad, and garlic sauce.',
-      price: '$18.99',
+      name: 'House Salad',
+      description: 'A crisp blend of romaine, cucumbers, onions, and grape tomatoes tossed in olive oil, lemon, garlic, and black pepper.',
+      price: '$13.99',
       category: 'Main Dish',
-      image: 'https://images.pexels.com/photos/7470601/pexels-photo-7470601.jpeg'
+      image: 'https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg'
+    },
+    {
+      id: 'm2',
+      name: 'Caesar Salad',
+      description: 'Classic romaine, shaved parmesan, and crunchy croutons with house Caesar dressing.',
+      price: '$12.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg',
+      notes: 'Add grilled chicken: +$7.50'
+    },
+    {
+      id: 'm3',
+      name: 'Chicken Shawarma Wrap',
+      description: 'Marinated chicken breast with lettuce, tomato, onions, garlic, and creamy hummus sauce, wrapped fresh.',
+      price: '$14.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/7470601/pexels-photo-7470601.jpeg',
+      notes: 'Add fries or salad: +$3.99'
+    },
+    {
+      id: 'm4',
+      name: 'Beef Donair Wrap',
+      description: 'Tender beef donair with lettuce, tomato, onions, garlic, and sweet sauce. Served with your choice of fries or salad.',
+      price: '$16.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg'
     },
     {
       id: 'm5',
-      name: 'Istanbul Flatbread',
-      description: 'Turkish Sujuk beef sausage, peppers, tomatoes, olives, and mozzarella on flatbread with tzatziki.',
-      price: '$13.99',
+      name: 'Steak Sandwich',
+      description: 'Juicy 5.5 oz grilled beef steak served on artisan bread with a side of fries or salad.',
+      price: '$21.99',
       category: 'Main Dish',
-      image: 'https://images.pexels.com/photos/5639326/pexels-photo-5639326.jpeg'
+      image: 'https://images.pexels.com/photos/3615461/pexels-photo-3615461.jpeg'
     },
     {
       id: 'm6',
-      name: 'Sizzling Sujuk Grill Platter',
-      description: 'Grilled Turkish Sujuk beef sausage with sautéed peppers, served with rice, salad, and tzatziki.',
-      price: '$28.99',
+      name: 'Beef Burger',
+      description: 'Classic grilled beef burger with your favorite toppings. Served with fries or salad.',
+      price: '$17.99',
       category: 'Main Dish',
-      image: 'https://images.pexels.com/photos/6605214/pexels-photo-6605214.jpeg'
+      image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg'
     },
     {
       id: 'm7',
-      name: 'Sujuk Sandwich',
-      description: 'Grilled Turkish Sujuk with peppers, tomatoes, and Swiss cheese on fresh baked bread.',
-      price: '$18.99',
+      name: 'Crispy Chicken Burger',
+      description: 'Golden fried chicken breast on a bun. Comes with fries or salad.',
+      price: '$16.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/2271107/pexels-photo-2271107.jpeg'
+    },
+    {
+      id: 'm8',
+      name: 'Chicken Strips & Fries',
+      description: 'Three crispy chicken tenders served over a bed of fries.',
+      price: '$19.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg'
+    },
+    {
+      id: 'm9',
+      name: 'Grilled Chicken Sandwich',
+      description: 'Fresh grilled chicken breast on a demi baguette. Served with fries or salad.',
+      price: '$19.99',
       category: 'Main Dish',
       image: 'https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg'
     },
     {
-      id: 'm8',
-      name: 'Grilled Tilapia',
-      description: 'Pan seared tilapia with lemon butter sauce, served with rice and a fresh side salad.',
-      price: '$24.99',
+      id: 'm10',
+      name: 'Istanbul Flatbread',
+      description: 'Turkish Sujuk beef sausage, sweet peppers, tomatoes, onions, black olives, and mozzarella on warm flatbread. Served with homemade tzatziki.',
+      price: '$13.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/5639326/pexels-photo-5639326.jpeg',
+      notes: 'Add extra sausage: +$5'
+    },
+    {
+      id: 'm11',
+      name: 'Antalya Sujuk Panini',
+      description: 'Sliced Turkish Sujuk beef sausage with sweet peppers, tomatoes, onions, Swiss cheese, and zesty mayo — grilled to perfection.',
+      price: '$17.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg',
+      notes: 'Add extra sausage: +$5'
+    },
+    {
+      id: 'm12',
+      name: 'Tilapia Fish',
+      description: 'Pan-seared tilapia topped with creamy lemon butter sauce. Served with rice and salad.',
+      price: '$29.99',
       category: 'Main Dish',
       image: 'https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg'
     },
     {
-      id: 'm9',
-      name: 'Chicken Rose',
-      description: 'Double chicken breast with signature rose sauce, served with your choice of spaghetti or rice.',
-      price: '$26.99',
+      id: 'm13',
+      name: 'Fresh Grilled Chicken Breast',
+      description: 'Double chicken breast grilled to perfection, topped with house-made rose sauce. Served with spaghetti or rice and salad.',
+      price: '$30.99',
       category: 'Main Dish',
       image: 'https://images.pexels.com/photos/5865067/pexels-photo-5865067.jpeg'
     },
     {
-      id: 'm10',
+      id: 'm14',
+      name: 'Butter Chicken',
+      description: 'Rich, spiced butter chicken served with rice, salad, and warm naan bread.',
+      price: '$30.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg'
+    },
+    {
+      id: 'm15',
+      name: 'Spaghetti with Chicken',
+      description: 'Classic spaghetti in tomato sauce tossed with grilled chicken.',
+      price: '$24.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg'
+    },
+    {
+      id: 'm16',
       name: 'Chicken Biryani',
-      description: 'Aromatic chicken with basmati rice, herbs, and spices, served with yogurt on the side.',
-      price: '$22.99',
+      description: 'Fragrant basmati rice cooked with spiced chicken, herbs, and seasonings. Served with yogurt.',
+      price: '$30.99',
       category: 'Main Dish',
       image: 'https://images.pexels.com/photos/7393915/pexels-photo-7393915.jpeg'
+    },
+    {
+      id: 'm17',
+      name: 'Sizzling Sujuk Grill Platter',
+      description: 'Turkish Sujuk beef sausage sautéed with sweet peppers. Served with rice, house salad, and tzatziki.',
+      price: '$28.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/6605214/pexels-photo-6605214.jpeg',
+      notes: 'Add grilled chicken: +$5.50 | Extra sausage: +$5'
     }
   ],
   drinks: [
     {
       id: 'd1',
-      name: 'Turkish Coffee',
-      description: 'Strong, aromatic coffee prepared in the traditional Middle Eastern style.',
-      price: '$4.99',
-      category: 'Coffee',
-      image: 'https://images.pexels.com/photos/6549080/pexels-photo-6549080.jpeg'
-    },
-    {
-      id: 'd2',
-      name: 'Cappuccino',
-      description: 'Espresso with steamed milk and a silky layer of foam.',
-      price: '$5.49',
-      category: 'Coffee',
-      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
-    },
-    {
-      id: 'd3',
-      name: 'Caramel Latte',
-      description: 'Espresso with steamed milk and sweet caramel syrup.',
-      price: '$5.99',
-      category: 'Coffee',
-      image: 'https://images.pexels.com/photos/3951748/pexels-photo-3951748.jpeg'
-    },
-    {
-      id: 'd4',
-      name: 'Mint Tea',
-      description: 'Fresh mint leaves steeped in hot water, sweetened to perfection.',
-      price: '$3.99',
-      category: 'Tea',
-      image: 'https://images.pexels.com/photos/5989085/pexels-photo-5989085.jpeg'
-    },
-    {
-      id: 'd5',
       name: 'Somali Tea',
-      description: 'Spiced tea with cardamom, cinnamon and cloves, served with milk.',
+      description: 'Our most loved house tea. Slow-brewed, milky, and naturally spiced — bold in flavor and full of tradition.',
       price: '$7.99',
       category: 'Tea',
       image: 'https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg'
     },
     {
-      id: 'd6',
-      name: 'Arabic Tea',
-      description: 'Traditional Arabic tea with cardamom and mint.',
-      price: '$7.99',
+      id: 'd2',
+      name: 'Ginger Masala Chai',
+      description: 'A cozy, aromatic chai tea with depth and warmth in every sip.',
+      price: '$8.99',
       category: 'Tea',
       image: 'https://images.pexels.com/photos/4021983/pexels-photo-4021983.jpeg'
     },
     {
-      id: 'd7',
+      id: 'd3',
+      name: 'Moroccan Tea',
+      description: 'A fragrant blend of black and green tea steeped with fresh mint, served sweet and warm.',
+      price: '$7.99',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/5989085/pexels-photo-5989085.jpeg'
+    },
+    {
+      id: 'd4',
+      name: 'Orange Pekoe',
+      description: 'Simple, warm, and calming — your choice of traditional favourites.',
+      price: '$5.99',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/5989085/pexels-photo-5989085.jpeg'
+    },
+    {
+      id: 'd5',
       name: 'Strawberry Milkshake',
-      description: 'Creamy blend of strawberries, vanilla ice cream, and milk.',
+      description: 'Thick, creamy, and blended to order. A sweet classic with your choice of flavour.',
       price: '$8.49',
       category: 'Milkshake',
       image: 'https://images.pexels.com/photos/5060368/pexels-photo-5060368.jpeg'
     },
     {
-      id: 'd8',
+      id: 'd6',
       name: 'Chocolate Milkshake',
-      description: 'Rich chocolate ice cream blended with milk and topped with whipped cream.',
+      description: 'Thick, creamy, and blended to order. A sweet classic with your choice of flavour.',
       price: '$8.49',
       category: 'Milkshake',
       image: 'https://images.pexels.com/photos/3727250/pexels-photo-3727250.jpeg'
     },
     {
+      id: 'd7',
+      name: 'Turkish Coffee',
+      description: 'For the true coffee lovers. Balanced, bold, and beautifully brewed.',
+      price: '$7.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/6549080/pexels-photo-6549080.jpeg'
+    },
+    {
+      id: 'd8',
+      name: 'Cappuccino',
+      description: 'For the true coffee lovers. Balanced, bold, and beautifully brewed.',
+      price: '$7.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+    },
+    {
       id: 'd9',
-      name: 'Mango Milkshake',
-      description: 'Tropical mango blended with vanilla ice cream and milk.',
-      price: '$8.49',
-      category: 'Milkshake',
-      image: 'https://images.pexels.com/photos/3625372/pexels-photo-3625372.jpeg'
+      name: 'Espresso',
+      description: 'For the true coffee lovers. Balanced, bold, and beautifully brewed.',
+      price: '$4.25',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
     },
     {
       id: 'd10',
-      name: 'Mango Lassi',
-      description: 'Refreshing yogurt drink blended with mango and a hint of cardamom.',
-      price: '$5.99',
-      category: 'Drink',
-      image: 'https://images.pexels.com/photos/12448165/pexels-photo-12448165.jpeg'
-    },
-    {
-      id: 'd12',
-      name: 'Rose Lemonade',
-      description: 'House-made lemonade infused with rose water and sweetened with honey.',
-      price: '$4.99',
-      category: 'Drink',
-      image: 'https://images.pexels.com/photos/2109099/pexels-photo-2109099.jpeg'
+      name: 'Iced Cappuccino',
+      description: 'Cool, creamy, and finished with whipped cream. A smooth way to stay refreshed.',
+      price: '$8.49',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
     }
   ],
   desserts: [
     {
+      id: 'de1',
+      name: 'Chocolate Cheesecake',
+      description: 'Rich and creamy chocolate-infused cheesecake.',
+      price: '$12.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg'
+    },
+    {
       id: 'de2',
-      name: 'Kunafa',
-      description: 'Sweet cheese pastry soaked in sugar syrup, topped with crushed pistachios.',
-      price: '$7.99',
+      name: 'Chocolate Cake',
+      description: 'Warm, baked chocolate cake served with vanilla ice cream.',
+      price: '$12.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg'
+    },
+    {
+      id: 'de3',
+      name: 'Banana Xango (Chan\'go)',
+      description: 'Banana cheesecake wrapped in flaky pastry, dusted with cinnamon sugar. Served with caramel drizzle and French vanilla ice cream.',
+      price: '$12.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg'
+    },
+    {
+      id: 'de4',
+      name: 'Hot Fudge Brownie Sundae',
+      description: 'Warm double chocolate brownie served with vanilla ice cream, topped with butterscotch, chocolate sauce, whipped cream, and a cherry on top.',
+      price: '$12.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg'
+    },
+    {
+      id: 'de5',
+      name: 'Kanafa Sweet Pastry',
+      description: 'Traditional Turkish—Middle Eastern pastry made with cheese, semolina, pistachios, and almonds. Finished with a light sugar syrup.',
+      price: '$11.99',
       category: 'Dessert',
       image: 'https://images.pexels.com/photos/9260823/pexels-photo-9260823.jpeg'
     }
@@ -437,13 +546,13 @@ export const businessInfo = {
   phone: '(403)237-9002',
   email: 'info@medinacafe.com',
   hours: {
-    monday: '11:00 AM - 11:00 PM',
-    tuesday: '11:00 AM - 11:00 PM',
-    wednesday: '11:00 AM - 11:00 PM',
-    thursday: '11:00 AM - 11:00 PM',
-    friday: '11:00 AM - 1:00 AM',
-    saturday: '11:00 AM - 1:00 AM',
-    sunday: '12:00 PM - 10:00 PM',
+    monday: '4:00 PM - 2:00 AM',
+    tuesday: '2:00 PM - 2:00 AM',
+    wednesday: '2:00 PM - 2:00 AM',
+    thursday: '2:00 PM - 2:00 AM',
+    friday: '2:00 PM - 3:00 AM',
+    saturday: '2:00 PM - 3:00 AM',
+    sunday: '2:00 PM - 2:00 AM',
   },
   socialMedia: {
     facebook: 'https://facebook.com/medinacafe',
