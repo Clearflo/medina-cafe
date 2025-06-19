@@ -236,3 +236,37 @@ export const menuItems = {
       notes: 'After 1AM $31.99'
     }
   ],
+  appetizers: [
+    {
+      id: 'a1',
+      name: 'Hummus',
+      description: 'Creamy chickpea dip made with tahini, lemon, and olive oil. Served with warm pita.',
+      price: '$13.99',
+      category: 'Warm Starters & Crispy Bites',
+      image: 'https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg'
+    },
+    {
+      id: 'a2',
+      name: 'Poutine',
+      description: 'Golden fries topped with cheese curds and our signature homemade gravy.',
+      price: '$18.99',
+      category: 'Warm Starters & Crispy Bites',
+      image: 'https://images.pexels.com/photos/15161107/pexels-photo-15161107/free-photo-of-poutine-on-plate.jpeg'
+    },
+    {
+      id: 'a3',
+      name: 'French Fries',
+      description: 'Crispy, tender fries that keep guests coming back. A house favorite.',
+      price: '$10.99',
+      category: 'Warm Starters & Crispy Bites',
+      image: 'https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg'
+    },
+    {
+      id: 'a4',
+      name: 'Beef Samosa (4 pcs)',
+      description: 'Flaky pastry filled with seasoned minced beef. Perfectly spiced and fried.',
+      price: '$13.99',
+      category: 'Warm Starters & Crispy Bites',
+      image: 'https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg'
+    }
+  ],
