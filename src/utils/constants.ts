@@ -270,7 +270,7 @@ export const menuItems = {
       image: 'https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg'
     }
   ],
-  saladsAndWraps: [
+  mainDishes: [
     {
       id: 'sw1',
       name: 'House Salad',
@@ -304,9 +304,7 @@ export const menuItems = {
       price: '$16.99',
       category: 'Fresh Salads & Wraps',
       image: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg'
-    }
-  ],
-  sandwichesAndBites: [
+    },
     {
       id: 'sb1',
       name: 'Steak Sandwich',
@@ -364,6 +362,74 @@ export const menuItems = {
       category: 'Grilled Sandwiches & Global Bites',
       image: 'https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg',
       notes: 'Add extra sausage +$5'
+    }
+  ],
+  drinks: [
+    {
+      id: 'd1',
+      name: 'Turkish Tea',
+      description: 'Traditional Turkish black tea served in authentic glasses.',
+      price: '$4.99',
+      category: 'Hot Beverages',
+      image: 'https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg'
+    },
+    {
+      id: 'd2',
+      name: 'Fresh Mint Tea',
+      description: 'Refreshing mint tea made with fresh mint leaves.',
+      price: '$5.99',
+      category: 'Hot Beverages',
+      image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
+    },
+    {
+      id: 'd3',
+      name: 'Arabic Coffee',
+      description: 'Traditional Arabic coffee with cardamom.',
+      price: '$6.99',
+      category: 'Hot Beverages',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+    },
+    {
+      id: 'd4',
+      name: 'Fresh Orange Juice',
+      description: 'Freshly squeezed orange juice.',
+      price: '$7.99',
+      category: 'Fresh Juices',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+    },
+    {
+      id: 'd5',
+      name: 'Pomegranate Juice',
+      description: 'Pure pomegranate juice, rich in antioxidants.',
+      price: '$8.99',
+      category: 'Fresh Juices',
+      image: 'https://images.pexels.com/photos/1435722/pexels-photo-1435722.jpeg'
+    }
+  ],
+  desserts: [
+    {
+      id: 'ds1',
+      name: 'Baklava',
+      description: 'Traditional Middle Eastern pastry with layers of phyllo, nuts, and honey.',
+      price: '$8.99',
+      category: 'Traditional Desserts',
+      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
+    },
+    {
+      id: 'ds2',
+      name: 'Turkish Delight',
+      description: 'Authentic Turkish lokum in assorted flavors.',
+      price: '$6.99',
+      category: 'Traditional Desserts',
+      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
+    },
+    {
+      id: 'ds3',
+      name: 'Kunafa',
+      description: 'Sweet cheese pastry topped with crispy shredded wheat and syrup.',
+      price: '$9.99',
+      category: 'Traditional Desserts',
+      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
     }
   ]
 };
