@@ -242,7 +242,7 @@ export const menuItems = {
       name: 'Hummus',
       description: 'Creamy chickpea dip made with tahini, lemon, and olive oil. Served with warm pita.',
       price: '$13.99',
-      category: 'Warm Starters & Crispy Bites',
+      category: 'Appetizer',
       image: 'https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg'
     },
     {
@@ -250,7 +250,7 @@ export const menuItems = {
       name: 'Poutine',
       description: 'Golden fries topped with cheese curds and our signature homemade gravy.',
       price: '$18.99',
-      category: 'Warm Starters & Crispy Bites',
+      category: 'Appetizer',
       image: 'https://images.pexels.com/photos/15161107/pexels-photo-15161107/free-photo-of-poutine-on-plate.jpeg'
     },
     {
@@ -258,7 +258,7 @@ export const menuItems = {
       name: 'French Fries',
       description: 'Crispy, tender fries that keep guests coming back. A house favorite.',
       price: '$10.99',
-      category: 'Warm Starters & Crispy Bites',
+      category: 'Appetizer',
       image: 'https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg'
     },
     {
@@ -266,17 +266,17 @@ export const menuItems = {
       name: 'Beef Samosa (4 pcs)',
       description: 'Flaky pastry filled with seasoned minced beef. Perfectly spiced and fried.',
       price: '$13.99',
-      category: 'Warm Starters & Crispy Bites',
+      category: 'Appetizer',
       image: 'https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg'
     }
   ],
-  mainDishes: [
+  saladsAndWraps: [
     {
       id: 'sw1',
       name: 'House Salad',
       description: 'A crisp blend of romaine, cucumbers, onions, and grape tomatoes tossed in olive oil, lemon, garlic, and black pepper.',
       price: '$13.99',
-      category: 'Fresh Salads & Wraps',
+      category: 'Salad',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'
     },
     {
@@ -284,7 +284,7 @@ export const menuItems = {
       name: 'Caesar Salad',
       description: 'Classic romaine, shaved parmesan, and crunchy croutons with house Caesar dressing.',
       price: '$12.99',
-      category: 'Fresh Salads & Wraps',
+      category: 'Salad',
       image: 'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg',
       notes: 'Add grilled chicken +$7.50'
     },
@@ -293,7 +293,7 @@ export const menuItems = {
       name: 'Chicken Shawarma Wrap',
       description: 'Marinated chicken breast with lettuce, tomato, onions, garlic, and creamy hummus sauce, wrapped fresh.',
       price: '$14.99',
-      category: 'Fresh Salads & Wraps',
+      category: 'Wrap',
       image: 'https://images.pexels.com/photos/4664189/pexels-photo-4664189.jpeg',
       notes: 'Add fries or salad +$3.99'
     },
@@ -302,15 +302,17 @@ export const menuItems = {
       name: 'Beef Donair Wrap',
       description: 'Tender beef donair with lettuce, tomato, onions, garlic, and sweet sauce. Served with your choice of fries or salad.',
       price: '$16.99',
-      category: 'Fresh Salads & Wraps',
+      category: 'Wrap',
       image: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg'
-    },
+    }
+  ],
+  sandwichesAndBites: [
     {
       id: 'sb1',
       name: 'Steak Sandwich',
       description: 'Juicy 5.5 oz grilled beef steak served on artisan bread with a side of fries or salad.',
       price: '$21.99',
-      category: 'Grilled Sandwiches & Global Bites',
+      category: 'Sandwich',
       image: 'https://images.pexels.com/photos/4871119/pexels-photo-4871119.jpeg'
     },
     {
@@ -318,7 +320,7 @@ export const menuItems = {
       name: 'Beef Burger',
       description: 'Classic grilled beef burger with your favorite toppings. Served with fries or salad.',
       price: '$17.99',
-      category: 'Grilled Sandwiches & Global Bites',
+      category: 'Sandwich',
       image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg'
     },
     {
@@ -326,7 +328,7 @@ export const menuItems = {
       name: 'Crispy Chicken Burger',
       description: 'Golden fried chicken breast on a bun. Comes with fries or salad.',
       price: '$16.99',
-      category: 'Grilled Sandwiches & Global Bites',
+      category: 'Sandwich',
       image: 'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg'
     },
     {
@@ -334,7 +336,7 @@ export const menuItems = {
       name: 'Chicken Strips & Fries',
       description: 'Three crispy chicken tenders served over a bed of fries.',
       price: '$19.99',
-      category: 'Grilled Sandwiches & Global Bites',
+      category: 'Bite',
       image: 'https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg'
     },
     {
@@ -342,7 +344,7 @@ export const menuItems = {
       name: 'Grilled Chicken Sandwich',
       description: 'Fresh grilled chicken breast on a demi baguette. Served with fries or salad.',
       price: '$19.99',
-      category: 'Grilled Sandwiches & Global Bites',
+      category: 'Sandwich',
       image: 'https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg'
     },
     {
@@ -350,7 +352,7 @@ export const menuItems = {
       name: 'Istanbul Flatbread',
       description: 'Turkish Sujuk beef sausage, sweet peppers, tomatoes, onions, black olives, and mozzarella on warm flatbread. Served with homemade tzatziki.',
       price: '$13.99',
-      category: 'Grilled Sandwiches & Global Bites',
+      category: 'Bite',
       image: 'https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg',
       notes: 'Add extra sausage +$5'
     },
@@ -359,10 +361,13 @@ export const menuItems = {
       name: 'Antalya Sujuk Panini',
       description: 'Sliced Turkish Sujuk beef sausage with sweet peppers, tomatoes, onions, Swiss cheese, and zesty mayo — grilled to perfection.',
       price: '$17.99',
-      category: 'Grilled Sandwiches & Global Bites',
+      category: 'Bite',
       image: 'https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg',
       notes: 'Add extra sausage +$5'
     }
+  ],
+  mainDishes: [
+    // This can be used for main entrees that don't fit in the above categories
   ],
   drinks: [
     {
@@ -370,7 +375,7 @@ export const menuItems = {
       name: 'Turkish Tea',
       description: 'Traditional Turkish black tea served in authentic glasses.',
       price: '$4.99',
-      category: 'Hot Beverages',
+      category: 'Tea',
       image: 'https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg'
     },
     {
@@ -378,7 +383,7 @@ export const menuItems = {
       name: 'Fresh Mint Tea',
       description: 'Refreshing mint tea made with fresh mint leaves.',
       price: '$5.99',
-      category: 'Hot Beverages',
+      category: 'Tea',
       image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
     },
     {
@@ -386,24 +391,88 @@ export const menuItems = {
       name: 'Arabic Coffee',
       description: 'Traditional Arabic coffee with cardamom.',
       price: '$6.99',
-      category: 'Hot Beverages',
+      category: 'Coffee',
       image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
     },
     {
       id: 'd4',
-      name: 'Fresh Orange Juice',
-      description: 'Freshly squeezed orange juice.',
-      price: '$7.99',
-      category: 'Fresh Juices',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+      name: 'Espresso',
+      description: 'Rich, strong Italian espresso.',
+      price: '$3.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
     },
     {
       id: 'd5',
+      name: 'Cappuccino',
+      description: 'Classic cappuccino with steamed milk and foam.',
+      price: '$5.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+    },
+    {
+      id: 'd6',
+      name: 'Latte',
+      description: 'Smooth coffee with steamed milk.',
+      price: '$6.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/302896/pexels-photo-302896.jpeg'
+    },
+    {
+      id: 'd7',
+      name: 'Vanilla Milkshake',
+      description: 'Creamy vanilla milkshake made with premium ice cream.',
+      price: '$8.99',
+      category: 'Milkshake',
+      image: 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg'
+    },
+    {
+      id: 'd8',
+      name: 'Chocolate Milkshake',
+      description: 'Rich chocolate milkshake topped with whipped cream.',
+      price: '$8.99',
+      category: 'Milkshake',
+      image: 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg'
+    },
+    {
+      id: 'd9',
+      name: 'Strawberry Milkshake',
+      description: 'Fresh strawberry milkshake with real strawberry pieces.',
+      price: '$8.99',
+      category: 'Milkshake',
+      image: 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg'
+    },
+    {
+      id: 'd10',
+      name: 'Fresh Orange Juice',
+      description: 'Freshly squeezed orange juice.',
+      price: '$7.99',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+    },
+    {
+      id: 'd11',
       name: 'Pomegranate Juice',
       description: 'Pure pomegranate juice, rich in antioxidants.',
       price: '$8.99',
-      category: 'Fresh Juices',
+      category: 'Drink',
       image: 'https://images.pexels.com/photos/1435722/pexels-photo-1435722.jpeg'
+    },
+    {
+      id: 'd12',
+      name: 'Apple Juice',
+      description: 'Fresh apple juice, crisp and refreshing.',
+      price: '$6.99',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+    },
+    {
+      id: 'd13',
+      name: 'Soft Drinks',
+      description: 'Coke, Pepsi, Sprite, Orange, and other popular sodas.',
+      price: '$3.99',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     }
   ],
   desserts: [
@@ -412,7 +481,7 @@ export const menuItems = {
       name: 'Baklava',
       description: 'Traditional Middle Eastern pastry with layers of phyllo, nuts, and honey.',
       price: '$8.99',
-      category: 'Traditional Desserts',
+      category: 'Dessert',
       image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
     },
     {
@@ -420,7 +489,7 @@ export const menuItems = {
       name: 'Turkish Delight',
       description: 'Authentic Turkish lokum in assorted flavors.',
       price: '$6.99',
-      category: 'Traditional Desserts',
+      category: 'Dessert',
       image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
     },
     {
@@ -428,7 +497,31 @@ export const menuItems = {
       name: 'Kunafa',
       description: 'Sweet cheese pastry topped with crispy shredded wheat and syrup.',
       price: '$9.99',
-      category: 'Traditional Desserts',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
+    },
+    {
+      id: 'ds4',
+      name: 'Chocolate Lava Cake',
+      description: 'Warm chocolate cake with molten chocolate center, served with vanilla ice cream.',
+      price: '$11.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
+    },
+    {
+      id: 'ds5',
+      name: 'Tiramisu',
+      description: 'Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream.',
+      price: '$10.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
+    },
+    {
+      id: 'ds6',
+      name: 'Ice Cream Sundae',
+      description: 'Three scoops of vanilla ice cream with chocolate sauce, whipped cream, and cherry.',
+      price: '$7.99',
+      category: 'Dessert',
       image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
     }
   ]
