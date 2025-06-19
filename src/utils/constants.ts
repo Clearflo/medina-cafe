@@ -365,4 +365,5 @@ export const menuItems = {
       image: 'https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg',
       notes: 'Add extra sausage +$5'
     }
-  ],
+  ]
+};
