@@ -305,53 +305,171 @@ export const menuItems = {
     }
   ],
   drinks: [
+    // Signature House Teas
     {
       id: 'd1',
-      name: 'Turkish Coffee',
-      description: 'Traditional Turkish coffee served in a small cup with Turkish delight.',
-      price: '$5.99',
-      category: 'Coffee',
-      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
-    },
-    {
-      id: 'd2',
-      name: 'Cappuccino',
-      description: 'Rich espresso with steamed milk and foam, perfectly balanced.',
-      price: '$4.99',
-      category: 'Coffee',
-      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
-    },
-    {
-      id: 'd3',
-      name: 'Mint Tea',
-      description: 'Fresh mint tea served hot with sugar on the side.',
-      price: '$3.99',
-      category: 'Tea',
+      name: 'Somali Tea',
+      description: 'Our most loved house tea. Slow-brewed, milky, and naturally spiced — bold in flavor and full of tradition. Comfort in a cup.',
+      price: '$7.99',
+      category: 'Signature House Teas',
       image: 'https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg'
     },
     {
-      id: 'd4',
-      name: 'Earl Grey Tea',
-      description: 'Classic black tea with bergamot oil for a citrusy flavor.',
-      price: '$3.99',
-      category: 'Tea',
+      id: 'd2',
+      name: 'Ginger Masala Chai',
+      description: 'A cozy, aromatic chai tea with depth and warmth in every sip. Bold, smooth, and deeply satisfying.',
+      price: '$8.99',
+      category: 'Signature House Teas',
       image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
     },
     {
-      id: 'd5',
-      name: 'Vanilla Milkshake',
-      description: 'Creamy vanilla milkshake topped with whipped cream.',
-      price: '$6.99',
-      category: 'Milkshake',
+      id: 'd3',
+      name: 'Moroccan Tea',
+      description: 'A fragrant blend of black and green tea steeped with fresh mint, served sweet and warm. Light, refreshing, and beautifully timeless.',
+      price: '$7.99',
+      category: 'Signature House Teas',
+      image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
+    },
+    // Milk Shakes
+    {
+      id: 'd4',
+      name: 'Milk Shakes',
+      description: 'Thick, creamy, and blended to order. A sweet classic with your choice of flavour. Available in: Strawberry, Peach, Mango, Banana, Raspberry, Chocolate, Caramel, Pina Colada, Vanilla, Strawberry Banana.',
+      price: '$8.49',
+      category: 'Milkshakes',
       image: 'https://images.pexels.com/photos/4099123/pexels-photo-4099123.jpeg'
     },
+    // Frappes
+    {
+      id: 'd5',
+      name: 'Frappes',
+      description: 'Chilled, creamy, and topped with whipped cream. A cool twist on your café favourites. Available in: Double Chocolate, White Chocolate. Add espresso shot +$2.99',
+      price: '$8.49',
+      category: 'Frappes',
+      image: 'https://images.pexels.com/photos/4226894/pexels-photo-4226894.jpeg'
+    },
+    // Smoothies
     {
       id: 'd6',
-      name: 'Chocolate Milkshake',
-      description: 'Rich chocolate milkshake with chocolate chips and whipped cream.',
-      price: '$6.99',
-      category: 'Milkshake',
-      image: 'https://images.pexels.com/photos/4226894/pexels-photo-4226894.jpeg'
+      name: 'Smoothies',
+      description: 'Fruity, ice-blended, and naturally refreshing — no extras needed. Available in: Mango, Strawberry, Peach, Raspberry, Pina Colada, Strawberry Banana, Passionfruit.',
+      price: '$7.99',
+      category: 'Smoothies',
+      image: 'https://images.pexels.com/photos/2294471/pexels-photo-2294471.jpeg'
+    },
+    // Italian Sodas
+    {
+      id: 'd7',
+      name: 'Italian Sodas',
+      description: 'Bubbly and full of flavour. House-made sodas with a playful twist. Available in: Raspberry, Grenadine, Peach, Caramel, Vanilla, Pear, Kiwi, Mango, Strawberry, Passion Fruit.',
+      price: '$5.99',
+      category: 'Italian Sodas',
+      image: 'https://images.pexels.com/photos/2842876/pexels-photo-2842876.jpeg'
+    },
+    // Specialty Drinks
+    {
+      id: 'd8',
+      name: 'Matcha Green Tea Lemonade',
+      description: 'Earthy matcha meets citrusy lemonade in this chilled, energizing blend. Smooth, tangy, and balanced.',
+      price: '$8.49',
+      category: 'Specialty Drinks',
+      image: 'https://images.pexels.com/photos/4992988/pexels-photo-4992988.jpeg'
+    },
+    // Mocktails
+    {
+      id: 'd9',
+      name: 'Mocktails',
+      description: 'Crafted without alcohol — bold, fun, and full of flavour. Available: Virgin Mojito, Shirley Temple, Virgin Caesar.',
+      price: '$7.99',
+      category: 'Mocktails',
+      image: 'https://images.pexels.com/photos/1304537/pexels-photo-1304537.jpeg'
+    },
+    // Hot Drinks
+    {
+      id: 'd10',
+      name: 'House Hot Drinks',
+      description: 'Warm, familiar favourites made fresh to order. Available: Café Latte, Chai Latte, Matcha Green Tea Latte, Caramel Latte, Hot Chocolate, White Hot Chocolate, Turkish/Arabic Coffee.',
+      price: '$7.99',
+      category: 'Hot Drinks',
+      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
+    },
+    // Espresso Bar
+    {
+      id: 'd11',
+      name: 'Black Coffee',
+      description: 'For the true coffee lovers. Balanced, bold, and beautifully brewed.',
+      price: '$7.99',
+      category: 'Espresso Bar',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+    },
+    {
+      id: 'd12',
+      name: 'Espresso',
+      description: 'Rich, concentrated coffee shot.',
+      price: '$4.25',
+      category: 'Espresso Bar',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+    },
+    {
+      id: 'd13',
+      name: 'Cappuccino',
+      description: 'Rich espresso with steamed milk and foam, perfectly balanced.',
+      price: '$7.99',
+      category: 'Espresso Bar',
+      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
+    },
+    {
+      id: 'd14',
+      name: 'Specialty Coffee Drinks',
+      description: 'Premium coffee creations. Available: Double Espresso, Macchiato, Mochaccino, Café Americano, Caramel Macchiato, Café Mocha, Vanilla Latte, Hazelnut Latte, Peppermint Mocha, Pumpkin Spice Latte.',
+      price: '$7.99',
+      category: 'Espresso Bar',
+      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
+    },
+    // Iced Drinks
+    {
+      id: 'd15',
+      name: 'Iced Drinks',
+      description: 'Cool, creamy, and finished with whipped cream. A smooth way to stay refreshed. Available: Iced Cappuccino, Iced Mochaccino, Iced Caramel Cappuccino, Iced Chai.',
+      price: '$8.49',
+      category: 'Iced Drinks',
+      image: 'https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg'
+    },
+    // Bottled Beverages
+    {
+      id: 'd16',
+      name: 'Bottled Non-Alcoholic Beverages',
+      description: 'Crisp, fizzy, and globally loved. Jarritos: Lime, Mango, Mandarin, Pineapple. Laziza: Apple, Raspberry, Peach. Also available: Barbican, Tiger Malt, Perrier.',
+      price: '$5.49',
+      category: 'Bottled Beverages',
+      image: 'https://images.pexels.com/photos/4622100/pexels-photo-4622100.jpeg'
+    },
+    // Juices
+    {
+      id: 'd17',
+      name: 'Fresh Juices & Beverages',
+      description: 'Cold, classic, and always refreshing. Available: Orange Juice, Apple Juice, Mango Juice, Guava Juice, Pineapple Juice, Clamato Juice, Milk.',
+      price: '$5.99',
+      category: 'Juices & Beverages',
+      image: 'https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg'
+    },
+    // Energy Drinks
+    {
+      id: 'd18',
+      name: 'Energy Drinks',
+      description: 'Boost your day, no questions asked. Available: Red Bull, Gatorade.',
+      price: '$5.49',
+      category: 'Energy Drinks',
+      image: 'https://images.pexels.com/photos/2842876/pexels-photo-2842876.jpeg'
+    },
+    // Classic Teas
+    {
+      id: 'd19',
+      name: 'Classic Teas',
+      description: 'Simple, warm, and calming — your choice of traditional favourites. Available: Orange Pekoe, Mint, Peach Ginger, Chai, Camomile, Raspberry, Green, Earl Grey, Cranberry, Vanilla, Lemon.',
+      price: '$5.99',
+      category: 'Classic Teas',
+      image: 'https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg'
     }
   ],
   desserts: [
