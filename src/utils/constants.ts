@@ -242,7 +242,7 @@ export const menuItems = {
       name: 'Hummus',
       description: 'Creamy chickpea dip made with tahini, lemon, and olive oil. Served with warm pita.',
       price: '$13.99',
-      category: 'Warm Starters & Crispy Bites',
+      category: 'Appetizer',
       image: 'https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg'
     },
     {
@@ -250,7 +250,7 @@ export const menuItems = {
       name: 'Poutine',
       description: 'Golden fries topped with cheese curds and our signature homemade gravy.',
       price: '$18.99',
-      category: 'Warm Starters & Crispy Bites',
+      category: 'Appetizer',
       image: 'https://images.pexels.com/photos/15161107/pexels-photo-15161107/free-photo-of-poutine-on-plate.jpeg'
     },
     {
@@ -258,7 +258,7 @@ export const menuItems = {
       name: 'French Fries',
       description: 'Crispy, tender fries that keep guests coming back. A house favorite.',
       price: '$10.99',
-      category: 'Warm Starters & Crispy Bites',
+      category: 'Appetizer',
       image: 'https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg'
     },
     {
@@ -266,7 +266,126 @@ export const menuItems = {
       name: 'Beef Samosa (4 pcs)',
       description: 'Flaky pastry filled with seasoned minced beef. Perfectly spiced and fried.',
       price: '$13.99',
-      category: 'Warm Starters & Crispy Bites',
+      category: 'Appetizer',
       image: 'https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg'
     }
   ],
+  mainDishes: [
+    {
+      id: 'm1',
+      name: 'Chicken Shawarma',
+      description: 'Marinated chicken with garlic sauce, pickles, and vegetables in warm pita.',
+      price: '$16.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/4664189/pexels-photo-4664189.jpeg'
+    },
+    {
+      id: 'm2',
+      name: 'Beef Shawarma',
+      description: 'Tender beef with tahini sauce, tomatoes, and onions in warm pita.',
+      price: '$18.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg'
+    },
+    {
+      id: 'm3',
+      name: 'Mixed Grill Platter',
+      description: 'Combination of grilled meats served with rice, salad, and bread.',
+      price: '$24.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/4871119/pexels-photo-4871119.jpeg'
+    },
+    {
+      id: 'm4',
+      name: 'Falafel Wrap',
+      description: 'Crispy falafel with hummus, vegetables, and tahini in warm pita.',
+      price: '$14.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/6539798/pexels-photo-6539798.jpeg'
+    }
+  ],
+  drinks: [
+    {
+      id: 'd1',
+      name: 'Turkish Coffee',
+      description: 'Traditional Turkish coffee served in a small cup with Turkish delight.',
+      price: '$5.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+    },
+    {
+      id: 'd2',
+      name: 'Cappuccino',
+      description: 'Rich espresso with steamed milk and foam, perfectly balanced.',
+      price: '$4.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
+    },
+    {
+      id: 'd3',
+      name: 'Mint Tea',
+      description: 'Fresh mint tea served hot with sugar on the side.',
+      price: '$3.99',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg'
+    },
+    {
+      id: 'd4',
+      name: 'Earl Grey Tea',
+      description: 'Classic black tea with bergamot oil for a citrusy flavor.',
+      price: '$3.99',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
+    },
+    {
+      id: 'd5',
+      name: 'Vanilla Milkshake',
+      description: 'Creamy vanilla milkshake topped with whipped cream.',
+      price: '$6.99',
+      category: 'Milkshake',
+      image: 'https://images.pexels.com/photos/4099123/pexels-photo-4099123.jpeg'
+    },
+    {
+      id: 'd6',
+      name: 'Chocolate Milkshake',
+      description: 'Rich chocolate milkshake with chocolate chips and whipped cream.',
+      price: '$6.99',
+      category: 'Milkshake',
+      image: 'https://images.pexels.com/photos/4226894/pexels-photo-4226894.jpeg'
+    }
+  ],
+  desserts: [
+    {
+      id: 'ds1',
+      name: 'Baklava',
+      description: 'Layers of phyllo pastry with nuts and honey syrup.',
+      price: '$7.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/7474304/pexels-photo-7474304.jpeg'
+    },
+    {
+      id: 'ds2',
+      name: 'Kunafa',
+      description: 'Traditional Middle Eastern dessert with cheese and syrup.',
+      price: '$8.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/7474305/pexels-photo-7474305.jpeg'
+    },
+    {
+      id: 'ds3',
+      name: 'Rice Pudding',
+      description: 'Creamy rice pudding with cinnamon and pistachios.',
+      price: '$5.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/4686820/pexels-photo-4686820.jpeg'
+    },
+    {
+      id: 'ds4',
+      name: 'Turkish Delight',
+      description: 'Traditional Turkish confection with various flavors.',
+      price: '$6.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/8969234/pexels-photo-8969234.jpeg'
+    }
+  ]
+};
