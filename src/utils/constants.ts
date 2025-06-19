@@ -357,35 +357,43 @@ export const menuItems = {
   desserts: [
     {
       id: 'ds1',
-      name: 'Baklava',
-      description: 'Layers of phyllo pastry with nuts and honey syrup.',
-      price: '$7.99',
+      name: 'Chocolate Cheesecake',
+      description: 'Rich and creamy chocolate-infused cheesecake.',
+      price: '$12.99',
       category: 'Dessert',
-      image: 'https://images.pexels.com/photos/7474304/pexels-photo-7474304.jpeg'
+      image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg'
     },
     {
       id: 'ds2',
-      name: 'Kunafa',
-      description: 'Traditional Middle Eastern dessert with cheese and syrup.',
-      price: '$8.99',
+      name: 'Chocolate Cake',
+      description: 'Warm, baked chocolate cake served with vanilla ice cream.',
+      price: '$12.99',
       category: 'Dessert',
-      image: 'https://images.pexels.com/photos/7474305/pexels-photo-7474305.jpeg'
+      image: 'https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg'
     },
     {
       id: 'ds3',
-      name: 'Rice Pudding',
-      description: 'Creamy rice pudding with cinnamon and pistachios.',
-      price: '$5.99',
+      name: 'Banana Xango (Chan\'go)',
+      description: 'Banana cheesecake wrapped in flaky pastry, dusted with cinnamon sugar. Served with caramel drizzle and French vanilla ice cream.',
+      price: '$12.99',
       category: 'Dessert',
-      image: 'https://images.pexels.com/photos/4686820/pexels-photo-4686820.jpeg'
+      image: 'https://images.pexels.com/photos/5946623/pexels-photo-5946623.jpeg'
     },
     {
       id: 'ds4',
-      name: 'Turkish Delight',
-      description: 'Traditional Turkish confection with various flavors.',
-      price: '$6.99',
+      name: 'Hot Fudge Brownie Sundae',
+      description: 'Warm double chocolate brownie served with vanilla ice cream, topped with butterscotch, chocolate sauce, whipped cream, and a cherry on top.',
+      price: '$12.99',
       category: 'Dessert',
-      image: 'https://images.pexels.com/photos/8969234/pexels-photo-8969234.jpeg'
+      image: 'https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg'
+    },
+    {
+      id: 'ds5',
+      name: 'Kanafa Sweet Pastry',
+      description: 'Traditional Turkish-Middle Eastern pastry made with cheese, semolina, pistachios, and almonds. Finished with a light sugar syrup.',
+      price: '$11.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/7474305/pexels-photo-7474305.jpeg'
     }
   ]
 };
