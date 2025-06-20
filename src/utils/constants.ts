@@ -1,682 +1,594 @@
-// Menu items by category
+// Menu items by category - Updated to match official Medina Cafe menu
 export const menuItems = {
   sheesha: [
     // House Blend Sheesha - $25.99
     {
       id: 's1',
-      name: 'Orange Mint',
+      name: 'House Blend - Orange Mint',
       description: 'Our signature orange mint blend for a refreshing smoking experience.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's2',
-      name: 'Double Apple',
+      name: 'House Blend - Double Apple',
       description: 'The traditional favorite with a sweet and crisp double apple flavor.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6546260/pexels-photo-6546260.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's3',
-      name: 'White Apple',
+      name: 'House Blend - White Apple',
       description: 'Smooth and light apple flavor with subtle sweetness.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/7443862/pexels-photo-7443862.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's4',
-      name: 'White Grape',
+      name: 'House Blend - White Grape',
       description: 'Delicate white grape flavor with a clean, sweet finish.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/15145560/pexels-photo-15145560/free-photo-of-restaurant-table-with-hookah.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's5',
-      name: 'Mixed Fruit',
+      name: 'House Blend - Mixed Fruit',
       description: 'A delightful blend of assorted fruit flavors for a tropical experience.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6546266/pexels-photo-6546266.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's6',
-      name: 'Peach',
+      name: 'House Blend - Peach',
       description: 'Sweet and aromatic peach flavor, perfect for a relaxing session.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6957706/pexels-photo-6957706.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's7',
-      name: 'Guava',
+      name: 'House Blend - Guava',
       description: 'Tropical guava flavor with a distinct sweetness and aroma.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6476071/pexels-photo-6476071.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's8',
-      name: 'Vanilla',
+      name: 'House Blend - Vanilla',
       description: 'Smooth, creamy vanilla flavor for a mellow smoking experience.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/4792683/pexels-photo-4792683.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's9',
-      name: 'Pineapple',
+      name: 'House Blend - Pineapple',
       description: 'Tropical pineapple flavor with a tangy-sweet profile.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6544928/pexels-photo-6544928.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's10',
-      name: 'Kiwi',
+      name: 'House Blend - Kiwi',
       description: 'Unique kiwi flavor with a balanced sweet and tart profile.',
+      price: '$25.99',
       category: 'House Blend Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/5370659/pexels-photo-5370659.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
-    
-    // Fresh Sheesha - $25.99
     {
       id: 's11',
-      name: 'Fresh Mint',
+      name: 'Fresh - Mint',
       description: 'Pure, refreshing mint using fresh mint leaves for an authentic experience.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6546619/pexels-photo-6546619.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's12',
-      name: 'Grapefruit',
+      name: 'Fresh - Grapefruit',
       description: 'Tangy and refreshing grapefruit flavor with a citrus kick.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6545354/pexels-photo-6545354.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's13',
-      name: 'Apple Mint',
+      name: 'Fresh - Apple Mint',
       description: 'Perfect combination of crisp apple and cool mint for a refreshing blend.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/7437489/pexels-photo-7437489.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's14',
-      name: 'Lemon Mint',
+      name: 'Fresh - Lemon Mint',
       description: 'Zesty lemon blended with cool mint for a refreshing citrus experience.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/10939225/pexels-photo-10939225.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's15',
-      name: 'Blueberry Mint',
+      name: 'Fresh - Blueberry Mint',
       description: 'Sweet blueberry blended with refreshing mint for a balanced experience.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6545419/pexels-photo-6545419.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's16',
-      name: 'Pomegranate',
+      name: 'Fresh - Pomegranate',
       description: 'Rich pomegranate flavor with a sweet-tart profile.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6545078/pexels-photo-6545078.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's17',
-      name: 'Mango',
+      name: 'Fresh - Mango',
       description: 'Tropical mango flavor with a rich, sweet profile.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6157056/pexels-photo-6157056.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's18',
-      name: 'Rose',
+      name: 'Fresh - Rose',
       description: 'Delicate floral rose flavor for a unique aromatic experience.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/7078045/pexels-photo-7078045.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
     {
       id: 's19',
-      name: 'Watermelon',
+      name: 'Fresh - Watermelon',
       description: 'Juicy watermelon flavor that\'s light and refreshing.',
+      price: '$25.99',
       category: 'Fresh Sheesha',
-      notes: 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'
+      image: 'https://images.pexels.com/photos/6546121/pexels-photo-6546121.jpeg',
+      notes: 'Refill $18.99, After 1AM $27.99'
     },
-    
-    // Premium Sheesha - $28.99-$29.99
     {
       id: 's20',
-      name: 'Blue Mist',
+      name: 'Premium - Blue Mist',
       description: 'Signature premium blend with notes of blueberry and mint, perfectly balanced.',
+      price: '$28.99',
       category: 'Premium Sheesha',
-      notes: 'Regular: $28.99 | After 1AM: $30.99'
+      image: 'https://images.pexels.com/photos/6544945/pexels-photo-6544945.jpeg',
+      notes: 'After 1AM $30.99'
     },
     {
       id: 's21',
-      name: 'Pan',
+      name: 'Premium - Pan',
       description: 'Exotic pan flavor with unique sweet and spicy notes.',
+      price: '$28.99',
       category: 'Premium Sheesha',
-      notes: 'Regular: $28.99 | After 1AM: $30.99'
+      image: 'https://images.pexels.com/photos/5711875/pexels-photo-5711875.jpeg',
+      notes: 'After 1AM $30.99'
     },
     {
       id: 's22',
-      name: 'Blue Dragon',
+      name: 'Premium - Blue Dragon',
       description: 'Bold and exotic flavor profile with hints of berries and spices.',
+      price: '$28.99',
       category: 'Premium Sheesha',
-      notes: 'Regular: $28.99 | After 1AM: $30.99'
+      image: 'https://images.pexels.com/photos/6545421/pexels-photo-6545421.jpeg',
+      notes: 'After 1AM $30.99'
     },
     {
       id: 's23',
-      name: 'Lady K',
+      name: 'Premium - Lady K',
       description: 'Sophisticated blend with floral and fruity notes for a refined experience.',
+      price: '$29.99',
       category: 'Premium Sheesha',
-      notes: 'Regular: $29.99 | After 1AM: $31.99'
+      image: 'https://images.pexels.com/photos/5370669/pexels-photo-5370669.jpeg',
+      notes: 'After 1AM $31.99'
     },
     {
       id: 's24',
-      name: 'Medina Premium',
+      name: 'Premium - Medina Premium',
       description: 'Our house special premium blend with secret flavors and exceptional quality.',
+      price: '$29.99',
       category: 'Premium Sheesha',
-      notes: 'Regular: $29.99 | After 1AM: $31.99'
+      image: 'https://images.pexels.com/photos/5792857/pexels-photo-5792857.jpeg',
+      notes: 'After 1AM $31.99'
     },
     {
       id: 's25',
-      name: 'Mi Amore',
+      name: 'Premium - Mi Amore',
       description: 'Romantic blend with sweet fruits and subtle floral notes.',
+      price: '$29.99',
       category: 'Premium Sheesha',
-      notes: 'Regular: $29.99 | After 1AM: $31.99'
+      image: 'https://images.pexels.com/photos/6546258/pexels-photo-6546258.jpeg',
+      notes: 'After 1AM $31.99'
     },
     {
       id: 's26',
-      name: 'Love66',
+      name: 'Premium - Love66',
       description: 'Popular premium blend with passion fruit, mint, and other exotic flavors.',
+      price: '$29.99',
       category: 'Premium Sheesha',
-      notes: 'Regular: $29.99 | After 1AM: $31.99'
+      image: 'https://images.pexels.com/photos/6546277/pexels-photo-6546277.jpeg',
+      notes: 'After 1AM $31.99'
     }
   ],
-  
   appetizers: [
     {
       id: 'a1',
       name: 'Hummus',
-      description: 'Creamy chickpea dip made with tahini, lemon, and olive oil. Served with warm pita bread.',
+      description: 'Creamy chickpea dip made with tahini, lemon, and olive oil. Served with warm pita.',
       price: '$13.99',
-      category: 'Appetizer'
+      category: 'Appetizer',
+      image: 'https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg'
     },
     {
       id: 'a2',
-      name: 'Baba Ganoush',
-      description: 'Smoky roasted eggplant dip blended with tahini, garlic, and lemon. Served with pita.',
-      price: '$14.99',
-      category: 'Appetizer'
+      name: 'Poutine',
+      description: 'Golden fries topped with cheese curds and our signature homemade gravy.',
+      price: '$18.99',
+      category: 'Appetizer',
+      image: 'https://images.pexels.com/photos/15161107/pexels-photo-15161107/free-photo-of-poutine-on-plate.jpeg'
     },
     {
       id: 'a3',
-      name: 'Mezze Platter',
-      description: 'A selection of hummus, baba ganoush, olives, feta cheese, and fresh vegetables with pita.',
-      price: '$19.99',
-      category: 'Appetizer'
+      name: 'French Fries',
+      description: 'Crispy, tender fries that keep guests coming back. A house favorite.',
+      price: '$10.99',
+      category: 'Appetizer',
+      image: 'https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg'
     },
     {
       id: 'a4',
-      name: 'Stuffed Grape Leaves (Dolma)',
-      description: 'Traditional grape leaves stuffed with rice, herbs, and spices. Served with yogurt sauce.',
-      price: '$15.99',
-      category: 'Appetizer'
-    },
-    {
-      id: 'a5',
-      name: 'Kibbeh',
-      description: 'Fried bulgur and meat patties stuffed with seasoned ground beef and pine nuts.',
-      price: '$16.99',
-      category: 'Appetizer'
-    },
-    {
-      id: 'a6',
-      name: 'Falafel (6 pieces)',
-      description: 'Crispy chickpea fritters served with tahini sauce and fresh vegetables.',
-      price: '$14.99',
-      category: 'Appetizer'
-    },
-    {
-      id: 'a7',
-      name: 'Cheese Rolls (Sigara Böreği)',
-      description: 'Crispy phyllo pastry rolls filled with Turkish cheese and herbs.',
+      name: 'Beef Samosa (4 pcs)',
+      description: 'Flaky pastry filled with seasoned minced beef. Perfectly spiced and fried.',
       price: '$13.99',
-      category: 'Appetizer'
-    },
-    {
-      id: 'a8',
-      name: 'French Fries',
-      description: 'Crispy golden fries seasoned with Mediterranean herbs.',
-      price: '$10.99',
-      category: 'Appetizer'
-    },
-    {
-      id: 'a9',
-      name: 'Poutine',
-      description: 'Canadian-style fries topped with cheese curds and our signature gravy.',
-      price: '$18.99',
-      category: 'Appetizer'
-    },
-    {
-      id: 'a10',
-      name: 'Beef Samosa (4 pieces)',
-      description: 'Flaky pastry triangles filled with seasoned minced beef and spices.',
-      price: '$13.99',
-      category: 'Appetizer'
+      category: 'Appetizer',
+      image: 'https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg'
     }
   ],
-  
   saladsAndWraps: [
     {
       id: 'sw1',
-      name: 'Mediterranean House Salad',
-      description: 'Mixed greens, tomatoes, cucumbers, red onions, olives, and feta cheese with olive oil vinaigrette.',
+      name: 'House Salad',
+      description: 'A crisp blend of romaine, cucumbers, onions, and grape tomatoes tossed in olive oil, lemon, garlic, and black pepper.',
       price: '$13.99',
-      category: 'Salad'
+      category: 'Salad',
+      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'
     },
     {
       id: 'sw2',
-      name: 'Tabbouleh Salad',
-      description: 'Traditional parsley salad with tomatoes, mint, bulgur, lemon juice, and olive oil.',
-      price: '$14.99',
-      category: 'Salad'
+      name: 'Caesar Salad',
+      description: 'Classic romaine, shaved parmesan, and crunchy croutons with house Caesar dressing.',
+      price: '$12.99',
+      category: 'Salad',
+      image: 'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg',
+      notes: 'Add grilled chicken: +$7.50'
     },
     {
       id: 'sw3',
-      name: 'Fattoush Salad',
-      description: 'Mixed vegetables with toasted pita bread, sumac, and pomegranate molasses dressing.',
-      price: '$15.99',
-      category: 'Salad'
+      name: 'Chicken Shawarma Wrap',
+      description: 'Marinated chicken breast with lettuce, tomato, onions, garlic, and creamy hummus sauce, wrapped fresh.',
+      price: '$14.99',
+      category: 'Wrap',
+      image: 'https://images.pexels.com/photos/4664189/pexels-photo-4664189.jpeg',
+      notes: 'Add fries or salad: +$3.99'
     },
     {
       id: 'sw4',
-      name: 'Caesar Salad',
-      description: 'Crisp romaine lettuce, parmesan cheese, croutons, and Caesar dressing.',
-      price: '$12.99',
-      category: 'Salad',
-      notes: 'Add grilled chicken +$7.50'
-    },
-    {
-      id: 'sw5',
-      name: 'Chicken Shawarma Wrap',
-      description: 'Marinated chicken with garlic sauce, pickles, and vegetables in lavash bread.',
-      price: '$14.99',
-      category: 'Wrap',
-      notes: 'Served with fries or salad +$3.99'
-    },
-    {
-      id: 'sw6',
       name: 'Beef Donair Wrap',
-      description: 'Spiced beef with sweet sauce, tomatoes, onions, and lettuce in pita bread.',
+      description: 'Tender beef donair with lettuce, tomato, onions, garlic, and sweet sauce. Served with your choice of fries or salad.',
       price: '$16.99',
-      category: 'Wrap'
-    },
-    {
-      id: 'sw7',
-      name: 'Falafel Wrap',
-      description: 'Crispy falafel with tahini sauce, vegetables, and pickles in lavash bread.',
-      price: '$13.99',
-      category: 'Wrap'
-    },
-    {
-      id: 'sw8',
-      name: 'Lamb Shawarma Wrap',
-      description: 'Tender marinated lamb with garlic sauce and vegetables in lavash bread.',
-      price: '$17.99',
-      category: 'Wrap'
+      category: 'Wrap',
+      image: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg'
     }
   ],
-  
   sandwichesAndBites: [
     {
       id: 'sb1',
-      name: 'Medina Special Burger',
-      description: 'House-made beef patty with Mediterranean spices, served with fries and salad.',
-      price: '$17.99',
-      category: 'Sandwich'
+      name: 'Steak Sandwich',
+      description: 'Juicy 5.5 oz grilled beef steak served on artisan bread with a side of fries or salad.',
+      price: '$21.99',
+      category: 'Sandwich',
+      image: 'https://images.pexels.com/photos/4871119/pexels-photo-4871119.jpeg'
     },
     {
       id: 'sb2',
-      name: 'Grilled Chicken Sandwich',
-      description: 'Marinated chicken breast with garlic aioli and fresh vegetables on artisan bread.',
-      price: '$16.99',
-      category: 'Sandwich'
+      name: 'Beef Burger',
+      description: 'Classic grilled beef burger with your favorite toppings. Served with fries or salad.',
+      price: '$17.99',
+      category: 'Sandwich',
+      image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg'
     },
     {
       id: 'sb3',
-      name: 'Steak Sandwich',
-      description: 'Grilled beef steak with sautéed onions and peppers on crusty bread.',
-      price: '$21.99',
-      category: 'Sandwich'
+      name: 'Crispy Chicken Burger',
+      description: 'Golden fried chicken breast on a bun. Comes with fries or salad.',
+      price: '$16.99',
+      category: 'Sandwich',
+      image: 'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg'
     },
     {
       id: 'sb4',
-      name: 'Turkish Sujuk Panini',
-      description: 'Spiced Turkish sausage with peppers, tomatoes, and cheese, grilled to perfection.',
-      price: '$17.99',
-      category: 'Sandwich',
-      notes: 'Add extra sujuk +$5.00'
+      name: 'Chicken Strips & Fries',
+      description: 'Three crispy chicken tenders served over a bed of fries.',
+      price: '$19.99',
+      category: 'Bite',
+      image: 'https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg'
     },
     {
       id: 'sb5',
-      name: 'Crispy Chicken Burger',
-      description: 'Breaded chicken breast with lettuce, tomato, and mayo, served with fries.',
-      price: '$16.99',
-      category: 'Sandwich'
+      name: 'Grilled Chicken Sandwich',
+      description: 'Fresh grilled chicken breast on a demi baguette. Served with fries or salad.',
+      price: '$19.99',
+      category: 'Sandwich',
+      image: 'https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg'
     },
     {
       id: 'sb6',
       name: 'Istanbul Flatbread',
-      description: 'Turkish flatbread topped with sujuk, vegetables, cheese, and herbs.',
-      price: '$15.99',
-      category: 'Bite'
+      description: 'Turkish Sujuk beef sausage, sweet peppers, tomatoes, onions, black olives, and mozzarella on warm flatbread. Served with homemade tzatziki.',
+      price: '$13.99',
+      category: 'Bite',
+      image: 'https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg',
+      notes: 'Add extra sausage: +$5'
     },
     {
       id: 'sb7',
-      name: 'Chicken Strips & Fries',
-      description: 'Crispy chicken tenders served with golden fries and dipping sauce.',
-      price: '$19.99',
-      category: 'Bite'
-    },
-    {
-      id: 'sb8',
-      name: 'Turkish Pizza (Lahmacun)',
-      description: 'Thin crust topped with seasoned ground lamb, vegetables, and herbs.',
-      price: '$16.99',
-      category: 'Bite'
+      name: 'Antalya Sujuk Panini',
+      description: 'Sliced Turkish Sujuk beef sausage with sweet peppers, tomatoes, onions, Swiss cheese, and zesty mayo — grilled to perfection.',
+      price: '$17.99',
+      category: 'Bite',
+      image: 'https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg',
+      notes: 'Add extra sausage: +$5'
     }
   ],
-  
   mainDishes: [
     {
       id: 'md1',
-      name: 'Mixed Grill Platter',
-      description: 'Combination of lamb, chicken, and beef kebabs served with rice, grilled vegetables, and bread.',
-      price: '$32.99',
-      category: 'Main Dish'
+      name: 'Tilapia Fish',
+      description: 'Pan-seared tilapia topped with creamy lemon butter sauce. Served with rice and salad.',
+      price: '$29.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg'
     },
     {
       id: 'md2',
-      name: 'Lamb Shish Kebab',
-      description: 'Tender marinated lamb cubes grilled on skewers, served with rice pilaf and salad.',
-      price: '$28.99',
-      category: 'Main Dish'
+      name: 'Fresh Grilled Chicken Breast',
+      description: 'Double chicken breast grilled to perfection, topped with house-made rose sauce. Served with spaghetti or rice and salad.',
+      price: '$30.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg'
     },
     {
       id: 'md3',
-      name: 'Chicken Shish Kebab',
-      description: 'Marinated chicken breast cubes grilled to perfection, served with rice and vegetables.',
-      price: '$24.99',
-      category: 'Main Dish'
+      name: 'Butter Chicken',
+      description: 'Rich, spiced butter chicken served with rice, salad, and warm naan bread.',
+      price: '$30.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg'
     },
     {
       id: 'md4',
-      name: 'Beef Shish Kebab',
-      description: 'Premium beef cubes marinated in Middle Eastern spices, grilled and served with rice.',
-      price: '$26.99',
-      category: 'Main Dish'
+      name: 'Spaghetti with Chicken',
+      description: 'Classic spaghetti in tomato sauce tossed with grilled chicken.',
+      price: '$24.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg'
     },
     {
       id: 'md5',
-      name: 'Adana Kebab',
-      description: 'Spicy ground lamb kebab grilled on skewers, served with bulgur rice and yogurt.',
-      price: '$25.99',
-      category: 'Main Dish'
+      name: 'Chicken Biryani',
+      description: 'Fragrant basmati rice cooked with spiced chicken, herbs, and seasonings. Served with yogurt.',
+      price: '$30.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg'
     },
     {
       id: 'md6',
-      name: 'Chicken Shawarma Platter',
-      description: 'Sliced marinated chicken served with rice, salad, garlic sauce, and pita bread.',
-      price: '$23.99',
-      category: 'Main Dish'
-    },
-    {
-      id: 'md7',
-      name: 'Lamb Shawarma Platter',
-      description: 'Tender lamb shawarma served with rice, vegetables, tahini sauce, and bread.',
-      price: '$26.99',
-      category: 'Main Dish'
-    },
-    {
-      id: 'md8',
-      name: 'Grilled Salmon',
-      description: 'Atlantic salmon grilled with Mediterranean herbs, served with rice and seasonal vegetables.',
-      price: '$27.99',
-      category: 'Main Dish'
-    },
-    {
-      id: 'md9',
-      name: 'Stuffed Eggplant (Karnıyarık)',
-      description: 'Eggplant stuffed with seasoned ground beef, onions, and tomatoes, served with rice.',
-      price: '$22.99',
-      category: 'Main Dish'
-    },
-    {
-      id: 'md10',
-      name: 'Turkish Manti',
-      description: 'Traditional Turkish dumplings filled with spiced beef, served with yogurt and garlic sauce.',
-      price: '$24.99',
-      category: 'Main Dish'
-    },
-    {
-      id: 'md11',
-      name: 'Chicken Biryani',
-      description: 'Fragrant basmati rice cooked with spiced chicken, served with raita and salad.',
-      price: '$25.99',
-      category: 'Main Dish'
-    },
-    {
-      id: 'md12',
-      name: 'Butter Chicken',
-      description: 'Creamy tomato-based curry with tender chicken, served with basmati rice and naan.',
-      price: '$24.99',
-      category: 'Main Dish'
+      name: 'Sizzling Sujuk Grill Platter',
+      description: 'Turkish Sujuk beef sausage sautéed with sweet peppers. Served with rice, house salad, and tzatziki.',
+      price: '$28.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/4871119/pexels-photo-4871119.jpeg',
+      notes: 'Add grilled chicken: +$5.50 | Extra sausage: +$5'
     }
   ],
-  
   drinks: [
-    // Hot Beverages
     {
       id: 'd1',
-      name: 'Turkish Tea (Çay)',
-      description: 'Traditional black tea served in authentic Turkish glasses.',
-      price: '$4.99',
-      category: 'Tea'
+      name: 'Somali Tea',
+      description: 'Our most loved house tea. Slow-brewed, milky, and naturally spiced — bold in flavor and full of tradition. Comfort in a cup.',
+      price: '$7.99',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg'
     },
     {
       id: 'd2',
-      name: 'Fresh Mint Tea',
-      description: 'Refreshing tea made with fresh mint leaves and honey.',
-      price: '$5.99',
-      category: 'Tea'
+      name: 'Ginger Masala Chai',
+      description: 'A cozy, aromatic chai tea with depth and warmth in every sip. Bold, smooth, and deeply satisfying.',
+      price: '$8.99',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
     },
     {
       id: 'd3',
-      name: 'Arabic Coffee',
-      description: 'Traditional Middle Eastern coffee with cardamom and spices.',
-      price: '$6.99',
-      category: 'Coffee'
+      name: 'Moroccan Tea',
+      description: 'A fragrant blend of black and green tea steeped with fresh mint, served sweet and warm. Light, refreshing, and beautifully timeless.',
+      price: '$7.99',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
     },
     {
       id: 'd4',
-      name: 'Turkish Coffee',
-      description: 'Rich, strong coffee prepared in the traditional Turkish style.',
-      price: '$7.99',
-      category: 'Coffee'
+      name: 'Milk Shakes',
+      description: 'Thick, creamy, and blended to order. A sweet classic with your choice of flavour: Strawberry, Peach, Mango, Banana, Raspberry, Chocolate, Caramel, Pina Colada, Vanilla, Strawberry Banana',
+      price: '$8.49',
+      category: 'Milkshake',
+      image: 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg'
     },
     {
       id: 'd5',
-      name: 'Espresso',
-      description: 'Strong Italian espresso served in traditional cup.',
-      price: '$3.99',
-      category: 'Coffee'
+      name: 'Frappes',
+      description: 'Chilled, creamy, and topped with whipped cream. A cool twist on your café favourites. Double Chocolate, White Chocolate',
+      price: '$8.49',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg',
+      notes: 'Add espresso shot: +$2.99'
     },
     {
       id: 'd6',
-      name: 'Cappuccino',
-      description: 'Classic cappuccino with steamed milk and foam art.',
-      price: '$5.99',
-      category: 'Coffee'
+      name: 'Smoothies',
+      description: 'Fruity, ice-blended, and naturally refreshing — no extras needed. Mango, Strawberry, Peach, Raspberry, Pina Colada, Strawberry Banana, Passionfruit',
+      price: '$7.99',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     },
     {
       id: 'd7',
-      name: 'Café Latte',
-      description: 'Smooth espresso with steamed milk and light foam.',
-      price: '$6.99',
-      category: 'Coffee'
+      name: 'Italian Sodas',
+      description: 'Bubbly and full of flavour. House-made sodas with a playful twist. Raspberry, Grenadine, Peach, Caramel, Vanilla, Pear, Kiwi, Mango, Strawberry, Passion Fruit',
+      price: '$5.99',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     },
-    
-    // Cold Beverages
     {
       id: 'd8',
-      name: 'Fresh Orange Juice',
-      description: 'Freshly squeezed orange juice, served chilled.',
-      price: '$7.99',
-      category: 'Drink'
+      name: 'Matcha Green Tea Lemonade',
+      description: 'Earthy matcha meets citrusy lemonade in this chilled, energizing blend. Smooth, tangy, and balanced.',
+      price: '$8.49',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     },
     {
       id: 'd9',
-      name: 'Pomegranate Juice',
-      description: 'Pure pomegranate juice, rich in antioxidants.',
-      price: '$8.99',
-      category: 'Drink'
+      name: 'Mocktails',
+      description: 'Crafted without alcohol — bold, fun, and full of flavour. Virgin Mojito, Shirley Temple, Virgin Caesar',
+      price: '$7.99',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     },
     {
       id: 'd10',
-      name: 'Apple Juice',
-      description: 'Fresh apple juice, crisp and refreshing.',
-      price: '$6.99',
-      category: 'Drink'
+      name: 'House Hot Drinks',
+      description: 'Warm, familiar favourites made fresh to order. Café Latte, Chai Latte, Matcha Green Tea Latte, Caramel Latte, Hot Chocolate, White Hot Chocolate, Turkish / Arabic Coffee',
+      price: '$7.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
     },
     {
       id: 'd11',
-      name: 'Ayran',
-      description: 'Traditional Turkish yogurt drink with salt and mint.',
-      price: '$5.99',
-      category: 'Drink'
+      name: 'Espresso Bar',
+      description: 'For the true coffee lovers. Balanced, bold, and beautifully brewed. Black Coffee, Espresso - $4.25, Double Espresso, Cappuccino, Macchiato, Mochaccino, Café Americano, Caramel Macchiato, Café Mocha, Vanilla Latte, Hazelnut Latte, Peppermint Mocha, Pumpkin Spice Latte',
+      price: '$7.99',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
     },
     {
       id: 'd12',
-      name: 'Lemonade',
-      description: 'Fresh lemonade made with real lemons and mint.',
-      price: '$6.99',
-      category: 'Drink'
+      name: 'Iced Drinks',
+      description: 'Cool, creamy, and finished with whipped cream. A smooth way to stay refreshed. Iced Cappuccino, Iced Mochaccino, Iced Caramel Cappuccino, Iced Chai',
+      price: '$8.49',
+      category: 'Coffee',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
     },
-    
-    // Milkshakes
     {
       id: 'd13',
-      name: 'Vanilla Milkshake',
-      description: 'Creamy vanilla milkshake topped with whipped cream.',
-      price: '$8.99',
-      category: 'Milkshake'
+      name: 'Bottled Non-Alcoholic Beverages',
+      description: 'Crisp, fizzy, and globally loved. Jarritos: Lime, Mango, Mandarin, Pineapple. Laziza: Apple, Raspberry, Peach. Also available: Barbican, Tiger Malt, Perrier',
+      price: '$5.49',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     },
     {
       id: 'd14',
-      name: 'Chocolate Milkshake',
-      description: 'Rich chocolate milkshake with chocolate chips.',
-      price: '$8.99',
-      category: 'Milkshake'
+      name: 'Juice & Other Beverages',
+      description: 'Cold, classic, and always refreshing. Orange Juice, Apple Juice, Mango Juice, Guava Juice, Pineapple Juice, Clamato Juice, Milk',
+      price: '$5.99',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     },
     {
       id: 'd15',
-      name: 'Strawberry Milkshake',
-      description: 'Fresh strawberry milkshake with real fruit pieces.',
-      price: '$8.99',
-      category: 'Milkshake'
+      name: 'Energy Drinks',
+      description: 'Boost your day, no questions asked. Red Bull, Gatorade',
+      price: '$5.49',
+      category: 'Drink',
+      image: 'https://images.pexels.com/photos/2842876/pexels-photo-2842876.jpeg'
     },
     {
       id: 'd16',
-      name: 'Oreo Milkshake',
-      description: 'Cookies and cream milkshake with crushed Oreos.',
-      price: '$9.99',
-      category: 'Milkshake'
-    },
-    
-    // Soft Drinks
-    {
-      id: 'd17',
-      name: 'Soft Drinks',
-      description: 'Coca-Cola, Pepsi, Sprite, Orange Fanta, and other popular sodas.',
-      price: '$3.99',
-      category: 'Drink'
-    },
-    {
-      id: 'd18',
-      name: 'Sparkling Water',
-      description: 'Premium sparkling water with lemon or lime.',
-      price: '$4.99',
-      category: 'Drink'
+      name: 'Classic Teas',
+      description: 'Simple, warm, and calming — your choice of traditional favourites. Orange Pekoe, Mint, Peach Ginger, Chai, Camomile, Raspberry, Green, Earl Grey, Cranberry, Vanilla, Lemon',
+      price: '$5.99',
+      category: 'Tea',
+      image: 'https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg'
     }
   ],
-  
   desserts: [
     {
       id: 'ds1',
-      name: 'Baklava',
-      description: 'Traditional Turkish pastry with layers of phyllo, nuts, and honey syrup.',
-      price: '$8.99',
-      category: 'Dessert'
+      name: 'Chocolate Cheesecake',
+      description: 'Rich and creamy chocolate-infused cheesecake.',
+      price: '$12.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg'
     },
     {
       id: 'ds2',
-      name: 'Turkish Delight (Lokum)',
-      description: 'Authentic Turkish confection in assorted flavors with powdered sugar.',
-      price: '$6.99',
-      category: 'Dessert'
+      name: 'Chocolate Cake',
+      description: 'Warm, baked chocolate cake served with vanilla ice cream.',
+      price: '$12.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg'
     },
     {
       id: 'ds3',
-      name: 'Kunafa',
-      description: 'Sweet cheese pastry topped with crispy shredded wheat and sugar syrup.',
-      price: '$9.99',
-      category: 'Dessert'
+      name: 'Banana Xango (Chan\'go)',
+      description: 'Banana cheesecake wrapped in flaky pastry, dusted with cinnamon sugar. Served with caramel drizzle and French vanilla ice cream.',
+      price: '$12.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/5946623/pexels-photo-5946623.jpeg'
     },
     {
       id: 'ds4',
-      name: 'Rice Pudding (Sütlaç)',
-      description: 'Creamy Turkish rice pudding with cinnamon and vanilla.',
-      price: '$7.99',
-      category: 'Dessert'
+      name: 'Hot Fudge Brownie Sundae',
+      description: 'Warm double chocolate brownie served with vanilla ice cream, topped with butterscotch, chocolate sauce, whipped cream, and a cherry on top.',
+      price: '$12.99',
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg'
     },
     {
       id: 'ds5',
-      name: 'Chocolate Lava Cake',
-      description: 'Warm chocolate cake with molten center, served with vanilla ice cream.',
+      name: 'Kanafa Sweet Pastry',
+      description: 'Traditional Turkish-Middle Eastern pastry made with cheese, semolina, pistachios, and almonds. Finished with a light sugar syrup.',
       price: '$11.99',
-      category: 'Dessert'
-    },
-    {
-      id: 'ds6',
-      name: 'Tiramisu',
-      description: 'Classic Italian dessert with coffee-soaked ladyfingers and mascarpone.',
-      price: '$10.99',
-      category: 'Dessert'
-    },
-    {
-      id: 'ds7',
-      name: 'Turkish Ice Cream (Dondurma)',
-      description: 'Traditional stretchy ice cream in vanilla, pistachio, or chocolate.',
-      price: '$8.99',
-      category: 'Dessert'
-    },
-    {
-      id: 'ds8',
-      name: 'Muhallabia',
-      description: 'Middle Eastern milk pudding topped with pistachios and rose water.',
-      price: '$7.99',
-      category: 'Dessert'
-    },
-    {
-      id: 'ds9',
-      name: 'Fresh Fruit Platter',
-      description: 'Seasonal fresh fruits beautifully arranged and served chilled.',
-      price: '$12.99',
-      category: 'Dessert'
-    },
-    {
-      id: 'ds10',
-      name: 'Ice Cream Sundae',
-      description: 'Three scoops of ice cream with chocolate sauce, whipped cream, and cherry.',
-      price: '$9.99',
-      category: 'Dessert'
+      category: 'Dessert',
+      image: 'https://images.pexels.com/photos/7474305/pexels-photo-7474305.jpeg'
     }
   ]
 };
