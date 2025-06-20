@@ -367,7 +367,54 @@ export const menuItems = {
     }
   ],
   mainDishes: [
-    // This can be used for main entrees that don't fit in the above categories
+    {
+      id: 'md1',
+      name: 'Grilled Lamb Chops',
+      description: 'Tender lamb chops marinated in Mediterranean herbs and grilled to perfection. Served with rice pilaf and roasted vegetables.',
+      price: '$28.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/299347/pexels-photo-299347.jpeg'
+    },
+    {
+      id: 'md2',
+      name: 'Mixed Grill Platter',
+      description: 'A combination of grilled lamb, chicken, and beef kebabs served with rice, grilled tomatoes, and onions.',
+      price: '$32.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg'
+    },
+    {
+      id: 'md3',
+      name: 'Chicken Shish Kebab',
+      description: 'Marinated chicken breast cubes grilled on skewers, served with rice pilaf and Mediterranean salad.',
+      price: '$22.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/6546268/pexels-photo-6546268.jpeg'
+    },
+    {
+      id: 'md4',
+      name: 'Beef Shish Kebab',
+      description: 'Premium beef cubes marinated and grilled to perfection, served with rice and fresh vegetables.',
+      price: '$26.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg'
+    },
+    {
+      id: 'md5',
+      name: 'Mediterranean Sea Bass',
+      description: 'Fresh sea bass grilled with lemon, herbs, and olive oil. Served with rice and seasonal vegetables.',
+      price: '$29.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg'
+    },
+    {
+      id: 'md6',
+      name: 'Stuffed Eggplant (Karniyarik)',
+      description: 'Traditional Turkish stuffed eggplant with seasoned ground beef, onions, and tomatoes. Served with rice.',
+      price: '$24.99',
+      category: 'Main Dish',
+      image: 'https://images.pexels.com/photos/5638730/pexels-photo-5638730.jpeg'
+    }
   ],
   drinks: [
     {
