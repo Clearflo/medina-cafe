@@ -46,7 +46,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail size={16} className="text-[#8B2C2C] flex-shrink-0" />
-                  <a href="mailto:info@medinacafe.com" className="text-xs text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation">info@medinacafe.com</a>
+                  <a href="mailto:medinacafeandgrill@gmail.com" className="text-xs text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation">medinacafeandgrill@gmail.com</a>
                 </li>
               </ul>
             </div>
@@ -123,7 +123,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-[#8B2C2C] flex-shrink-0" />
-                <a href="mailto:info@medinacafe.com" className="text-sm text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation">info@medinacafe.com</a>
+                <a href="mailto:medinacafeandgrill@gmail.com" className="text-sm text-gray-600 hover:text-[#8B2C2C] transition-colors touch-manipulation">medinacafeandgrill@gmail.com</a>
               </li>
             </ul>
           </div>
