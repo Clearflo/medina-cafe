@@ -166,7 +166,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-600/30 mt-8 sm:mt-10 pt-6 text-center">
           <p className="text-xs sm:text-sm text-gray-600/80">
-            © {currentYear} Medina Cafe & Grill Sheesha Lounge. Powered by <span className="font-bold">Clearflo AI</span>
+            © {currentYear} Medina Cafe & Grill Sheesha Lounge. Powered by <span className="font-black">Clearflo AI</span>
           </p>
         </div>
       </div>
