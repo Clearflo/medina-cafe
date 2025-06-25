@@ -166,7 +166,15 @@ const Footer = () => {
 
         <div className="border-t border-gray-600/30 mt-8 sm:mt-10 pt-6 text-center">
           <p className="text-xs sm:text-sm text-gray-600/80">
-            © {currentYear} Medina Cafe & Grill Sheesha Lounge. Powered by <span className="font-black">Clearflo AI</span>
+            © {currentYear} Medina Cafe & Grill Sheesha Lounge. Powered by{' '}
+            <span style={{
+              fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              fontWeight: '800',
+              letterSpacing: '-0.025em',
+              textTransform: 'none'
+            }}>
+              Clearflo AI
+            </span>
           </p>
         </div>
       </div>
