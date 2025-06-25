@@ -171,7 +171,8 @@ const Footer = () => {
               fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               fontWeight: '800',
               letterSpacing: '-0.025em',
-              textTransform: 'none'
+              textTransform: 'none',
+              color: '#1D3557'
             }}>
               Clearflo AI
             </span>
