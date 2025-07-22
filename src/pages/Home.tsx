@@ -168,8 +168,8 @@ const Home = () => {
           >
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="/images/medina101.jpeg"
-                alt="Medina Cafe Interior Atmosphere"
+                src="/images/medinafront2.JPG"
+                alt="Medina Cafe Front Exterior"
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />
