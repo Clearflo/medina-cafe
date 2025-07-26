@@ -31,7 +31,7 @@ type CategoryType = 'all' | 'sheesha' | 'sheeshaHouse' | 'sheeshaFresh' | 'shees
 // Define subcategories for sheesha
 const sheeshaSubcategories = {
   all: 'All Sheesha',
-  sheeshaHouse: 'House Blend',
+  sheeshaHouse: 'Classics',
   sheeshaFresh: 'Fresh',
   sheeshaPremium: 'Premium'
 };
@@ -235,7 +235,7 @@ const Menu = () => {
   
   // Group sheesha items by category
   const groupedSheeshaItems = {
-    'House Blend Sheesha': filteredItems.filter(item => 
+    'Classics': filteredItems.filter(item => 
       item.category.includes('House Blend') && 
       (activeCategory === 'all' || activeCategory === 'sheesha' || activeCategory === 'sheeshaHouse')
     ),
@@ -530,7 +530,7 @@ const Menu = () => {
             {(activeCategory === 'all' || activeCategory.includes('sheesha')) && (
               Object.entries(groupedSheeshaItems).map(([category, items]) => 
                 items.length > 0 ? (
-                  <div key={category} className="mb-12" id={category === 'House Blend Sheesha' ? 'sheesha' : undefined}>
+                  <div key={category} className="mb-12" id={category === 'Classics' ? 'sheesha' : undefined}>
                     <div className="flex items-center gap-3 mb-4">
                       <img 
                         src="/images/adobe-express-sheesha1-icon.png" 
@@ -540,7 +540,7 @@ const Menu = () => {
                       />
                       <h3 className="font-heading text-xl font-semibold text-accent-700">
                         {category}
-                        {category === 'House Blend Sheesha' && <span className="ml-2 text-secondary-300">$25.99</span>}
+                        {category === 'Classics' && <span className="ml-2 text-secondary-300">$25.99</span>}
                         {category === 'Fresh Sheesha' && <span className="ml-2 text-secondary-300">$25.99</span>}
                         {category === 'Premium Sheesha' && <span className="ml-2 text-secondary-300">$28.99-$29.99</span>}
                       </h3>
