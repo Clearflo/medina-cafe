@@ -4,7 +4,7 @@ export const menuItems = {
     // Keep existing sheesha items as they are perfect
     {
       id: 's1',
-      name: 'House Blend - Orange Mint',
+      name: 'Orange Mint',
       description: 'Our signature orange mint blend for a refreshing smoking experience.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -13,7 +13,7 @@ export const menuItems = {
     },
     {
       id: 's2',
-      name: 'House Blend - Double Apple',
+      name: 'Double Apple',
       description: 'The traditional favorite with a sweet and crisp double apple flavor.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -22,7 +22,7 @@ export const menuItems = {
     },
     {
       id: 's3',
-      name: 'House Blend - White Apple',
+      name: 'White Apple',
       description: 'Smooth and light apple flavor with subtle sweetness.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -31,7 +31,7 @@ export const menuItems = {
     },
     {
       id: 's4',
-      name: 'House Blend - White Grape',
+      name: 'White Grape',
       description: 'Delicate white grape flavor with a clean, sweet finish.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -40,7 +40,7 @@ export const menuItems = {
     },
     {
       id: 's5',
-      name: 'House Blend - Mixed Fruit',
+      name: 'Mixed Fruit',
       description: 'A delightful blend of assorted fruit flavors for a tropical experience.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -49,7 +49,7 @@ export const menuItems = {
     },
     {
       id: 's6',
-      name: 'House Blend - Peach',
+      name: 'Peach',
       description: 'Sweet and aromatic peach flavor, perfect for a relaxing session.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -58,7 +58,7 @@ export const menuItems = {
     },
     {
       id: 's7',
-      name: 'House Blend - Guava',
+      name: 'Guava',
       description: 'Tropical guava flavor with a distinct sweetness and aroma.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -67,7 +67,7 @@ export const menuItems = {
     },
     {
       id: 's8',
-      name: 'House Blend - Vanilla',
+      name: 'Vanilla',
       description: 'Smooth, creamy vanilla flavor for a mellow smoking experience.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -76,7 +76,7 @@ export const menuItems = {
     },
     {
       id: 's9',
-      name: 'House Blend - Pineapple',
+      name: 'Pineapple',
       description: 'Tropical pineapple flavor with a tangy-sweet profile.',
       price: '$25.99',
       category: 'House Blend Sheesha',
@@ -85,7 +85,7 @@ export const menuItems = {
     },
     {
       id: 's10',
-      name: 'House Blend - Kiwi',
+      name: 'Kiwi',
       description: 'Unique kiwi flavor with a balanced sweet and tart profile.',
       price: '$25.99',
       category: 'House Blend Sheesha',
