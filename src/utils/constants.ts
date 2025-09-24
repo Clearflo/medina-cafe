@@ -540,14 +540,17 @@ export const menuItems = {
       category: 'Energy Drinks',
       image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     },
-    {
-      id: 'd16',
-      name: 'Classic Teas',
-      description: 'Simple, warm, and calming — your choice of traditional favourites. Orange Pekoe, Mint, Peach Ginger, Chai, Camomile, Raspberry, Green, Earl Grey, Cranberry, Vanilla, Lemon',
-      price: '$5.99',
-      category: 'Classic Teas',
-      image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
-    }
+ {
+  id: "classic-teas",
+  name: "Classic Teas", 
+  price: 5.99,
+  description: "Simple, warm, and calming — your choice of traditional favourites.",
+  hasFlavorSelection: true,
+  flavors: [
+    "Orange Pekoe", "Mint", "Peach Ginger", "Chai", "Camomile", 
+    "Raspberry", "Green", "Earl Grey", "Cranberry", "Vanilla", "Lemon"
+  ]
+}
   ],
   desserts: [
     {
