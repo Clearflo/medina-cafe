@@ -25,8 +25,8 @@ const staggerContainer = {
   }
 };
 
-// Define types for each menu category - Updated to include new categories
-type CategoryType = 'all' | 'sheesha' | 'sheeshaHouse' | 'sheeshaFresh' | 'sheeshaPremium' | 'appetizers' | 'saladsAndWraps' | 'sandwichesAndBites' | 'mainDishes' | 'drinks' | 'coffee' | 'tea' | 'milkshake' | 'desserts';
+// Define types for each menu category - REMOVED drink subcategories
+type CategoryType = 'all' | 'sheesha' | 'sheeshaHouse' | 'sheeshaFresh' | 'sheeshaPremium' | 'appetizers' | 'saladsAndWraps' | 'sandwichesAndBites' | 'mainDishes' | 'drinks' | 'desserts';
 
 // Define subcategories for sheesha
 const sheeshaSubcategories = {
@@ -34,14 +34,6 @@ const sheeshaSubcategories = {
   sheeshaHouse: 'Classics',
   sheeshaFresh: 'Fresh',
   sheeshaPremium: 'Premium'
-};
-
-// Define subcategories for drinks
-const drinkSubcategories = {
-  all: 'All Drinks',
-  coffee: 'Coffee',
-  tea: 'Tea',
-  milkshake: 'Milkshakes'
 };
 
 // Component for text-based menu items (unified for all categories)
@@ -75,7 +67,6 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState<CategoryType>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [showSheeshaSubcategories, setShowSheeshaSubcategories] = useState<boolean>(false);
-  const [showDrinkSubcategories, setShowDrinkSubcategories] = useState<boolean>(false);
   
   const menuResultsRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -100,16 +91,11 @@ const Menu = () => {
       if (targetCategory) {
         setActiveCategory(targetCategory);
         
-        // Set subcategory visibility
+        // Set subcategory visibility - ONLY for sheesha now
         if (targetCategory === 'sheesha') {
           setShowSheeshaSubcategories(true);
-          setShowDrinkSubcategories(false);
-        } else if (targetCategory === 'drinks') {
-          setShowDrinkSubcategories(true);
-          setShowSheeshaSubcategories(false);
         } else {
           setShowSheeshaSubcategories(false);
-          setShowDrinkSubcategories(false);
         }
       }
     }
@@ -154,7 +140,7 @@ const Menu = () => {
     { id: 'desserts', name: 'Desserts', icon: <CakeSlice size={24} /> },
   ];
 
-  // Filter menu items based on active category and search term
+  // Filter menu items based on active category and search term - SIMPLIFIED drinks logic
   const getFilteredItems = () => {
     let filteredItems = [];
     
@@ -178,13 +164,8 @@ const Menu = () => {
     } else if (activeCategory === 'sheeshaPremium') {
       filteredItems = menuItems.sheesha.filter(item => item.category.includes('Premium'));
     } else if (activeCategory === 'drinks') {
+      // SIMPLIFIED: Show all drinks in one category
       filteredItems = [...menuItems.drinks];
-    } else if (activeCategory === 'coffee') {
-      filteredItems = menuItems.drinks.filter(item => item.category.includes('Coffee') || item.category.includes('Espresso'));
-    } else if (activeCategory === 'tea') {
-      filteredItems = menuItems.drinks.filter(item => item.category.includes('Tea'));
-    } else if (activeCategory === 'milkshake') {
-      filteredItems = menuItems.drinks.filter(item => item.category.includes('Milk'));
     } else {
       filteredItems = menuItems[activeCategory] || [];
     }
@@ -222,7 +203,7 @@ const Menu = () => {
     )
   };
   
-  // Filter non-sheesha items and group them by category
+  // Filter non-sheesha items and group them by category - SIMPLIFIED drinks filtering
   const groupedNonSheeshaItems = {
     'Appetizers': filteredItems.filter(item => 
       (item.category.includes('Warm Starters') || item.category.includes('Crispy Bites')) && 
@@ -246,7 +227,7 @@ const Menu = () => {
        item.category.includes('Soda') || item.category.includes('Matcha') || item.category.includes('Mocktail') || 
        item.category.includes('Frappe') || item.category.includes('Beverage') || item.category.includes('Juice') || 
        item.category.includes('Energy') || item.category.includes('House') || item.category.includes('Signature')) && 
-      (activeCategory === 'all' || activeCategory === 'drinks' || activeCategory === 'coffee' || activeCategory === 'tea' || activeCategory === 'milkshake')
+      (activeCategory === 'all' || activeCategory === 'drinks')
     ),
     'Desserts': filteredItems.filter(item => 
       item.category.includes('Dessert') && 
@@ -254,20 +235,15 @@ const Menu = () => {
     )
   };  
   
-  // Handle category click
+  // Handle category click - SIMPLIFIED without drink subcategories
   const handleCategoryClick = (category: CategoryType) => {
     setActiveCategory(category);
     
-    // Handle subcategory displays
+    // Handle subcategory displays - ONLY for sheesha now
     if (category === 'sheesha') {
       setShowSheeshaSubcategories(true);
-      setShowDrinkSubcategories(false);
-    } else if (category === 'drinks') {
-      setShowDrinkSubcategories(true);
-      setShowSheeshaSubcategories(false);
     } else {
       setShowSheeshaSubcategories(false);
-      setShowDrinkSubcategories(false);
     }
   };
   
@@ -344,8 +320,7 @@ const Menu = () => {
                 whileTap={{ scale: 0.98 }}
                 className={`w-full flex items-center justify-between px-6 py-4 rounded-xl transition-all duration-300 text-left ${
                   (activeCategory === category.id) || 
-                  (activeCategory.includes('sheesha') && category.id === 'sheesha') ||
-                  ((activeCategory.includes('coffee') || activeCategory.includes('tea') || activeCategory.includes('milkshake')) && category.id === 'drinks')
+                  (activeCategory.includes('sheesha') && category.id === 'sheesha')
                     ? 'bg-secondary-300 text-white shadow-lg transform scale-[1.02]'
                     : 'bg-white text-accent-700 hover:bg-gray-50 shadow-md border border-gray-100'
                 }`}
@@ -358,7 +333,7 @@ const Menu = () => {
             ))}
           </div>
 
-          {/* FIXED Sheesha Subcategories - Positioned correctly */}
+          {/* ONLY Sheesha Subcategories - Drink subcategories REMOVED */}
           <AnimatePresence>
             {showSheeshaSubcategories && (
               <motion.div
@@ -407,60 +382,6 @@ const Menu = () => {
                   }`}
                 >
                   {sheeshaSubcategories.sheeshaPremium}
-                </button>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* FIXED Drink Subcategories - Positioned correctly */}
-          <AnimatePresence>
-            {showDrinkSubcategories && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="mt-4 space-y-2"
-              >
-                <button
-                  onClick={() => setActiveCategory('drinks')}
-                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
-                    activeCategory === 'drinks'
-                      ? 'bg-secondary-400 text-white shadow-md'
-                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
-                  }`}
-                >
-                  {drinkSubcategories.all}
-                </button>
-                <button
-                  onClick={() => setActiveCategory('coffee')}
-                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
-                    activeCategory === 'coffee'
-                      ? 'bg-secondary-400 text-white shadow-md'
-                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
-                  }`}
-                >
-                  {drinkSubcategories.coffee}
-                </button>
-                <button
-                  onClick={() => setActiveCategory('tea')}
-                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
-                    activeCategory === 'tea'
-                      ? 'bg-secondary-400 text-white shadow-md'
-                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
-                  }`}
-                >
-                  {drinkSubcategories.tea}
-                </button>
-                <button
-                  onClick={() => setActiveCategory('milkshake')}
-                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
-                    activeCategory === 'milkshake'
-                      ? 'bg-secondary-400 text-white shadow-md'
-                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
-                  }`}
-                >
-                  {drinkSubcategories.milkshake}
                 </button>
               </motion.div>
             )}
