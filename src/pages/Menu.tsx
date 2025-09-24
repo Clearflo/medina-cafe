@@ -37,11 +37,13 @@ const sheeshaSubcategories = {
 };
 
 // Component for text-based menu items (unified for all categories)
-const MenuItem = ({ name, description, price, notes }: { 
+const MenuItem = ({ name, description, price, notes, hasFlavorSelection, flavors }: { 
   name: string, 
   description: string, 
   price?: string, 
-  notes?: string 
+  notes?: string,
+  hasFlavorSelection?: boolean,
+  flavors?: string[]
 }) => {
   return (
     <motion.div 
@@ -55,7 +57,29 @@ const MenuItem = ({ name, description, price, notes }: {
         <h3 className="font-heading text-lg font-semibold text-accent-800">{name}</h3>
         {price && <span className="text-secondary-300 font-medium whitespace-nowrap ml-2">{price}</span>}
       </div>
-      <p className="text-sm text-gray-600 mb-2">{description}</p>
+      
+      {/* Special handling for Classic Teas */}
+      {hasFlavorSelection && flavors ? (
+        <div className="mb-4">
+          <p className="text-sm font-bold text-amber-700 mb-3 bg-amber-50 px-3 py-2 rounded-md border-l-4 border-amber-400">
+            🍵 Choose your flavour:
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {flavors.map((flavor, index) => (
+              <span
+                key={index}
+                className="inline-block bg-gradient-to-r from-amber-100 to-orange-100 border border-amber-300 rounded-full px-3 py-1 text-sm text-amber-800 font-medium shadow-sm"
+              >
+                {flavor}
+              </span>
+            ))}
+          </div>
+          <p className="text-sm text-gray-600 mb-2 mt-3 italic">{description}</p>
+        </div>
+      ) : (
+        <p className="text-sm text-gray-600 mb-2">{description}</p>
+      )}
+      
       {notes && (
         <p className="text-xs text-secondary-300 font-medium">{notes}</p>
       )}
