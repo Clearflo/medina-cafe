@@ -250,37 +250,37 @@ const Menu = () => {
   };
   
   // Filter non-sheesha items and group them by category
-
-const groupedNonSheeshaItems = {
-  'Appetizers': filteredItems.filter(item => 
-    (item.category.includes('Warm Starters') || item.category.includes('Crispy Bites')) && 
-    (activeCategory === 'all' || activeCategory === 'appetizers')
-  ),
-  'Salads & Wraps': filteredItems.filter(item => 
-    (item.category.includes('Fresh Salads') || item.category.includes('Wraps')) && 
-    (activeCategory === 'all' || activeCategory === 'saladsAndWraps')
-  ),
-  'Sandwiches & Bites': filteredItems.filter(item => 
-    (item.category.includes('Grilled Sandwiches') || item.category.includes('Global Bites')) && 
-    (activeCategory === 'all' || activeCategory === 'sandwichesAndBites')
-  ),
-  'Main Dishes': filteredItems.filter(item => 
-    (item.category.includes('Signature Entrees') || item.category.includes('Global Plates')) && 
-    (activeCategory === 'all' || activeCategory === 'mainDishes')
-  ),
-  'Drinks': filteredItems.filter(item => 
-    (item.category.includes('Coffee') || item.category.includes('Tea') || item.category.includes('Milk') || 
-     item.category.includes('Drink') || item.category.includes('Espresso') || item.category.includes('Smoothie') || 
-     item.category.includes('Soda') || item.category.includes('Matcha') || item.category.includes('Mocktail') || 
-     item.category.includes('Frappe') || item.category.includes('Beverage') || item.category.includes('Juice') || 
-     item.category.includes('Energy') || item.category.includes('House') || item.category.includes('Signature')) && 
-    (activeCategory === 'all' || activeCategory === 'drinks' || activeCategory === 'coffee' || activeCategory === 'tea' || activeCategory === 'milkshake')
-  ),
-  'Desserts': filteredItems.filter(item => 
-    item.category.includes('Dessert') && 
-    (activeCategory === 'all' || activeCategory === 'desserts')
-  )
-};  
+  const groupedNonSheeshaItems = {
+    'Appetizers': filteredItems.filter(item => 
+      (item.category.includes('Warm Starters') || item.category.includes('Crispy Bites')) && 
+      (activeCategory === 'all' || activeCategory === 'appetizers')
+    ),
+    'Salads & Wraps': filteredItems.filter(item => 
+      (item.category.includes('Fresh Salads') || item.category.includes('Wraps')) && 
+      (activeCategory === 'all' || activeCategory === 'saladsAndWraps')
+    ),
+    'Sandwiches & Bites': filteredItems.filter(item => 
+      (item.category.includes('Grilled Sandwiches') || item.category.includes('Global Bites')) && 
+      (activeCategory === 'all' || activeCategory === 'sandwichesAndBites')
+    ),
+    'Main Dishes': filteredItems.filter(item => 
+      (item.category.includes('Signature Entrees') || item.category.includes('Global Plates')) && 
+      (activeCategory === 'all' || activeCategory === 'mainDishes')
+    ),
+    'Drinks': filteredItems.filter(item => 
+      (item.category.includes('Coffee') || item.category.includes('Tea') || item.category.includes('Milk') || 
+       item.category.includes('Drink') || item.category.includes('Espresso') || item.category.includes('Smoothie') || 
+       item.category.includes('Soda') || item.category.includes('Matcha') || item.category.includes('Mocktail') || 
+       item.category.includes('Frappe') || item.category.includes('Beverage') || item.category.includes('Juice') || 
+       item.category.includes('Energy') || item.category.includes('House') || item.category.includes('Signature')) && 
+      (activeCategory === 'all' || activeCategory === 'drinks' || activeCategory === 'coffee' || activeCategory === 'tea' || activeCategory === 'milkshake')
+    ),
+    'Desserts': filteredItems.filter(item => 
+      item.category.includes('Dessert') && 
+      (activeCategory === 'all' || activeCategory === 'desserts')
+    )
+  };  
+  
   // Handle category click
   const handleCategoryClick = (category: CategoryType) => {
     setActiveCategory(category);
@@ -374,28 +374,29 @@ const groupedNonSheeshaItems = {
           </div>
         </div>
 
-        {/* Category Filters */}
+        {/* Category Filters - NEW VERTICAL STACK LAYOUT */}
         <div 
           ref={categoryRef} 
           className={`transition-all duration-300 ${isSticky ? 'sticky top-[60px] z-30 bg-stone-50 shadow-md py-3 -mx-4 px-4 md:mx-0 md:px-0 md:static md:shadow-none md:py-0' : ''}`}
         >
-          <div className="flex justify-start md:justify-center mb-6 mt-4 overflow-x-auto pb-2 hide-scrollbar">
-            <div className="flex space-x-2 md:space-x-4">
+          {/* NEW: Vertical Stack Category Layout */}
+          <div className="mb-6 mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => handleCategoryClick(category.id as CategoryType)}
                   data-category={category.id}
-                  className={`flex items-center gap-2 px-4 py-3 md:px-6 md:py-3 rounded-full transition-all duration-300 min-w-[80px] justify-center touch-manipulation ${
+                  className={`flex items-center gap-3 px-6 py-4 rounded-lg transition-all duration-300 w-full text-left touch-manipulation ${
                     (activeCategory === category.id) || 
                     (activeCategory.includes('sheesha') && category.id === 'sheesha') ||
                     ((activeCategory.includes('coffee') || activeCategory.includes('tea') || activeCategory.includes('milkshake')) && category.id === 'drinks')
-                      ? 'bg-secondary-300 text-white'
-                      : 'bg-white text-accent-700 hover:bg-gray-100'
+                      ? 'bg-secondary-300 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 hover:shadow-md border border-gray-200'
                   }`}
                 >
                   {category.icon}
-                  <span className="whitespace-nowrap font-medium">{category.name}</span>
+                  <span className="font-medium text-lg">{category.name}</span>
                 </button>
               ))}
             </div>
@@ -409,45 +410,45 @@ const groupedNonSheeshaItems = {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="flex justify-start md:justify-center mb-6 overflow-x-auto pb-2 hide-scrollbar"
+                className="mb-6"
               >
-                <div className="flex space-x-2 md:space-x-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   <button
                     onClick={() => setActiveCategory('sheesha')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
+                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
                       activeCategory === 'sheesha'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
+                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {sheeshaSubcategories.all}
                   </button>
                   <button
                     onClick={() => setActiveCategory('sheeshaHouse')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
+                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
                       activeCategory === 'sheeshaHouse'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
+                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {sheeshaSubcategories.sheeshaHouse}
                   </button>
                   <button
                     onClick={() => setActiveCategory('sheeshaFresh')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
+                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
                       activeCategory === 'sheeshaFresh'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
+                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {sheeshaSubcategories.sheeshaFresh}
                   </button>
                   <button
                     onClick={() => setActiveCategory('sheeshaPremium')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
+                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
                       activeCategory === 'sheeshaPremium'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
+                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {sheeshaSubcategories.sheeshaPremium}
@@ -465,45 +466,45 @@ const groupedNonSheeshaItems = {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="flex justify-start md:justify-center mb-6 overflow-x-auto pb-2 hide-scrollbar"
+                className="mb-6"
               >
-                <div className="flex space-x-2 md:space-x-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   <button
                     onClick={() => setActiveCategory('drinks')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
+                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
                       activeCategory === 'drinks'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
+                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {drinkSubcategories.all}
                   </button>
                   <button
                     onClick={() => setActiveCategory('coffee')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
+                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
                       activeCategory === 'coffee'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
+                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {drinkSubcategories.coffee}
                   </button>
                   <button
                     onClick={() => setActiveCategory('tea')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
+                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
                       activeCategory === 'tea'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
+                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {drinkSubcategories.tea}
                   </button>
                   <button
                     onClick={() => setActiveCategory('milkshake')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 min-w-[100px] text-center touch-manipulation ${
+                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
                       activeCategory === 'milkshake'
                         ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100'
+                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {drinkSubcategories.milkshake}
