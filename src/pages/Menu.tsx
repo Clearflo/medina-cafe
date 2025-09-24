@@ -57,7 +57,7 @@ const MenuItem = ({ name, description, price, notes }: {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
-      className="bg-stone-50 p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+      className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
     >
       <div className="flex justify-between items-start mb-1">
         <h3 className="font-heading text-lg font-semibold text-accent-800">{name}</h3>
@@ -76,10 +76,8 @@ const Menu = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [showSheeshaSubcategories, setShowSheeshaSubcategories] = useState<boolean>(false);
   const [showDrinkSubcategories, setShowDrinkSubcategories] = useState<boolean>(false);
-  const [isSticky, setIsSticky] = useState(false);
   
-  const categoryRef = useRef<HTMLDivElement>(null);
-  const prevScrollY = useRef(0);
+  const menuResultsRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   
   // Handle hash navigation from URL
@@ -113,21 +111,7 @@ const Menu = () => {
           setShowSheeshaSubcategories(false);
           setShowDrinkSubcategories(false);
         }
-        
-        // Scroll to the results section after a short delay to ensure rendering
-        setTimeout(() => {
-          const resultsElement = document.getElementById('menu-results');
-          if (resultsElement) {
-            window.scrollTo({
-              top: resultsElement.offsetTop - 150,
-              behavior: 'smooth'
-            });
-          }
-        }, 500);
       }
-    } else {
-      // Scroll to top when no hash
-      window.scrollTo(0, 0);
     }
   }, [location.hash]);
   
@@ -136,31 +120,20 @@ const Menu = () => {
     setSearchTerm('');
   }, [activeCategory]);
 
-  // Handle sticky category navigation
+  // Scroll to results after category change
   useEffect(() => {
-    const handleScroll = () => {
-      if (categoryRef.current) {
-        const categoryTop = categoryRef.current.getBoundingClientRect().top;
-        const currentScrollY = window.scrollY;
-        
-        if (categoryTop <= 80 && currentScrollY > prevScrollY.current) {
-          setIsSticky(true);
-        } else if (currentScrollY < prevScrollY.current) {
-          setIsSticky(false);
-        }
-        
-        prevScrollY.current = currentScrollY;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    if (activeCategory !== 'all' && menuResultsRef.current) {
+      setTimeout(() => {
+        menuResultsRef.current?.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 300);
+    }
+  }, [activeCategory]);
 
   const categories = [
-    { id: 'all', name: 'All', icon: <UtensilsCrossed size={20} /> },
+    { id: 'all', name: 'All', icon: <UtensilsCrossed size={24} /> },
     { 
       id: 'sheesha', 
       name: 'Sheesha', 
@@ -168,17 +141,17 @@ const Menu = () => {
         <img 
           src="/images/adobe-express-sheesha1-icon.png" 
           alt="Sheesha" 
-          className="w-5 h-5 object-contain"
+          className="w-6 h-6 object-contain"
           style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(38%) saturate(492%) hue-rotate(18deg) brightness(92%) contrast(85%)' }}
         />
       )
     },
-    { id: 'appetizers', name: 'Appetizers', icon: <Sandwich size={20} /> },
-    { id: 'saladsAndWraps', name: 'Salads & Wraps', icon: <UtensilsCrossed size={20} /> },
-    { id: 'sandwichesAndBites', name: 'Sandwiches & Bites', icon: <Sandwich size={20} /> },
-    { id: 'mainDishes', name: 'Main Dishes', icon: <UtensilsCrossed size={20} /> },
-    { id: 'drinks', name: 'Drinks', icon: <CupSoda size={20} /> },
-    { id: 'desserts', name: 'Desserts', icon: <CakeSlice size={20} /> },
+    { id: 'appetizers', name: 'Appetizers', icon: <Sandwich size={24} /> },
+    { id: 'saladsAndWraps', name: 'Salads & Wraps', icon: <UtensilsCrossed size={24} /> },
+    { id: 'sandwichesAndBites', name: 'Sandwiches & Bites', icon: <Sandwich size={24} /> },
+    { id: 'mainDishes', name: 'Main Dishes', icon: <UtensilsCrossed size={24} /> },
+    { id: 'drinks', name: 'Drinks', icon: <CupSoda size={24} /> },
+    { id: 'desserts', name: 'Desserts', icon: <CakeSlice size={24} /> },
   ];
 
   // Filter menu items based on active category and search term
@@ -207,11 +180,11 @@ const Menu = () => {
     } else if (activeCategory === 'drinks') {
       filteredItems = [...menuItems.drinks];
     } else if (activeCategory === 'coffee') {
-      filteredItems = menuItems.drinks.filter(item => item.category.includes('Coffee'));
+      filteredItems = menuItems.drinks.filter(item => item.category.includes('Coffee') || item.category.includes('Espresso'));
     } else if (activeCategory === 'tea') {
       filteredItems = menuItems.drinks.filter(item => item.category.includes('Tea'));
     } else if (activeCategory === 'milkshake') {
-      filteredItems = menuItems.drinks.filter(item => item.category.includes('Milkshake'));
+      filteredItems = menuItems.drinks.filter(item => item.category.includes('Milk'));
     } else {
       filteredItems = menuItems[activeCategory] || [];
     }
@@ -296,19 +269,6 @@ const Menu = () => {
       setShowSheeshaSubcategories(false);
       setShowDrinkSubcategories(false);
     }
-    
-    // Scroll to results when on mobile
-    if (window.innerWidth < 768) {
-      setTimeout(() => {
-        const resultsElement = document.getElementById('menu-results');
-        if (resultsElement) {
-          window.scrollTo({
-            top: resultsElement.offsetTop - 150,
-            behavior: 'smooth'
-          });
-        }
-      }, 100);
-    }
   };
   
   const clearSearch = () => {
@@ -347,12 +307,12 @@ const Menu = () => {
             title="Our Menu" 
             subtitle="Explore our selection of authentic cuisine and premium sheesha flavors"
             centered
-            className="mt-8 mb-6"
+            className="mt-8 mb-8"
           />
         </motion.div>
 
         {/* Search Bar */}
-        <div className="my-6 max-w-md mx-auto">
+        <div className="my-8 max-w-md mx-auto">
           <div className="relative">
             <input
               type="text"
@@ -374,35 +334,31 @@ const Menu = () => {
           </div>
         </div>
 
-        {/* Category Filters - NEW VERTICAL STACK LAYOUT */}
-        <div 
-          ref={categoryRef} 
-          className={`transition-all duration-300 ${isSticky ? 'sticky top-[60px] z-30 bg-stone-50 shadow-md py-3 -mx-4 px-4 md:mx-0 md:px-0 md:static md:shadow-none md:py-0' : ''}`}
-        >
-          {/* NEW: Vertical Stack Category Layout */}
-          <div className="mb-6 mt-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => handleCategoryClick(category.id as CategoryType)}
-                  data-category={category.id}
-                  className={`flex items-center gap-3 px-6 py-4 rounded-lg transition-all duration-300 w-full text-left touch-manipulation ${
-                    (activeCategory === category.id) || 
-                    (activeCategory.includes('sheesha') && category.id === 'sheesha') ||
-                    ((activeCategory.includes('coffee') || activeCategory.includes('tea') || activeCategory.includes('milkshake')) && category.id === 'drinks')
-                      ? 'bg-secondary-300 text-white shadow-md'
-                      : 'bg-white text-accent-700 hover:bg-gray-50 hover:shadow-md border border-gray-200'
-                  }`}
-                >
+        {/* IMPROVED Category Filters */}
+        <div className="mb-8">
+          <div className="space-y-3">
+            {categories.map((category) => (
+              <motion.button
+                key={category.id}
+                onClick={() => handleCategoryClick(category.id as CategoryType)}
+                whileTap={{ scale: 0.98 }}
+                className={`w-full flex items-center justify-between px-6 py-4 rounded-xl transition-all duration-300 text-left ${
+                  (activeCategory === category.id) || 
+                  (activeCategory.includes('sheesha') && category.id === 'sheesha') ||
+                  ((activeCategory.includes('coffee') || activeCategory.includes('tea') || activeCategory.includes('milkshake')) && category.id === 'drinks')
+                    ? 'bg-secondary-300 text-white shadow-lg transform scale-[1.02]'
+                    : 'bg-white text-accent-700 hover:bg-gray-50 shadow-md border border-gray-100'
+                }`}
+              >
+                <div className="flex items-center gap-4">
                   {category.icon}
-                  <span className="font-medium text-lg">{category.name}</span>
-                </button>
-              ))}
-            </div>
+                  <span className="font-semibold text-lg">{category.name}</span>
+                </div>
+              </motion.button>
+            ))}
           </div>
 
-          {/* Sheesha Subcategories */}
+          {/* FIXED Sheesha Subcategories - Positioned correctly */}
           <AnimatePresence>
             {showSheeshaSubcategories && (
               <motion.div
@@ -410,55 +366,53 @@ const Menu = () => {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="mb-6"
+                className="mt-4 space-y-2"
               >
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  <button
-                    onClick={() => setActiveCategory('sheesha')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
-                      activeCategory === 'sheesha'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    {sheeshaSubcategories.all}
-                  </button>
-                  <button
-                    onClick={() => setActiveCategory('sheeshaHouse')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
-                      activeCategory === 'sheeshaHouse'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    {sheeshaSubcategories.sheeshaHouse}
-                  </button>
-                  <button
-                    onClick={() => setActiveCategory('sheeshaFresh')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
-                      activeCategory === 'sheeshaFresh'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    {sheeshaSubcategories.sheeshaFresh}
-                  </button>
-                  <button
-                    onClick={() => setActiveCategory('sheeshaPremium')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
-                      activeCategory === 'sheeshaPremium'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    {sheeshaSubcategories.sheeshaPremium}
-                  </button>
-                </div>
+                <button
+                  onClick={() => setActiveCategory('sheesha')}
+                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
+                    activeCategory === 'sheesha'
+                      ? 'bg-secondary-400 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {sheeshaSubcategories.all}
+                </button>
+                <button
+                  onClick={() => setActiveCategory('sheeshaHouse')}
+                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
+                    activeCategory === 'sheeshaHouse'
+                      ? 'bg-secondary-400 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {sheeshaSubcategories.sheeshaHouse}
+                </button>
+                <button
+                  onClick={() => setActiveCategory('sheeshaFresh')}
+                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
+                    activeCategory === 'sheeshaFresh'
+                      ? 'bg-secondary-400 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {sheeshaSubcategories.sheeshaFresh}
+                </button>
+                <button
+                  onClick={() => setActiveCategory('sheeshaPremium')}
+                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
+                    activeCategory === 'sheeshaPremium'
+                      ? 'bg-secondary-400 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {sheeshaSubcategories.sheeshaPremium}
+                </button>
               </motion.div>
             )}
           </AnimatePresence>
 
-          {/* Drink Subcategories */}
+          {/* FIXED Drink Subcategories - Positioned correctly */}
           <AnimatePresence>
             {showDrinkSubcategories && (
               <motion.div
@@ -466,58 +420,56 @@ const Menu = () => {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="mb-6"
+                className="mt-4 space-y-2"
               >
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  <button
-                    onClick={() => setActiveCategory('drinks')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
-                      activeCategory === 'drinks'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    {drinkSubcategories.all}
-                  </button>
-                  <button
-                    onClick={() => setActiveCategory('coffee')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
-                      activeCategory === 'coffee'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    {drinkSubcategories.coffee}
-                  </button>
-                  <button
-                    onClick={() => setActiveCategory('tea')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
-                      activeCategory === 'tea'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    {drinkSubcategories.tea}
-                  </button>
-                  <button
-                    onClick={() => setActiveCategory('milkshake')}
-                    className={`px-4 py-2.5 rounded-full transition-all duration-300 text-center touch-manipulation ${
-                      activeCategory === 'milkshake'
-                        ? 'bg-secondary-400 text-white'
-                        : 'bg-white text-accent-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    {drinkSubcategories.milkshake}
-                  </button>
-                </div>
+                <button
+                  onClick={() => setActiveCategory('drinks')}
+                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
+                    activeCategory === 'drinks'
+                      ? 'bg-secondary-400 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {drinkSubcategories.all}
+                </button>
+                <button
+                  onClick={() => setActiveCategory('coffee')}
+                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
+                    activeCategory === 'coffee'
+                      ? 'bg-secondary-400 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {drinkSubcategories.coffee}
+                </button>
+                <button
+                  onClick={() => setActiveCategory('tea')}
+                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
+                    activeCategory === 'tea'
+                      ? 'bg-secondary-400 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {drinkSubcategories.tea}
+                </button>
+                <button
+                  onClick={() => setActiveCategory('milkshake')}
+                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
+                    activeCategory === 'milkshake'
+                      ? 'bg-secondary-400 text-white shadow-md'
+                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {drinkSubcategories.milkshake}
+                </button>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
 
         {/* Results Count */}
-        <div id="menu-results" className="text-center mb-6 mt-4">
-          <p className="text-gray-600">
+        <div ref={menuResultsRef} className="text-center mb-8">
+          <p className="text-gray-600 text-lg font-medium">
             {searchTerm ? `Found ${filteredItems.length} items matching "${searchTerm}"` : 
              `Showing ${filteredItems.length} menu items`}
           </p>
@@ -530,40 +482,39 @@ const Menu = () => {
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
+            className="space-y-12"
           >
             {/* Sheesha Menu Section */}
             {(activeCategory === 'all' || activeCategory.includes('sheesha')) && (
               Object.entries(groupedSheeshaItems).map(([category, items]) => 
                 items.length > 0 ? (
-                  <div key={category} className="mb-12" id={category === 'Classics' ? 'sheesha' : undefined}>
-                    <div className="flex items-center gap-3 mb-4">
+                  <div key={category} className="space-y-6">
+                    <div className="flex items-center gap-3">
                       <img 
                         src="/images/adobe-express-sheesha1-icon.png" 
                         alt="Sheesha" 
-                        className="w-6 h-6 object-contain"
+                        className="w-8 h-8 object-contain"
                         style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(38%) saturate(492%) hue-rotate(18deg) brightness(92%) contrast(85%)' }}
                       />
-                      <h3 className="font-heading text-xl font-semibold text-accent-700">
+                      <h3 className="font-heading text-2xl font-bold text-accent-700">
                         {category}
-                        {category === 'Classics' && <span className="ml-2 text-secondary-300">$25.99</span>}
-                        {category === 'Fresh Sheesha' && <span className="ml-2 text-secondary-300">$25.99</span>}
-                        {category === 'Premium Sheesha' && <span className="ml-2 text-secondary-300">$28.99-$29.99</span>}
+                        {category === 'Classics' && <span className="ml-2 text-secondary-300 font-semibold">$25.99</span>}
+                        {category === 'Fresh Sheesha' && <span className="ml-2 text-secondary-300 font-semibold">$25.99</span>}
+                        {category === 'Premium Sheesha' && <span className="ml-2 text-secondary-300 font-semibold">$28.99-$29.99</span>}
                       </h3>
                     </div>
                     
                     {/* Sheesha pricing info */}
-                    {items.length > 0 && (
-                      <div className="mb-6 p-3 bg-white rounded-lg">
-                        <p className="text-sm text-gray-700">
-                          {category.includes('Premium') 
-                            ? 'Premium Sheesha: $28.99-$29.99 | After 1AM: $30.99-$31.99' 
-                            : 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'}
-                        </p>
-                      </div>
-                    )}
+                    <div className="p-4 bg-white rounded-lg border-l-4 border-secondary-300">
+                      <p className="text-sm text-gray-700 font-medium">
+                        {category.includes('Premium') 
+                          ? 'Premium Sheesha: $28.99-$29.99 | After 1AM: $30.99-$31.99' 
+                          : 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'}
+                      </p>
+                    </div>
                     
                     {/* Grid layout for sheesha flavors */}
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="space-y-4">
                       {items.map((item) => (
                         <MenuItem
                           key={item.id}
@@ -581,16 +532,16 @@ const Menu = () => {
             {/* Non-Sheesha Menu Items */}
             {Object.entries(groupedNonSheeshaItems).map(([category, items]) => 
               items.length > 0 ? (
-                <div key={category} className="mb-12" id={category.toLowerCase().replace(' ', '').replace('&', '')}>
-                  <div className="flex items-center gap-3 mb-4">
+                <div key={category} className="space-y-6">
+                  <div className="flex items-center gap-3">
                     {getCategoryIcon(category)}
-                    <h3 className="font-heading text-xl font-semibold text-accent-700">
+                    <h3 className="font-heading text-2xl font-bold text-accent-700">
                       {category}
                     </h3>
                   </div>
                   
                   {/* Grid layout for menu items */}
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="space-y-4">
                     {items.map((item) => (
                       <MenuItem
                         key={item.id}
@@ -606,13 +557,13 @@ const Menu = () => {
 
             {/* No results message */}
             {filteredItems.length === 0 && (
-              <div className="col-span-full text-center py-12">
-                <p className="text-lg text-gray-600 mb-4">No menu items found.</p>
+              <div className="text-center py-16">
+                <p className="text-xl text-gray-600 mb-6">No menu items found.</p>
                 <button 
                   onClick={clearSearch}
-                  className="bg-secondary-300 hover:bg-secondary-400 text-white px-6 py-3 rounded-full transition-all duration-300 text-base font-medium inline-flex items-center gap-2"
+                  className="bg-secondary-300 hover:bg-secondary-400 text-white px-8 py-3 rounded-full transition-all duration-300 text-lg font-semibold inline-flex items-center gap-2"
                 >
-                  Clear Search <FilterX size={18} />
+                  Clear Search <FilterX size={20} />
                 </button>
               </div>
             )}
@@ -620,21 +571,21 @@ const Menu = () => {
         </AnimatePresence>
 
         {/* Sheesha Sessions Info */}
-        <div className="mt-16 bg-accent-700/5 p-6 rounded-lg">
+        <div className="mt-20 bg-accent-700/5 p-6 rounded-xl border border-accent-700/10">
           <div className="text-center">
-            <h3 className="font-heading text-xl font-semibold text-accent-700 mb-4">
+            <h3 className="font-heading text-2xl font-bold text-accent-700 mb-4">
               Sheesha Sessions
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 text-lg">
               All sheesha sessions last approximately 60-90 minutes. We offer premium tobacco and herbal options.
             </p>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-6 text-lg">
               Must be 18+ to order sheesha. Please ask your server about our current special flavors and combinations.
             </p>
-            <div className="mt-4 p-3 bg-secondary-300/20 rounded-md inline-block">
-              <p className="text-sm text-accent-700 font-medium">Sheesha Pricing:</p>
-              <p className="text-sm text-gray-600">Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99</p>
-              <p className="text-sm text-gray-600">Premium: $28.99-$29.99 | After 1AM: $30.99-$31.99</p>
+            <div className="p-4 bg-secondary-300/20 rounded-lg inline-block">
+              <p className="text-sm text-accent-700 font-bold mb-2">Sheesha Pricing:</p>
+              <p className="text-sm text-gray-600 font-medium">Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99</p>
+              <p className="text-sm text-gray-600 font-medium">Premium: $28.99-$29.99 | After 1AM: $30.99-$31.99</p>
             </div>
           </div>
         </div>
