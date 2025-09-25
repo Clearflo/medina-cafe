@@ -86,7 +86,6 @@ const MenuItem = ({ name, description, price, notes, hasFlavorSelection, flavors
     </motion.div>
   );
 };
-
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState<CategoryType>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
