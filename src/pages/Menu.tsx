@@ -61,7 +61,7 @@ const MenuItem = ({ name, description, price, notes, hasFlavorSelection, flavors
       {hasFlavorSelection && flavors ? (
         <div className="mb-4">
           <p className="text-sm font-bold text-amber-700 mb-3 bg-amber-50 px-3 py-2 rounded-md border-l-4 border-amber-400">
-            🍵 Choose your flavour:
+            {name === "Classic Teas" ? "🍵" : "🥤"} Choose your flavour:
           </p>
           <div className="flex flex-wrap gap-2">
             {flavors.map((flavor, index) => (
