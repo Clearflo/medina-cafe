@@ -545,6 +545,7 @@ export const menuItems = {
   name: "Classic Teas", 
   price: 5.99,
   description: "Simple, warm, and calming — your choice of traditional favourites.",
+  category: "Classic Teas",
   hasFlavorSelection: true,
   flavors: [
     "Orange Pekoe", "Mint", "Peach Ginger", "Chai", "Camomile", 
