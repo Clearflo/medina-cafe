@@ -443,7 +443,7 @@ export const menuItems = {
       category: 'Signature House Teas',
       image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
     },
-  {
+ {
   id: 'd4',
   name: 'Milk Shakes',
   description: 'Thick, creamy, and blended to order. A sweet classic with your choice of flavour.',
@@ -555,34 +555,34 @@ export const menuItems = {
     "Iced Cappuccino", "Iced Mochaccino", "Iced Caramel Cappuccino", "Iced Chai"
   ]
 },
-    {
-      id: 'd13',
-      name: 'Bottled Non-Alcoholic Beverages',
-      description: 'Crisp, fizzy, and globally loved. Jarritos: Lime, Mango, Mandarin, Pineapple. Laziza: Apple, Raspberry, Peach. Also available: Barbican, Tiger Malt, Perrier',
-      price: '$5.49',
-      category: 'Bottled Non-Alcoholic Beverages',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
-    },
-    {
-      id: 'd14',
-      name: 'Juice & Other Beverages',
-      description: 'Cold, classic, and always refreshing. Orange Juice, Apple Juice, Mango Juice, Guava Juice, Pineapple Juice, Clamato Juice, Milk',
-      price: '$5.99',
-      category: 'Juice & Other Beverages',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
-    },
-    {
-      id: 'd15',
-      name: 'Energy Drinks',
-      description: 'Boost your day, no questions asked. Red Bull, Gatorade',
-      price: '$5.49',
-      category: 'Energy Drinks',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
-    },
- {
+{
+  id: 'd13',
+  name: 'Bottled Non-Alcoholic Beverages',
+  description: 'Crisp, fizzy, and globally loved. Jarritos: Lime, Mango, Mandarin, Pineapple. Laziza: Apple, Raspberry, Peach. Also available: Barbican, Tiger Malt, Perrier',
+  price: '$5.49',
+  category: 'Bottled Non-Alcoholic Beverages',
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+},
+{
+  id: 'd14',
+  name: 'Juice & Other Beverages',
+  description: 'Cold, classic, and always refreshing. Orange Juice, Apple Juice, Mango Juice, Guava Juice, Pineapple Juice, Clamato Juice, Milk',
+  price: '$5.99',
+  category: 'Juice & Other Beverages',
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+},
+{
+  id: 'd15',
+  name: 'Energy Drinks',
+  description: 'Boost your day, no questions asked. Red Bull, Gatorade',
+  price: '$5.49',
+  category: 'Energy Drinks',
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+},
+{
   id: "classic-teas",
   name: "Classic Teas", 
-  price: 5.99,
+  price: "5.99",
   description: "Simple, warm, and calming — your choice of traditional favourites.",
   category: "Classic Teas",
   hasFlavorSelection: true,
