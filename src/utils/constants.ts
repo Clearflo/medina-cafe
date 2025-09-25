@@ -558,26 +558,41 @@ export const menuItems = {
 {
   id: 'd13',
   name: 'Bottled Non-Alcoholic Beverages',
-  description: 'Crisp, fizzy, and globally loved. Jarritos: Lime, Mango, Mandarin, Pineapple. Laziza: Apple, Raspberry, Peach. Also available: Barbican, Tiger Malt, Perrier',
+  description: 'Crisp, fizzy, and globally loved premium beverages.',
   price: '$5.49',
   category: 'Bottled Non-Alcoholic Beverages',
-  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Jarritos Lime", "Jarritos Mango", "Jarritos Mandarin", "Jarritos Pineapple",
+    "Laziza Apple", "Laziza Raspberry", "Laziza Peach", 
+    "Barbican", "Tiger Malt", "Perrier"
+  ]
 },
 {
   id: 'd14',
   name: 'Juice & Other Beverages',
-  description: 'Cold, classic, and always refreshing. Orange Juice, Apple Juice, Mango Juice, Guava Juice, Pineapple Juice, Clamato Juice, Milk',
+  description: 'Cold, classic, and always refreshing beverages.',
   price: '$5.99',
   category: 'Juice & Other Beverages',
-  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Orange Juice", "Apple Juice", "Mango Juice", "Guava Juice", 
+    "Pineapple Juice", "Clamato Juice", "Milk"
+  ]
 },
 {
   id: 'd15',
   name: 'Energy Drinks',
-  description: 'Boost your day, no questions asked. Red Bull, Gatorade',
+  description: 'Boost your day, no questions asked.',
   price: '$5.49',
   category: 'Energy Drinks',
-  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Red Bull", "Gatorade"
+  ]
 },
 {
   id: "classic-teas",
