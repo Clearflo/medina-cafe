@@ -26,13 +26,12 @@ const staggerContainer = {
 };
 
 // Define types for each menu category - REMOVED drink subcategories
-type CategoryType = 'all' | 'sheesha' | 'sheeshaHouse' | 'sheeshaFresh' | 'sheeshaPremium' | 'appetizers' | 'saladsAndWraps' | 'sandwichesAndBites' | 'mainDishes' | 'drinks' | 'desserts';
+type CategoryType = 'all' | 'sheesha' | 'sheeshaHouse' | 'sheeshaPremium' | 'appetizers' | 'saladsAndWraps' | 'sandwichesAndBites' | 'mainDishes' | 'drinks' | 'desserts';
 
 // Define subcategories for sheesha
 const sheeshaSubcategories = {
   all: 'All Sheesha',
   sheeshaHouse: 'Classics',
-  sheeshaFresh: 'Fresh',
   sheeshaPremium: 'Premium'
 };
 
@@ -182,9 +181,7 @@ const Menu = () => {
       filteredItems = [...menuItems.sheesha];
     } else if (activeCategory === 'sheeshaHouse') {
       filteredItems = menuItems.sheesha.filter(item => item.category.includes('House Blend'));
-    } else if (activeCategory === 'sheeshaFresh') {
-      filteredItems = menuItems.sheesha.filter(item => item.category.includes('Fresh'));
-    } else if (activeCategory === 'sheeshaPremium') {
+   } else if (activeCategory === 'sheeshaPremium') {
       filteredItems = menuItems.sheesha.filter(item => item.category.includes('Premium'));
     } else if (activeCategory === 'drinks') {
       // SIMPLIFIED: Show all drinks in one category
@@ -211,20 +208,16 @@ const Menu = () => {
   const filteredItems = getFilteredItems();
   
   // Group sheesha items by category
-  const groupedSheeshaItems = {
-    'Classics': filteredItems.filter(item => 
-      item.category.includes('House Blend') && 
-      (activeCategory === 'all' || activeCategory === 'sheesha' || activeCategory === 'sheeshaHouse')
-    ),
-    'Fresh Sheesha': filteredItems.filter(item => 
-      item.category.includes('Fresh') && 
-      (activeCategory === 'all' || activeCategory === 'sheesha' || activeCategory === 'sheeshaFresh')
-    ),
-    'Premium Sheesha': filteredItems.filter(item => 
-      item.category.includes('Premium') && 
-      (activeCategory === 'all' || activeCategory === 'sheesha' || activeCategory === 'sheeshaPremium')
-    )
-  };
+const groupedSheeshaItems = {
+  'Classics': filteredItems.filter(item => 
+    item.category.includes('House Blend') && 
+    (activeCategory === 'all' || activeCategory === 'sheesha' || activeCategory === 'sheeshaHouse')
+  ),
+  'Premium Sheesha': filteredItems.filter(item => 
+    item.category.includes('Premium') && 
+    (activeCategory === 'all' || activeCategory === 'sheesha' || activeCategory === 'sheeshaPremium')
+  )
+};
   
   // Filter non-sheesha items and group them by category - SIMPLIFIED drinks filtering
   const groupedNonSheeshaItems = {
@@ -386,16 +379,7 @@ const Menu = () => {
                 >
                   {sheeshaSubcategories.sheeshaHouse}
                 </button>
-                <button
-                  onClick={() => setActiveCategory('sheeshaFresh')}
-                  className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
-                    activeCategory === 'sheeshaFresh'
-                      ? 'bg-secondary-400 text-white shadow-md'
-                      : 'bg-white text-accent-700 hover:bg-gray-50 border border-gray-200'
-                  }`}
-                >
-                  {sheeshaSubcategories.sheeshaFresh}
-                </button>
+             
                 <button
                   onClick={() => setActiveCategory('sheeshaPremium')}
                   className={`w-full px-4 py-3 rounded-lg transition-all duration-300 text-center ${
@@ -443,7 +427,6 @@ const Menu = () => {
                       <h3 className="font-heading text-2xl font-bold text-accent-700">
                         {category}
                         {category === 'Classics' && <span className="ml-2 text-secondary-300 font-semibold">$25.99</span>}
-                        {category === 'Fresh Sheesha' && <span className="ml-2 text-secondary-300 font-semibold">$25.99</span>}
                         {category === 'Premium Sheesha' && <span className="ml-2 text-secondary-300 font-semibold">$28.99-$29.99</span>}
                       </h3>
                     </div>
