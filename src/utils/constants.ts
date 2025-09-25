@@ -443,39 +443,58 @@ export const menuItems = {
       category: 'Signature House Teas',
       image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
     },
+  {
+  id: 'd4',
+  name: 'Milk Shakes',
+  description: 'Thick, creamy, and blended to order. A sweet classic with your choice of flavour.',
+  price: '$8.49',
+  category: 'Milk Shakes',
+  image: 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Strawberry", "Peach", "Mango", "Banana", "Raspberry", 
+    "Chocolate", "Caramel", "Pina Colada", "Vanilla", "Strawberry Banana"
+  ]
+}
+   {
+  id: 'd5',
+  name: 'Frappes',
+  description: 'Chilled, creamy, and topped with whipped cream. A cool twist on your café favourites.',
+  price: '$8.49',
+  category: 'Frappes',
+  image: 'https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg',
+  notes: 'Add espresso shot: +$2.99',
+  hasFlavorSelection: true,
+  flavors: [
+    "Double Chocolate", "White Chocolate"
+  ]
+}
+   {
+  id: 'd6',
+  name: 'Smoothies',
+  description: 'Fruity, ice-blended, and naturally refreshing — no extras needed.',
+  price: '$7.99',
+  category: 'Smoothies',
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Mango", "Strawberry", "Peach", "Raspberry", 
+    "Pina Colada", "Strawberry Banana", "Passionfruit"
+  ]
+}
     {
-      id: 'd4',
-      name: 'Milk Shakes',
-      description: 'Thick, creamy, and blended to order. A sweet classic with your choice of flavour: Strawberry, Peach, Mango, Banana, Raspberry, Chocolate, Caramel, Pina Colada, Vanilla, Strawberry Banana',
-      price: '$8.49',
-      category: 'Milk Shakes',
-      image: 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg'
-    },
-    {
-      id: 'd5',
-      name: 'Frappes',
-      description: 'Chilled, creamy, and topped with whipped cream. A cool twist on your café favourites. Double Chocolate, White Chocolate',
-      price: '$8.49',
-      category: 'Frappes',
-      image: 'https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg',
-      notes: 'Add espresso shot: +$2.99'
-    },
-    {
-      id: 'd6',
-      name: 'Smoothies',
-      description: 'Fruity, ice-blended, and naturally refreshing — no extras needed. Mango, Strawberry, Peach, Raspberry, Pina Colada, Strawberry Banana, Passionfruit',
-      price: '$7.99',
-      category: 'Smoothies',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
-    },
-    {
-      id: 'd7',
-      name: 'Italian Sodas',
-      description: 'Bubbly and full of flavour. House-made sodas with a playful twist. Raspberry, Grenadine, Peach, Caramel, Vanilla, Pear, Kiwi, Mango, Strawberry, Passion Fruit',
-      price: '$5.99',
-      category: 'Italian Sodas',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
-    },
+  id: 'd7',
+  name: 'Italian Sodas',
+  description: 'Bubbly and full of flavour. House-made sodas with a playful twist.',
+  price: '$5.99',
+  category: 'Italian Sodas',
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Raspberry", "Grenadine", "Peach", "Caramel", "Vanilla", 
+    "Pear", "Kiwi", "Mango", "Strawberry", "Passion Fruit"
+  ]
+}
     {
       id: 'd8',
       name: 'Matcha Green Tea Lemonade',
@@ -484,38 +503,55 @@ export const menuItems = {
       category: 'Matcha Green Tea Lemonade',
       image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
     },
-    {
-      id: 'd9',
-      name: 'Mocktails',
-      description: 'Crafted without alcohol — bold, fun, and full of flavour. Virgin Mojito, Shirley Temple, Virgin Caesar',
-      price: '$7.99',
-      category: 'Mocktails',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
-    },
-    {
-      id: 'd10',
-      name: 'House Hot Drinks',
-      description: 'Warm, familiar favourites made fresh to order. Café Latte, Chai Latte, Matcha Green Tea Latte, Caramel Latte, Hot Chocolate, White Hot Chocolate, Turkish / Arabic Coffee',
-      price: '$7.99',
-      category: 'House Hot Drinks',
-      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
-    },
-    {
-      id: 'd11',
-      name: 'Espresso Bar',
-      description: 'For the true coffee lovers. Balanced, bold, and beautifully brewed. Black Coffee, Espresso - $4.25, Double Espresso, Cappuccino, Macchiato, Mochaccino, Café Americano, Caramel Macchiato, Café Mocha, Vanilla Latte, Hazelnut Latte, Peppermint Mocha, Pumpkin Spice Latte',
-      price: '$7.99',
-      category: 'Espresso Bar',
-      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
-    },
-    {
-      id: 'd12',
-      name: 'Iced Drinks',
-      description: 'Cool, creamy, and finished with whipped cream. A smooth way to stay refreshed. Iced Cappuccino, Iced Mochaccino, Iced Caramel Cappuccino, Iced Chai',
-      price: '$8.49',
-      category: 'Iced Drinks',
-      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
-    },
+   {
+  id: 'd9',
+  name: 'Mocktails',
+  description: 'Crafted without alcohol — bold, fun, and full of flavour.',
+  price: '$7.99',
+  category: 'Mocktails',
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Virgin Mojito", "Shirley Temple", "Virgin Caesar"
+  ]
+{
+  id: 'd10',
+  name: 'House Hot Drinks',
+  description: 'Warm, familiar favourites made fresh to order.',
+  price: '$7.99',
+  category: 'House Hot Drinks',
+  image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Café Latte", "Chai Latte", "Matcha Green Tea Latte", "Caramel Latte", 
+    "Hot Chocolate", "White Hot Chocolate", "Turkish / Arabic Coffee"
+  ]
+{
+  id: 'd11',
+  name: 'Espresso Bar',
+  description: 'For the true coffee lovers. Balanced, bold, and beautifully brewed.',
+  price: '$7.99',
+  category: 'Espresso Bar',
+  image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Black Coffee", "Espresso", "Double Espresso", "Cappuccino", "Macchiato", 
+    "Mochaccino", "Café Americano", "Caramel Macchiato", "Café Mocha", 
+    "Vanilla Latte", "Hazelnut Latte", "Peppermint Mocha", "Pumpkin Spice Latte"
+  ],
+  notes: "Espresso: $4.25"
+{
+  id: 'd12',
+  name: 'Iced Drinks',
+  description: 'Cool, creamy, and finished with whipped cream. A smooth way to stay refreshed.',
+  price: '$8.49',
+  category: 'Iced Drinks',
+  image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg',
+  hasFlavorSelection: true,
+  flavors: [
+    "Iced Cappuccino", "Iced Mochaccino", "Iced Caramel Cappuccino", "Iced Chai"
+  ]
+}
     {
       id: 'd13',
       name: 'Bottled Non-Alcoholic Beverages',
