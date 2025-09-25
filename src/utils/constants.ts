@@ -455,8 +455,8 @@ export const menuItems = {
     "Strawberry", "Peach", "Mango", "Banana", "Raspberry", 
     "Chocolate", "Caramel", "Pina Colada", "Vanilla", "Strawberry Banana"
   ]
-}
-   {
+},
+{
   id: 'd5',
   name: 'Frappes',
   description: 'Chilled, creamy, and topped with whipped cream. A cool twist on your café favourites.',
@@ -468,8 +468,8 @@ export const menuItems = {
   flavors: [
     "Double Chocolate", "White Chocolate"
   ]
-}
-   {
+},
+{
   id: 'd6',
   name: 'Smoothies',
   description: 'Fruity, ice-blended, and naturally refreshing — no extras needed.',
@@ -481,8 +481,8 @@ export const menuItems = {
     "Mango", "Strawberry", "Peach", "Raspberry", 
     "Pina Colada", "Strawberry Banana", "Passionfruit"
   ]
-}
-    {
+},
+{
   id: 'd7',
   name: 'Italian Sodas',
   description: 'Bubbly and full of flavour. House-made sodas with a playful twist.',
@@ -494,16 +494,16 @@ export const menuItems = {
     "Raspberry", "Grenadine", "Peach", "Caramel", "Vanilla", 
     "Pear", "Kiwi", "Mango", "Strawberry", "Passion Fruit"
   ]
-}
-    {
-      id: 'd8',
-      name: 'Matcha Green Tea Lemonade',
-      description: 'Earthy matcha meets citrusy lemonade in this chilled, energizing blend. Smooth, tangy, and balanced.',
-      price: '$8.49',
-      category: 'Matcha Green Tea Lemonade',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
-    },
-   {
+},
+{
+  id: 'd8',
+  name: 'Matcha Green Tea Lemonade',
+  description: 'Earthy matcha meets citrusy lemonade in this chilled, energizing blend. Smooth, tangy, and balanced.',
+  price: '$8.49',
+  category: 'Matcha Green Tea Lemonade',
+  image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg'
+},
+{
   id: 'd9',
   name: 'Mocktails',
   description: 'Crafted without alcohol — bold, fun, and full of flavour.',
@@ -514,6 +514,7 @@ export const menuItems = {
   flavors: [
     "Virgin Mojito", "Shirley Temple", "Virgin Caesar"
   ]
+},
 {
   id: 'd10',
   name: 'House Hot Drinks',
@@ -526,6 +527,7 @@ export const menuItems = {
     "Café Latte", "Chai Latte", "Matcha Green Tea Latte", "Caramel Latte", 
     "Hot Chocolate", "White Hot Chocolate", "Turkish / Arabic Coffee"
   ]
+},
 {
   id: 'd11',
   name: 'Espresso Bar',
@@ -540,6 +542,7 @@ export const menuItems = {
     "Vanilla Latte", "Hazelnut Latte", "Peppermint Mocha", "Pumpkin Spice Latte"
   ],
   notes: "Espresso: $4.25"
+},
 {
   id: 'd12',
   name: 'Iced Drinks',
@@ -551,7 +554,7 @@ export const menuItems = {
   flavors: [
     "Iced Cappuccino", "Iced Mochaccino", "Iced Caramel Cappuccino", "Iced Chai"
   ]
-}
+},
     {
       id: 'd13',
       name: 'Bottled Non-Alcoholic Beverages',
