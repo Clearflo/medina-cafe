@@ -460,11 +460,13 @@ const Menu = () => {
                     {/* Grid layout for sheesha flavors */}
                     <div className="space-y-4">
                       {items.map((item) => (
-                        <MenuItem
-                          key={item.id}
-                          name={item.name}
-                          description={item.description}
-                          notes={item.notes}
+  <MenuItem
+    key={item.id}
+    name={item.name}
+    description={item.description}
+    notes={item.notes}
+    hasFlavorSelection={item.hasFlavorSelection}
+    flavors={item.flavors}
                         />
                       ))}
                     </div>
@@ -486,14 +488,16 @@ const Menu = () => {
                   
                   {/* Grid layout for menu items */}
                   <div className="space-y-4">
-                    {items.map((item) => (
-                      <MenuItem
-                        key={item.id}
-                        name={item.name}
-                        description={item.description}
-                        price={item.price}
-                      />
-                    ))}
+                  {items.map((item) => (
+  <MenuItem
+    key={item.id}
+    name={item.name}
+    description={item.description}
+    price={item.price}
+    hasFlavorSelection={item.hasFlavorSelection}
+    flavors={item.flavors}
+  />
+))}
                   </div>
                 </div>
               ) : null
