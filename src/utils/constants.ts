@@ -302,7 +302,7 @@ export const menuItems = {
       id: 'sw4',
       name: 'Beef Donair Wrap',
       description: 'Tender beef donair with lettuce, tomato, onions, garlic, and sweet sauce. Served with your choice of fries or salad.',
-      price: '$16.99',
+      price: '$17.99',
       category: 'Fresh Salads & Wraps',
       image: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg'
     }
@@ -328,7 +328,7 @@ export const menuItems = {
       id: 'sb3',
       name: 'Crispy Chicken Burger',
       description: 'Golden fried chicken breast on a bun. Comes with fries or salad.',
-      price: '$16.99',
+      price: '$17.99',
       category: 'Grilled Sandwiches & Global Bites',
       image: 'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg'
     },
@@ -442,6 +442,14 @@ export const menuItems = {
       price: '$7.99',
       category: 'Signature House Teas',
       image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg'
+    },
+    {
+      id: 'd4_yemeni',
+      name: 'Yemeni / Somali Coffee',
+      description: 'A bold, aromatic Yemeni and Somali coffee infused with warming spices like cardamom and ginger for a rich, comforting finish.',
+      price: '$7.99',
+      category: 'Signature House Teas',
+      image: 'https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg'
     },
  {
   id: 'd4',
