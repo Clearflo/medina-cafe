@@ -453,7 +453,7 @@ export const menuItems = {
   hasFlavorSelection: true,
   flavors: [
     "Strawberry", "Peach", "Mango", "Banana", "Raspberry", 
-    "Chocolate", "Caramel", "Pina Colada", "Vanilla", "Strawberry Banana"
+    "Chocolate", "Caramel", "Pina Colada", "Vanilla", "Strawberry Banana", "Biscoff"
   ]
 },
 {
