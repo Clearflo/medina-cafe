@@ -501,25 +501,6 @@ const groupedSheeshaItems = {
           </motion.div>
         </AnimatePresence>
 
-        {/* Sheesha Sessions Info */}
-        <div className="mt-20 bg-accent-700/5 p-6 rounded-xl border border-accent-700/10">
-          <div className="text-center">
-            <h3 className="font-heading text-2xl font-bold text-accent-700 mb-4">
-              Sheesha Sessions
-            </h3>
-            <p className="text-gray-600 mb-4 text-lg">
-              All sheesha sessions last approximately 60-90 minutes. We offer premium tobacco and herbal options.
-            </p>
-            <p className="text-gray-600 mb-6 text-lg">
-              Must be 18+ to order sheesha. Please ask your server about our current special flavors and combinations.
-            </p>
-            <div className="p-4 bg-secondary-300/20 rounded-lg inline-block">
-              <p className="text-sm text-accent-700 font-bold mb-2">Sheesha Pricing:</p>
-              <p className="text-sm text-gray-600 font-medium">Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99</p>
-              <p className="text-sm text-gray-600 font-medium">Premium: $28.99-$29.99 | After 1AM: $30.99-$31.99</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
