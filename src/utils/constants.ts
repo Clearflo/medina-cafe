@@ -239,6 +239,14 @@ export const menuItems = {
   ],
   appetizers: [
     {
+      id: 'a0',
+      name: 'Calamari',
+      description: 'Tender lightly breaded fried calamari served with tzatziki.',
+      price: '$20.99',
+      category: 'Warm Starters & Crispy Bites',
+      image: 'https://images.pexels.com/photos/3168837/pexels-photo-3168837.jpeg'
+    },
+    {
       id: 'a1',
       name: 'Hummus',
       description: 'Creamy chickpea dip made with tahini, lemon, and olive oil. Served with warm pita.',
