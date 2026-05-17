@@ -167,8 +167,8 @@ const Footer = () => {
         <div className="border-t border-gray-600/30 mt-8 sm:mt-10 pt-6 text-center">
           <p className="text-xs sm:text-sm text-gray-600/80">
             © {currentYear} Medina Cafe & Grill Sheesha Lounge. Powered by{' '}
-            <a 
-              href="https://clearflo.ai/website-services"
+            <a
+              href="https://www.ramosmethod.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline transition-all duration-200"
@@ -180,7 +180,7 @@ const Footer = () => {
                 color: '#1D3557'
               }}
             >
-              Clearflo AI
+              Ramos Method
             </a>
           </p>
         </div>
