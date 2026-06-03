@@ -180,7 +180,7 @@ export const menuItems = {
       price: '$28.99',
       category: 'Premium Sheesha',
       image: 'https://images.pexels.com/photos/6544945/pexels-photo-6544945.jpeg',
-      notes: 'After 1AM $30.99'
+      notes: 'After 1AM $34.99'
     },
     {
       id: 's21',
@@ -189,7 +189,7 @@ export const menuItems = {
       price: '$28.99',
       category: 'Premium Sheesha',
       image: 'https://images.pexels.com/photos/5711875/pexels-photo-5711875.jpeg',
-      notes: 'After 1AM $30.99'
+      notes: 'After 1AM $34.99'
     },
     {
       id: 's22',
@@ -198,7 +198,7 @@ export const menuItems = {
       price: '$28.99',
       category: 'Premium Sheesha',
       image: 'https://images.pexels.com/photos/6545421/pexels-photo-6545421.jpeg',
-      notes: 'After 1AM $30.99'
+      notes: 'After 1AM $34.99'
     },
     {
       id: 's23',
@@ -207,7 +207,7 @@ export const menuItems = {
       price: '$29.99',
       category: 'Premium Sheesha',
       image: 'https://images.pexels.com/photos/5370669/pexels-photo-5370669.jpeg',
-      notes: 'After 1AM $31.99'
+      notes: 'After 1AM $34.99'
     },
     {
       id: 's24',
@@ -216,7 +216,7 @@ export const menuItems = {
       price: '$29.99',
       category: 'Premium Sheesha',
       image: 'https://images.pexels.com/photos/5792857/pexels-photo-5792857.jpeg',
-      notes: 'After 1AM $31.99'
+      notes: 'After 1AM $34.99'
     },
     {
       id: 's25',
@@ -225,7 +225,7 @@ export const menuItems = {
       price: '$29.99',
       category: 'Premium Sheesha',
       image: 'https://images.pexels.com/photos/6546258/pexels-photo-6546258.jpeg',
-      notes: 'After 1AM $31.99'
+      notes: 'After 1AM $34.99'
     },
     {
       id: 's26',
@@ -234,7 +234,7 @@ export const menuItems = {
       price: '$29.99',
       category: 'Premium Sheesha',
       image: 'https://images.pexels.com/photos/6546277/pexels-photo-6546277.jpeg',
-      notes: 'After 1AM $31.99'
+      notes: 'After 1AM $34.99'
     }
   ],
   appetizers: [
