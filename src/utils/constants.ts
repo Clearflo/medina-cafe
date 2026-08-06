@@ -239,14 +239,6 @@ export const menuItems = {
   ],
   appetizers: [
     {
-      id: 'a0',
-      name: 'Calamari',
-      description: 'Tender lightly breaded fried calamari served with tzatziki.',
-      price: '$20.99',
-      category: 'Warm Starters & Crispy Bites',
-      image: 'https://images.pexels.com/photos/3168837/pexels-photo-3168837.jpeg'
-    },
-    {
       id: 'a1',
       name: 'Hummus',
       description: 'Creamy chickpea dip made with tahini, lemon, and olive oil. Served with warm pita.',
@@ -644,14 +636,6 @@ export const menuItems = {
       id: 'ds3',
       name: 'Banana Xango (Chan\'go)',
       description: 'Banana cheesecake wrapped in flaky pastry, dusted with cinnamon sugar. Served with caramel drizzle and French vanilla ice cream.',
-      price: '$12.99',
-      category: 'Desserts',
-      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
-    },
-    {
-      id: 'ds4',
-      name: 'Hot Fudge Brownie Sundae',
-      description: 'Warm double chocolate brownie served with vanilla ice cream, topped with butterscotch, chocolate sauce, whipped cream, and a cherry on top.',
       price: '$12.99',
       category: 'Desserts',
       image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
