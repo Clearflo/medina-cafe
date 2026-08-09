@@ -644,7 +644,7 @@ export const menuItems = {
       id: 'ds6',
       name: 'Triple Chocolate Mousse Cake',
       description: 'French style dessert made of layers of silky white milk and dark chocolate mousse.',
-      price: '$12.99',
+      price: '$13.99',
       category: 'Desserts',
       image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
     }
