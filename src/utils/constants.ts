@@ -633,18 +633,18 @@ export const menuItems = {
       image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
     },
     {
-      id: 'ds3',
-      name: 'Banana Xango (Chan\'go)',
-      description: 'Banana cheesecake wrapped in flaky pastry, dusted with cinnamon sugar. Served with caramel drizzle and French vanilla ice cream.',
-      price: '$12.99',
-      category: 'Desserts',
-      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
-    },
-    {
       id: 'ds5',
       name: 'Kanafa Sweet Pastry',
       description: 'Traditional Turkish—Middle Eastern pastry made with cheese, semolina, pistachios, and almonds. Finished with a light sugar syrup.',
       price: '$11.99',
+      category: 'Desserts',
+      image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
+    },
+    {
+      id: 'ds6',
+      name: 'Triple Chocolate Mousse Cake',
+      description: 'French style dessert made of layers of silky white milk and dark chocolate mousse.',
+      price: '$12.99',
       category: 'Desserts',
       image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg'
     }
