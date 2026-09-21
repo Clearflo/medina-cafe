@@ -426,18 +426,7 @@ const groupedSheeshaItems = {
                       />
                       <h3 className="font-heading text-2xl font-bold text-accent-700">
                         {category}
-                        {category === 'Classics' && <span className="ml-2 text-secondary-300 font-semibold">$25.99</span>}
-                        {category === 'Premium Sheesha' && <span className="ml-2 text-secondary-300 font-semibold">$29.99</span>}
                       </h3>
-                    </div>
-                    
-                    {/* Sheesha pricing info */}
-                    <div className="p-4 bg-white rounded-lg border-l-4 border-secondary-300">
-                      <p className="text-sm text-gray-700 font-medium">
-                        {category.includes('Premium')
-                          ? 'Sheesha: $29.99 | After 1AM: $34.99'
-                          : 'Regular: $25.99 | Refill: $18.99 | After 1AM: $27.99'}
-                      </p>
                     </div>
                     
                     {/* Grid layout for sheesha flavors */}
@@ -447,6 +436,7 @@ const groupedSheeshaItems = {
     key={item.id}
     name={item.name}
     description={item.description}
+    price={item.price}
     notes={item.notes}
     hasFlavorSelection={item.hasFlavorSelection}
     flavors={item.flavors}
