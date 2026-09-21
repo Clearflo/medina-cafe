@@ -186,7 +186,7 @@ export const menuItems = {
       id: 's21',
       name: 'Pan',
       description: 'Exotic pan flavor with unique sweet and spicy notes.',
-      price: '$28.99',
+      price: '$31.99',
       category: 'Premium Sheesha',
       image: 'https://images.pexels.com/photos/5711875/pexels-photo-5711875.jpeg',
       notes: 'After 1AM $34.99'
