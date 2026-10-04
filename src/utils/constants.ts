@@ -6,7 +6,7 @@ export const menuItems = {
       id: 's1',
       name: 'Orange Mint',
       description: 'Our signature orange mint blend for a refreshing smoking experience.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -15,7 +15,7 @@ export const menuItems = {
       id: 's2',
       name: 'Double Apple',
       description: 'The traditional favorite with a sweet and crisp double apple flavor.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546260/pexels-photo-6546260.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -24,7 +24,7 @@ export const menuItems = {
       id: 's3',
       name: 'White Apple',
       description: 'Smooth and light apple flavor with subtle sweetness.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/7443862/pexels-photo-7443862.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -33,7 +33,7 @@ export const menuItems = {
       id: 's4',
       name: 'White Grape',
       description: 'Delicate white grape flavor with a clean, sweet finish.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/15145560/pexels-photo-15145560/free-photo-of-restaurant-table-with-hookah.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -42,7 +42,7 @@ export const menuItems = {
       id: 's5',
       name: 'Mixed Fruit',
       description: 'A delightful blend of assorted fruit flavors for a tropical experience.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546266/pexels-photo-6546266.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -51,7 +51,7 @@ export const menuItems = {
       id: 's6',
       name: 'Peach',
       description: 'Sweet and aromatic peach flavor, perfect for a relaxing session.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6957706/pexels-photo-6957706.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -60,7 +60,7 @@ export const menuItems = {
       id: 's7',
       name: 'Guava',
       description: 'Tropical guava flavor with a distinct sweetness and aroma.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6476071/pexels-photo-6476071.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -69,7 +69,7 @@ export const menuItems = {
       id: 's8',
       name: 'Vanilla',
       description: 'Smooth, creamy vanilla flavor for a mellow smoking experience.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/4792683/pexels-photo-4792683.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -78,7 +78,7 @@ export const menuItems = {
       id: 's9',
       name: 'Pineapple',
       description: 'Tropical pineapple flavor with a tangy-sweet profile.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6544928/pexels-photo-6544928.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -87,7 +87,7 @@ export const menuItems = {
       id: 's10',
       name: 'Kiwi',
       description: 'Unique kiwi flavor with a balanced sweet and tart profile.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/5370659/pexels-photo-5370659.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -96,7 +96,7 @@ export const menuItems = {
       id: 's11',
       name: 'Mint',
       description: 'Pure, refreshing mint using fresh mint leaves for an authentic experience.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546619/pexels-photo-6546619.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -105,7 +105,7 @@ export const menuItems = {
       id: 's13',
       name: 'Apple Mint',
       description: 'Perfect combination of crisp apple and cool mint for a refreshing blend.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/7437489/pexels-photo-7437489.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -114,7 +114,7 @@ export const menuItems = {
       id: 's14',
       name: 'Lemon Mint',
       description: 'Zesty lemon blended with cool mint for a refreshing citrus experience.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/10939225/pexels-photo-10939225.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -123,7 +123,7 @@ export const menuItems = {
       id: 's15',
       name: 'Blueberry Mint',
       description: 'Sweet blueberry blended with refreshing mint for a balanced experience.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6545419/pexels-photo-6545419.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -132,7 +132,7 @@ export const menuItems = {
       id: 's16',
       name: 'Pomegranate',
       description: 'Rich pomegranate flavor with a sweet-tart profile.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6545078/pexels-photo-6545078.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -141,7 +141,7 @@ export const menuItems = {
       id: 's17',
       name: 'Mango',
       description: 'Tropical mango flavor with a rich, sweet profile.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6157056/pexels-photo-6157056.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -150,7 +150,7 @@ export const menuItems = {
       id: 's18',
       name: 'Rose',
       description: 'Delicate floral rose flavor for a unique aromatic experience.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/7078045/pexels-photo-7078045.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -159,7 +159,7 @@ export const menuItems = {
       id: 's19',
       name: 'Watermelon',
       description: 'Juicy watermelon flavor that\'s light and refreshing.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546121/pexels-photo-6546121.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
@@ -168,7 +168,7 @@ export const menuItems = {
       id: 's12',
       name: 'Watermelon Mint',
       description: 'Juicy watermelon blended with refreshing mint for a cool, sweet experience.',
-      price: '$25.99',
+      price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546121/pexels-photo-6546121.jpeg',
       notes: 'Refill $18.99, After 1AM $27.99'
