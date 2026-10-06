@@ -9,7 +9,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's2',
@@ -18,7 +18,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546260/pexels-photo-6546260.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's3',
@@ -27,7 +27,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/7443862/pexels-photo-7443862.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's4',
@@ -36,7 +36,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/15145560/pexels-photo-15145560/free-photo-of-restaurant-table-with-hookah.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's5',
@@ -45,7 +45,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546266/pexels-photo-6546266.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's6',
@@ -54,7 +54,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6957706/pexels-photo-6957706.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's7',
@@ -63,7 +63,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6476071/pexels-photo-6476071.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's8',
@@ -72,7 +72,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/4792683/pexels-photo-4792683.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's9',
@@ -81,7 +81,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6544928/pexels-photo-6544928.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's10',
@@ -90,7 +90,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/5370659/pexels-photo-5370659.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's11',
@@ -99,7 +99,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546619/pexels-photo-6546619.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's13',
@@ -108,7 +108,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/7437489/pexels-photo-7437489.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's14',
@@ -117,7 +117,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/10939225/pexels-photo-10939225.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's15',
@@ -126,7 +126,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6545419/pexels-photo-6545419.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's16',
@@ -135,7 +135,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6545078/pexels-photo-6545078.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's17',
@@ -144,7 +144,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6157056/pexels-photo-6157056.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's18',
@@ -153,7 +153,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/7078045/pexels-photo-7078045.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's19',
@@ -162,7 +162,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546121/pexels-photo-6546121.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's12',
@@ -171,7 +171,7 @@ export const menuItems = {
       price: '$27.99',
       category: 'House Blend Sheesha',
       image: 'https://images.pexels.com/photos/6546121/pexels-photo-6546121.jpeg',
-      notes: 'Refill $18.99, After 1AM $27.99'
+      notes: 'Refill $18.99, After 1AM $29.99'
     },
     {
       id: 's20',
